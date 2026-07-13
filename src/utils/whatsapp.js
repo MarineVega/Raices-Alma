@@ -1,14 +1,20 @@
-export const generarLinkWhatsApp = (tipo = null, paquete = null) => {
-    const numero = "5492284234077";
-    let mensaje = "Hola! Me interesa saber más sobre sus servicios";
+import { contacto } from "../data/contacto";
+
+export const generarLinkWhatsApp = (tipo = null, terapia = null) => {
+    const numero = contacto.whatsapp.numero;
+    let mensaje = "Hola! Me interesa reservar un turno";
     
-    if (tipo === "paquete" && paquete) {
-        mensaje = `Hola! Me interesa saber más sobre el paquete ${paquete}`;
+    if (tipo === "terapia" && terapia) {
+        mensaje = `Hola! Me interesa saber más sobre la terapia ${terapia}`;
     }
-    
-    if (tipo === "premium") {
-        mensaje = "Hola! Me interesa saber más sobre el servicio Preventa Premium";
+
+    if (tipo === "consulta") {
+        mensaje = `Hola! Me interesa saber más sobre tus terapias`;
     }
-    
+    /*
+    if (tipo === "xxx") {
+        mensaje = "Hola! Me interesa saber más sobre xxx";
+    }
+    */
     return `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 };

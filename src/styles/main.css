@@ -10,10 +10,7 @@
 @import "./components/sobreMi.css";
 @import "./components/terapias.css";
 @import "./components/videos.css";
-
-
-@import "./components/promocion.css";
-@import "./components/paquetes.css";
+@import "./components/rituales.css";
 @import "./components/contacto.css";
 @import "./components/footer.css";
 @import "./components/botonSubir.css";
@@ -21,7 +18,7 @@
 
 /* 
 @import "./components/interruptor.css";
-@import "./components/sobre-mi.css";
+
 @import "./components/detallePlantilla.css";
 @import "./components/carruselPlantilla.css"; */
 

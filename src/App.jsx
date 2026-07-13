@@ -11,10 +11,7 @@ import Hero from './components/Hero';
 import SobreMi from './components/SobreMi';
 import Terapias from './components/Terapias';
 import Videos from './components/Videos';
-
-
-import Paquetes from './components/Paquetes';
-import Promocion from './components/Promocion';
+import Rituales from './components/Rituales';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import BotonSubir from './components/BotonSubir';
@@ -62,13 +59,13 @@ function AppContent() {
     }
   }, [location]);
 
-  // Estado para el paquete seleccionado
-  const [paqueteSeleccionado, setPaqueteSeleccionado] = useState(null);
+  // Estado para el ritual seleccionado
+  const [ritualSeleccionado, setRitualSeleccionado] = useState(null);
   
   // Función para seleccionar paquete
-  const handleSeleccionarPaquete = (titulo) => {
-    console.log("Paquete seleccionado:", titulo); // Para debug
-    setPaqueteSeleccionado(titulo);
+  const handleSeleccionarRitual = (titulo) => {
+    console.log("Ritual seleccionado:", titulo); // Para debug
+    setRitualSeleccionado(titulo);
   };
 
   return (
@@ -93,10 +90,10 @@ function AppContent() {
                 <Videos />
 
 
-                <Promocion />
+                {/* <Promocion /> */}
                 {/* <Paquetes /> */}
                 {/* console.log("handleSeleccionarPaquete existe:", typeof handleSeleccionarPaquete); */}                
-                <Paquetes onSeleccionarPaquete={handleSeleccionarPaquete} />
+                <Rituales onSeleccionarRitual={handleSeleccionarRitual} />
                 
                 {/* <Contacto paqueteSeleccionado={paqueteSeleccionado} />                   */}
                 <Contacto />

@@ -2,15 +2,15 @@ import { contacto } from "../data/contacto";
 import { MessageCircle, MapPin, Clock } from "lucide-react";
 import { generarLinkWhatsApp } from "../utils/whatsapp";
  
-export default function Contacto({ paqueteSeleccionado = null }) {  
-  const urlWhatsapp = generarLinkWhatsApp(paqueteSeleccionado);
+export default function Contacto(tipo = "consulta", paqueteSeleccionado = null) {  
+  const urlWhatsapp = generarLinkWhatsApp();
 
   return (
     <section id="contacto" className="contacto">
       <div className="contacto-contenedor">
         <div className="contacto-header">
-          <h2 className="contacto-titulo">Contactanos</h2>
-          <p className="contacto-subtitulo">Estamos listos para atender tu vehículo</p>
+          <h2 className="contacto-titulo">Contactame</h2>
+          <p className="contacto-subtitulo">El primer paso hacia tu sanación empieza hoy</p>
         </div>
 
         <div className="contacto-grid">

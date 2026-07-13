@@ -24,8 +24,61 @@
     border-radius: 2rem;
     /* Sombra suave para destacar */
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+    max-width: 360px;
+    transform: rotate(-1.5deg);
   }
 
+
+.sobreMi-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            transparent 55%,
+            rgba(196,170,224,.15) 75%,
+            var(--color-primario-claro) 100%);
+
+    pointer-events: none;
+}
+
+/*
+.sobreMi-imagen::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:140px;
+
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        var(--color-primario-claro)
+    );
+
+    pointer-events:none;
+}
+*/
+/*
+.sobreMi-imagen::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.45),
+        rgba(190,150,255,.22),
+        transparent 70%
+    );
+
+    z-index:-1;
+}
+*/
   /* TEXTO */
   .sobreMi-texto {
     @apply flex flex-col;

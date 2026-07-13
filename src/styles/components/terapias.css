@@ -94,7 +94,7 @@
   }
 
   .terapia-titulo {
-    @apply text-xl font-bold mb-2 tracking-wider;
+    @apply text-2xl font-bold mb-2 tracking-wider;
     color: var(--color-secundario);
   }
 

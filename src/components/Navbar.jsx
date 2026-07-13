@@ -1,6 +1,7 @@
 import InterruptorModo from "./ui/InterruptorModo";
 import { Link } from "react-router-dom";
 // import InterruptorAccesibilidad from "./ui/InterruptorAccesibilidad";
+import { generarLinkWhatsApp } from "../utils/whatsapp";
 
 import Boton from "./ui/Boton";
 import { useState, useEffect } from "react";
@@ -28,6 +29,8 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
       window.removeEventListener("scroll", controlarScroll);
     };
   }, [menuAbierto]); // Solo se ejecuta cuando el estado del menú cambia
+
+  const urlWhatsapp = generarLinkWhatsApp("consulta");
 
   return (
     <nav className={`navbar ${menuAbierto ? "menu-abierto" : ""}`}>
@@ -87,13 +90,23 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
             </Link>
           </li>
 
-           <li>
+          <li>
             <Link
               to="/"
               onClick={() => localStorage.setItem("scrollto", "testimonios")}
               className="nav-link"
             >
               Testimonios
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/"
+              onClick={() => localStorage.setItem("scrollto", "contacto")}
+              className="nav-link"
+            >
+              Contacto
             </Link>
           </li>
 
@@ -124,7 +137,8 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
               {/* <Boton variant="primario" className="navbar-boton" href="#contacto">
                 Contacto
               </Boton> */}
-              <Boton 
+              
+              {/* <Boton 
                 variant="primario"
                 className="navbar-boton"
                 onClick={() =>{
@@ -133,8 +147,17 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
                 }}
               >
                 Consultar
-              </Boton>
+              </Boton> */}
               
+              <Boton 
+                variant="primario"
+                className="navbar-boton"
+                href={urlWhatsapp}
+                target="_blank"                
+              >
+                Consultar
+              </Boton>
+
             </div>
           </div>
 
@@ -222,6 +245,18 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
               }}
             >
               Testimonios
+            </Link>
+          </li>
+          
+          <li>
+            <Link
+              to="/" 
+              onClick={() => {
+                localStorage.setItem("scrollto", "contacto");
+                cerrarMenu();
+              }}
+            >
+              Contacto
             </Link>
           </li>
 

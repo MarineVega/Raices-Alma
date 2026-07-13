@@ -8,13 +8,16 @@
     .footer-contenedor {
         @apply max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pb-12;
     }
-
-    .footer-logo-img {
-        @apply h-12 w-auto mb-6 object-contain;
+    .footer-col-marca {
+        @apply flex flex-col items-center text-center;
     }
-
+    .footer-logo-img {
+        @apply h-32 w-auto mb-2 object-contain;
+    }
+    
     .footer-descripcion {
-        @apply text-base leading-relaxed mb-6 max-w-sm opacity-80;
+        @apply text-lg leading-relaxed mb-6 max-w-sm opacity-80;
+        color: var(--color-texto);
     }
 
     .footer-sociales {
@@ -31,12 +34,12 @@
     }
  
     .footer-h4 {
-        @apply font-bold text-lg mb-6;
+        @apply font-bold text-lg mb-4;
         color: var(--color-acento);
     }
 
     .footer-lista {
-        @apply flex flex-col gap-3;
+        @apply flex flex-col gap-1;
     }
 
     .footer-lista a {

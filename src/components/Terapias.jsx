@@ -1,7 +1,10 @@
 import { terapias } from "../data/terapias";
+import { generarLinkWhatsApp } from "../utils/whatsapp";
 import { Sparkles } from "lucide-react";
 
-export default function Terapias() {
+export default function Terapias(tipo = "terapia", terapiaSeleccionada = null) {
+  const urlWhatsapp = generarLinkWhatsApp("terapia",terapiaSeleccionada);
+
   return (
     <section id="terapias" className="terapias">
       <div className="terapias-contenedor">

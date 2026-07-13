@@ -37,7 +37,7 @@
     /* Links */
     .navbar-links {
         /* @apply hidden md:flex items-center gap-8 text-sm font-medium ml-auto; */
-        @apply hidden lg:flex items-center gap-16 ml-auto text-lg;
+        @apply hidden lg:flex items-center gap-8 ml-auto text-lg;
         /* ml-auto  -- para que los links queden más a la derecha*/
     }
 
@@ -67,11 +67,10 @@
 
     /* Clase específica para ajustar el botón genérico dentro del nav */
     .navbar-boton {
-        @apply px-5! py-2! text-base; 
-
+        @apply px-5! py-2! text-base;
     }
 
-    
+
     /* --- Botón de Accesibilidad --- */
 
     /* 1. Estado Base (Modo Claro) */

@@ -2,9 +2,10 @@ import React from 'react';
 import { FaHeart, FaInstagram, FaMapMarkerAlt, FaClock, FaWhatsapp, FaFacebook, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { generarLinkWhatsApp } from "../utils/whatsapp";
+import { contacto } from '../data/contacto';
 
 export default function Footer({paqueteSeleccionado = null }) {
-  const urlWhatsapp = generarLinkWhatsApp(paqueteSeleccionado);
+  const urlWhatsapp = generarLinkWhatsApp("consulta");
 
   return (
     <footer className="footer-principal">
@@ -13,21 +14,25 @@ export default function Footer({paqueteSeleccionado = null }) {
         {/* Columna 1: Logo y descripción */}
         <div className="footer-col-marca">
           <div className="footer-logo-box">
-            <img src="/Exclusive_Logo.png" alt="Exclusive Detail" className="footer-logo-img" />
+            <img 
+              src="/raices_sin_fondo.png" 
+              alt="Raíces del Alma" 
+              className="footer-logo-img"
+            />
           </div>
           <p className="footer-descripcion">
-            Estética vehicular. <br/> La perfección que buscás, en cada detalle.
+            Sanar el origen, despertar la consciencia <br/> y vivir el propósito
           </p>
           <div className="footer-sociales">
-            <a href="https://www.instagram.com/exclusiveolav/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/constelaciones_ana_/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={24} />
             </a>
-          
+{/*           
             <a href="https://www.facebook.com/profile.php?id=100063953653175" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <FaFacebook size={24} />
-            </a>
+            </a> */}
 
-             <a href="https://www.tiktok.com/@exclusivedetail0" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+             <a href="https://www.tiktok.com/@conste_ana" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
               <FaTiktok size={24} />
             </a>
 
@@ -39,25 +44,36 @@ export default function Footer({paqueteSeleccionado = null }) {
           <h4 className="footer-h4">Enlaces</h4>
           <ul className="footer-lista">
             <li>
-              <Link to="/" onClick={() => localStorage.setItem("scrollto", "paquetes")}>
-                Paquetes
+              <Link to="/" onClick={() => localStorage.setItem("scrollto", "sobreMi")}>
+                Sobre mí
               </Link>
             </li>
             <li>
-              <Link to="/" onClick={() => localStorage.setItem("scrollto", "servicios")}>
-                Servicios
+              <Link to="/" onClick={() => localStorage.setItem("scrollto", "terapias")}>
+                Terapias
               </Link>
             </li>
             <li>
-              <Link to="/" onClick={() => localStorage.setItem("scrollto", "premium")}>
-                Preventa Premium
+              <Link to="/" onClick={() => localStorage.setItem("scrollto", "videos")}>
+                Videos
               </Link>
             </li>
             <li>
+              <Link to="/" onClick={() => localStorage.setItem("scrollto", "rituales")}>
+                Rituales
+              </Link>
+            </li>
+            <li>
+              <Link to="/" onClick={() => localStorage.setItem("scrollto", "testimonios")}>
+                Testimonios
+              </Link>
+            </li>
+             <li>
               <Link to="/" onClick={() => localStorage.setItem("scrollto", "contacto")}>
                 Contacto
               </Link>
             </li>
+
           </ul>
         </div>
 
@@ -69,7 +85,8 @@ export default function Footer({paqueteSeleccionado = null }) {
                   {/* WhatsApp */}
                   <FaWhatsapp size={20} className="footer-contacto-icono" />
                   <a href={urlWhatsapp} target="_blank" rel="noopener noreferrer">
-                    WhatsApp 2284-234077
+                    WhatsApp {contacto.whatsapp.texto}
+                    
                   </a>                    
                 </div>
                 <div className="footer-contacto-item">

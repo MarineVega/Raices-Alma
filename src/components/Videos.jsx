@@ -93,7 +93,7 @@ function VideoCard({ video, color }) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [consulta, setConsulta] = useState(video.mensajePredefinido);  // Inicilizo con el mensaje
   // const [consulta, setConsulta] = useState("");
-  const whatsappNumero =  contacto.whatsapp.numero 
+  const whatsappNumero =  contacto.whatsapp.numero; 
 
   const handleConsulta = () => {
     const mensaje = encodeURIComponent(consulta || video.mensajePredefinido);

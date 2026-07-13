@@ -1,0 +1,160 @@
+@layer components {
+  .rituales {
+    @apply py-20 px-6 lg:px-16;
+    background: radial-gradient(
+      circle at center,
+      var(--color-primario-claro) 10%,
+      var(--color-primario) 50%
+    );
+    /* background-color: var(--color-fondo); */
+  }
+
+  .rituales-contenedor {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Header */
+  .rituales-header {
+    @apply text-center mb-16;
+  }
+
+  .rituales-badge {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4;
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+    border: 1px solid rgba(var(--color-acento-rgb), 0.3);
+  }
+
+  .rituales-badge-icon {
+    @apply w-5 h-5;
+    color: var(--color-acento);
+  }
+
+  .rituales-badge span {
+    @apply font-semibold tracking-widest;
+    color: var(--color-acento);
+  }
+
+  .rituales-titulo {
+    @apply text-4xl md:text-5xl font-bold mb-4 tracking-wider;
+    color: var(--color-secundario);
+  }
+
+  .rituales-subtitulo {    
+    @apply text-xl mt-4 max-w-2xl mx-auto tracking-widest;
+    color: var(--color-texto);
+  }
+
+  /* Grid */
+  .rituales-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  }
+
+  /* Card */
+  .rituales-card {
+    /* @apply relative rounded-2xl p-8 transition-all;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-borde); */
+    @apply p-6 rounded-2xl transition-all duration-300 hover:-translate-y-2;
+    background-color: var(--color-primario-claro);
+    border: 1px solid rgba(var(--color-primario-rgb), 0.8);
+  }
+
+
+  .rituales-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-acento);
+  }
+
+  /* Header del card */
+  .rituales-card-header {
+    @apply flex items-start gap-3 mb-6;
+    color: var(--color-secundario);
+  }
+
+  .rituales-icono-wrapper {
+    /* @apply p-3 rounded-xl;
+    background-color: rgba(var(--color-acento-rgb), 0.2); */
+    @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+    background-color: rgba(var(--color-acento-rgb), 0.7);
+  }
+
+  .rituales-icono {
+    @apply w-6 h-6;
+    color: var(--color-secundario);
+  }
+
+  .rituales-card-titulo {
+    /* @apply text-2xl font-bold;
+    color: var(--color-texto-brillo);    */
+    
+    @apply text-2xl font-bold tracking-wider;
+    color: var(--color-secundario);
+  }
+
+  .rituales-card-tagline {
+    @apply text-sm tracking-wider;
+    color: var(--color-texto);
+  }
+
+  .rituales-card-descripcion {    
+    @apply text-lg leading-relaxed mb-4 pb-4 text-center;
+    color: var(--color-texto-oscuro);
+    border-bottom: 2px solid rgba(var(--color-acento-rgb), 1);
+  }
+
+  /* Pasos */
+  .rituales-pasos {
+    @apply space-y-3 mb-8;
+  }
+
+  .rituales-pasos-titulo {
+    @apply font-bold flex items-center gap-2 text-lg;
+    color: var(--color-secundario);
+  }
+
+  .rituales-pasos-icono {
+    @apply w-5 h-5;
+    color: var(--color-secundario);
+  }
+
+  .rituales-pasos-lista {
+    @apply space-y-2;
+  }
+  
+  .rituales-pasos-lista li {
+    /* @apply flex items-start gap-3; */
+    @apply flex items-start gap-2 text-lg;
+    /* color: var(--color-texto); */
+    color: var(--color-secundario);
+  }
+
+  .rituales-pasos-bullet {
+    @apply w-1.5 h-1.5 rounded-full shrink-0 mt-2;
+    background-color: var(--color-secundario);
+  }
+
+  /* Botón */
+  .rituales-boton {
+    @apply block w-full text-center py-3 rounded-lg font-semibold transition-all tracking-wider;
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+    color: var(--color-acento);
+    border: 1px solid rgba(var(--color-acento-rgb), 0.3);
+  }
+
+  .rituales-boton:hover {
+    background-color: rgba(var(--color-acento-rgb), 0.2);
+    cursor: pointer;
+  }
+
+  .rituales-boton.destacado {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    border: none;
+  }
+
+  .rituales-boton.destacado:hover {
+    background-color: var(--color-acento);
+    opacity: 0.9;
+  }
+
+}
