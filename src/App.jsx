@@ -14,7 +14,6 @@ import Videos from './components/Videos';
 
 
 import Paquetes from './components/Paquetes';
-import ServicioPremium from './components/ServicioPremium';
 import Promocion from './components/Promocion';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
@@ -98,7 +97,7 @@ function AppContent() {
                 {/* <Paquetes /> */}
                 {/* console.log("handleSeleccionarPaquete existe:", typeof handleSeleccionarPaquete); */}                
                 <Paquetes onSeleccionarPaquete={handleSeleccionarPaquete} />
-                <ServicioPremium onSeleccionarPaquete={handleSeleccionarPaquete} />
+                
                 {/* <Contacto paqueteSeleccionado={paqueteSeleccionado} />                   */}
                 <Contacto />
               </main>

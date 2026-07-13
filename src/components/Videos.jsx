@@ -91,7 +91,8 @@ export default function Videos() {
 
 function VideoCard({ video, color }) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
-  const [consulta, setConsulta] = useState("");
+  const [consulta, setConsulta] = useState(video.mensajePredefinido);  // Inicilizo con el mensaje
+  // const [consulta, setConsulta] = useState("");
   const whatsappNumero =  contacto.whatsapp.numero 
 
   const handleConsulta = () => {
@@ -167,7 +168,9 @@ function VideoCard({ video, color }) {
               className="video-textarea"
               value={consulta}
               onChange={(e) => setConsulta(e.target.value)}
-              placeholder={video.mensajePredefinido}
+              // placeholder={video.mensajePredefinido}
+              placeholder="Escribí tu consulta aquí..."
+              defaultValue={video.mensajePredefinido} 
               rows={4}
             />
             <button 
