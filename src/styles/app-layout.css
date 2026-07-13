@@ -1,0 +1,28 @@
+/* OJO!!!!!!!!!! REVISAR */
+
+/* Base (Body, tipografía) */
+
+@layer base {
+    body {
+        font-family: "Nunito", sans-serif;        
+        background-color: var(--color-primario);
+        color: var(--color-texto);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+}
+
+@layer components {
+    .app-layout {
+        @apply min-h-screen transition-colors duration-300;
+        /* Esto asegura que si el body falla, el layout principal mantenga el color */
+        background-color: var(--color-primario);
+        color: var(--color-texto);
+        
+    }
+}
+
+/* para que los scroll sean más suaves, x ej, cuando clickea desde navbar y se dirije a cada sección: servicios, contacto, etx */
+html {
+  scroll-behavior: smooth;
+}
+  

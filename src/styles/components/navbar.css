@@ -1,0 +1,259 @@
+/* Es recomendable usar @layer components por 2 cuestiones importantes:
+    1. Orden de prioridad: Te asegura que tus estilos personalizados tengan la prioridad correcta frente a las clases base de Tailwind.
+    2. Limpieza: Evita conflictos si alguna vez usas una clase de utilidad de Tailwind en el HTML que debería sobrescribir un estilo del CSS.
+*/
+
+@layer components {
+    .navbar {
+        @apply fixed top-0 w-full z-50 transition-all duration-300 border-b;
+            
+        /* Usamos la variable RGB + la opacidad deseada */
+        /* esto no sirve, porque lo muestra transparente */
+        /*background-color: rgba(var(--color-fondo-rgb), 0.7);   */  /* el 2º parámetro es para aplicar transparencia */
+        background-color: var(--color-navbar);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);    
+        border-color: rgba(var(--color-borde-rgb), 0.05);
+    }
+
+    .navbar-contenedor {
+        @apply max-w-7xl mx-auto px-6 h-20 flex items-center justify-between;
+    }
+
+    /* Logo */
+    .navbar-logo {
+        @apply flex items-center gap-3 cursor-pointer select-none;
+    }
+
+    .navbar-logo-img {
+        @apply h-20 w-auto object-contain;
+    }
+
+    .navbar-marca-texto {
+        @apply font-sans font-bold text-lg hidden sm:block tracking-tight;
+        color: var(--color-acento);
+    }
+
+    /* Links */
+    .navbar-links {
+        /* @apply hidden md:flex items-center gap-8 text-sm font-medium ml-auto; */
+        @apply hidden lg:flex items-center gap-16 ml-auto text-lg;
+        /* ml-auto  -- para que los links queden más a la derecha*/
+    }
+
+    .nav-link {
+        @apply transition-colors duration-200 relative;
+        color: var(--color-texto);
+    }
+
+    .nav-link:hover {
+        color: var(--color-acento-brillo);
+    }
+
+    /* Acciones (lado derecho) */
+    .navbar-acciones {
+        @apply flex items-center gap-4;
+    }
+
+    .navbar-divisor {
+        @apply hidden md:block h-6 w-px mx-2;
+        background-color: var(--color-borde);
+    }
+
+    .navbar-btn-contenedor {
+        /* @apply hidden sm:block; */
+        @apply hidden lg:block;
+    }
+
+    /* Clase específica para ajustar el botón genérico dentro del nav */
+    .navbar-boton {
+        @apply px-5! py-2! text-base; 
+
+    }
+
+    
+    /* --- Botón de Accesibilidad --- */
+
+    /* 1. Estado Base (Modo Claro) */
+   .btn-accesibilidad {
+        @apply p-2 rounded-full transition-all duration-300 flex items-center justify-center;
+        background-color: transparent;
+        color: var(--color-texto) !important; /* Fuerza el color en modo claro */
+    }
+
+    /* 2. Estado ACTIVO (Cuando el ojo/hombrecito está encendido) */
+    /* Este debe mandar sobre el modo claro y oscuro */
+    .btn-accesibilidad.activo {
+        background-color: var(--color-terciario) !important;
+        color: #ffffff !important; 
+        box-shadow: 0 0 12px rgba(var(--color-terciario-rgb), 0.5);
+    }
+
+
+    /* Banner interno del Navbar */
+    .navbar-banner-accesibilidad {
+        @apply w-full py-2 px-6 text-center text-sm border-t-2;
+        background-color: #fff9c4; /* El amarillo de advertencia */
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-volver-diseno-link {
+        @apply ml-2 underline font-bold cursor-pointer transition-colors hover:opacity-70;
+        color: #0044CC; /* Azul de link accesible */
+    }
+
+    /* Ajuste de altura para que el Navbar se estire solo cuando el banner aparece */
+    .navbar {
+        height: auto !important; /* Permite que el nav crezca para albergar el banner */
+        @apply flex flex-col;
+    }
+
+    .navbar-contenedor {
+        @apply w-full;
+        height: 80px; /* Mantiene la altura de tu barra de navegación original */
+    }
+
+
+    /* Botón hamburguesa: solo visible en móvil - INICIO */
+    .menu-hamburguesa {
+        @apply block lg:hidden p-2 transition-transform active:scale-90;
+        color: var(--color-texto);
+    }
+
+    /* Contenedor del menú móvil */    
+    .navbar-menu-mobile {
+        @apply fixed top-20 left-0 w-full h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out z-40;
+
+        @apply fixed top-24 left-1/2 -translate-x-1/2 overflow-hidden transition-all duration-300 ease-in-out z-40;
+
+        /* 2. Definimos un ancho relativo y un máximo para que no sea gigante en tablets */
+        @apply w-[92%] max-w-400 rounded-3xl shadow-2xl border;
+        
+        /* 3. Estética de cristal (Glassmorphism) */
+        background-color: rgba(var(--color-fondo-rgb), 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-color: rgba(var(--color-borde-rgb), 0.1);
+
+        /* 4. Altura inicial */
+        height: 0;
+        opacity: 0;
+        
+        /* 1. Bajamos la opacidad a 0.7 o 0.8 para que sea transparente */
+        /* background-color: rgba(var(--color-fondo-rgb), 0.8); */
+
+        /* 2. El BLUR es lo que hace que se vea pro y no se pierda el texto */
+        /* backdrop-filter: blur(15px); */
+        /* Soporte para Safari */
+        /* -webkit-backdrop-filter: blur(15px);  */
+    
+        /* 3. Un borde sutil abajo ayuda a delimitar */
+        /* border-bottom: 1px solid rgba(var(--color-borde-rgb), 0.1); */
+    }
+
+    .navbar-menu-mobile.active {
+        /* Altura automática según el contenido o un valor fijo */
+        @apply h-auto py-10 opacity-100;
+    }
+    
+    .mobile-links {        
+        @apply flex flex-col items-center gap-8 text-xl font-bold;
+        color: var(--color-texto);        
+        /* Quitamos cualquier margen extra que pueda descentrar */
+        margin: 0; 
+        padding: 0;
+    }
+
+    .mobile-links li a {
+        @apply font-semibold tracking-wide transition-colors;
+        color: var(--color-texto);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para despegar el texto del fondo */
+    }
+
+    .btn-mobile-contacto {
+        @apply mt-4 px-10 py-3 rounded-full text-white;
+        background-color: var(--color-primario);
+    }
+
+
+    /* Usamos una ruta más específica para asegurar que el color gane */
+    .mobile-links li .btn-mobile-contacto {
+        @apply mt-4 px-10 py-3 rounded-full transition-all duration-300;
+        
+        /* Forzamos los colores con !important para que no los pise el color del menú */
+        background-color: var(--color-primario) !important;
+        color: #ffffff !important; /* Blanco puro para que resalte siempre */
+        
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Efecto hover opcional para que se note que es un botón */
+    .mobile-links li .btn-mobile-contacto:hover {
+        @apply scale-105 opacity-90;
+        box-shadow: 0 4px 15px rgba(var(--color-primario-rgb), 0.4);
+    }
+
+    .modo-accesibilidad .navbar-menu-mobile {
+        @apply border-t-4;
+        border-color: var(--color-primario);
+        background-color: #ffffff; /* Fondo sólido sin transparencias */
+    }
+
+    .modo-accesibilidad .mobile-links a {
+        @apply underline;
+        color: #000;
+    }
+
+    .modo-accesibilidad .mobile-links li .btn-mobile-contacto {
+        @apply border-2;
+        border-color: #000000;
+        background-color: var(--color-primario) !important;
+        color: #ffffff !important;
+        font-weight: 800; /* Más grosor para que se lea perfecto */
+    }
+
+    /* Botón hamburguesa: solo visible en móvil - FIN */
+
+    /* --- ANIMACIÓN ESCALONADA PARA LINKS MÓVILES -> INICIO --- */
+
+    /* 1. Definimos el movimiento: de abajo hacia arriba con aparición gradual */
+    @keyframes entradaLink {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* 2. Estado inicial: ocultos */
+    .mobile-links li {
+        opacity: 0;
+    }
+
+    /* 3. Activamos la animación solo cuando el menú tiene la clase .active */
+    .navbar-menu-mobile.active .mobile-links li {
+        animation: entradaLink 0.5s ease forwards;
+    }
+
+    /* 4. Retrasos (Delays) para el efecto escalonado: cada link sale un poquito después del anterior */
+    .navbar-menu-mobile.active .mobile-links li:nth-child(1) { animation-delay: 0.1s; }
+    .navbar-menu-mobile.active .mobile-links li:nth-child(2) { animation-delay: 0.2s; }
+    .navbar-menu-mobile.active .mobile-links li:nth-child(3) { animation-delay: 0.3s; }
+    .navbar-menu-mobile.active .mobile-links li:nth-child(4) { animation-delay: 0.4s; }
+
+    /*
+    ¿Cómo funciona?
+    opacity: 0: Los links están ahí, pero invisibles, esperando la señal.
+    forwards: Esta palabra en la animación es vital; le dice al navegador que, cuando termine de animar, el link se quede en su estado final (visible) y no vuelva a desaparecer.
+    nth-child(x): Es como pasar lista. Al primero le damos 0.1s de espera, al segundo 0.2s, y así. Esto crea ese efecto de "cascada" tan elegante.
+
+    /* --- ANIMACIÓN ESCALONADA PARA LINKS MÓVILES -> FIN --- */
+}
+
+/* cursor-pointer */

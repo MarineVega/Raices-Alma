@@ -1,0 +1,115 @@
+@layer components {
+  .sobreMi {
+    @apply relative py-20 md:py-20;
+    background-color: var(--color-primario-claro);
+  }
+
+  .sobreMi-contenedor {
+    @apply relative z-10 w-full mx-auto px-6 lg:px-16 max-w-7xl;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Imagen 45%, texto 55% aprox */
+    grid-template-columns: 0.8fr 1.4fr; 
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* IMAGEN DE LA TERAPEUTA */
+  .sobreMi-imagen {
+    @apply relative flex justify-center;
+  }
+
+  .sobreMi-imagen img {
+    @apply w-full max-w-md object-contain;
+    /* Efecto opcional: marco sutil */
+    border-radius: 2rem;
+    /* Sombra suave para destacar */
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+  }
+
+  /* TEXTO */
+  .sobreMi-texto {
+    @apply flex flex-col;
+  }
+
+  .sobreMi-titulo {
+    @apply text-4xl md:text-5xl font-bold mb-8;
+    color: var(--color-primario);
+    position: relative;
+  }
+
+  /* Línea decorativa bajo el título */
+  .sobreMi-titulo::after {
+    content: '';
+    @apply block w-32 h-1 mt-4;
+    background-color: var(--color-acento-brillo);
+  }
+
+  .sobreMi-descripcion {
+    @apply text-lg leading-relaxed;
+    color: var(--color-texto-oscuro);
+  }
+
+  /* Párrafos con viñetas */
+  .sobreMi-descripcion .sobreMi-linea {
+    @apply flex items-start gap-3 mb-4;
+  }
+
+  .sobreMi-linea .sobreMi-vinieta {
+    @apply shrink-0 mt-1;
+    color: var(--color-acento-brillo);
+  }
+
+  .sobreMi-linea .sobreMi-vinieta svg {
+    @apply w-5 h-5;
+  }
+
+  /* PIE */
+  .sobreMi-pie {
+    @apply mt-5 text-4xl font-semibold italic text-center tracking-wider;
+    color: var(--color-acento-brillo);
+    /* border-left: 3px solid var(--color-acento-brillo); */
+    /* padding-left: 1.5rem; */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .sobreMi {
+      @apply py-16;
+    }
+
+    .sobreMi-contenedor {
+      @apply grid-cols-1 gap-8;
+    }
+
+    .sobreMi-imagen {
+      @apply order-1 max-w-xs mx-auto;
+    }
+
+    .sobreMi-imagen img {
+      @apply max-w-62.5;
+    }
+
+    .sobreMi-texto {
+      @apply order-2 text-center;
+    }
+
+    .sobreMi-titulo {
+      @apply text-3xl;
+    }
+
+    .sobreMi-titulo::after {
+      @apply mx-auto;
+    }
+
+    .sobreMi-descripcion .sobreMi-linea {
+      @apply text-left;
+    }
+
+    .sobreMi-pie {
+      @apply text-center border-l-0 border-t-2 pt-4 px-4;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@layer components {
+    .footer-principal {
+        @apply pt-16 pb-8 px-6 mt-auto;
+        background-color: var(--color-primario) ;
+        color: var(--color-claro);
+    }
+
+    .footer-contenedor {
+        @apply max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pb-12;
+    }
+
+    .footer-logo-img {
+        @apply h-12 w-auto mb-6 object-contain;
+    }
+
+    .footer-descripcion {
+        @apply text-base leading-relaxed mb-6 max-w-sm opacity-80;
+    }
+
+    .footer-sociales {
+        @apply flex gap-3;
+    }
+
+    .footer-sociales a {
+        @apply p-2 rounded-full transition-all duration-300;
+        color: var(--color-texto);
+    }
+
+    .footer-sociales a:hover {    
+        background-color: rgba(var(--color-acento-rgb), 0.3);
+    }
+ 
+    .footer-h4 {
+        @apply font-bold text-lg mb-6;
+        color: var(--color-acento);
+    }
+
+    .footer-lista {
+        @apply flex flex-col gap-3;
+    }
+
+    .footer-lista a {
+        @apply text-base no-underline;
+        color: var(--color-claro);
+    }
+
+    .footer-lista a:hover {
+        color: var(--color-acento);
+    }
+
+    .footer-datos {
+      @apply space-y-3;
+    }
+    .footer-datos p {
+        @apply text-base mb-3 opacity-80;
+    }
+
+    .footer-contacto-item {
+        @apply flex items-start gap-3;
+    }
+
+    .footer-contacto-icono {
+        @apply shrink-0 mt-0.5;
+        color: var(--color-acento);
+    }
+
+    .footer-datos a {
+        color: var(--color-claro);
+        text-decoration: none;
+    }
+
+    .footer-datos a:hover {
+        color: var(--color-acento);
+    }
+
+    .footer-copyright {
+        @apply max-w-7xl mx-auto pt-8 border-t;    
+        border-color: rgba(var(--color-fondo-rgb), 0.15);
+    }
+
+    .footer-copyright-contenido {
+        @apply flex flex-col md:grid md:grid-cols-2 items-center text-sm opacity-60;
+    }
+
+    .footer-autor {
+        @apply mt-4 md:mt-0 md:text-right flex items-center md:justify-end;
+    }
+
+    .footer-corazon {
+        @apply mx-1;        
+        color: var(--color-fondo);
+    }
+
+    .footer-link-autor {
+        @apply ml-1 transition-colors duration-200;
+        color: var(--color-texto-brillo);
+        text-decoration: none;
+    }
+
+    .footer-link-autor:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,122 @@
+@layer components {
+  .hero {
+    @apply relative overflow-hidden flex items-center;
+    min-height: 90vh;
+    /* background-color: var(--color-primario);     */
+    
+    background: radial-gradient(
+      circle at center,
+      var(--color-primario-claro) 10%,
+      var(--color-primario) 50%
+    );
+
+
+
+    /* este me gusta para modo oscuro */
+/*     
+    background: radial-gradient(
+      circle at center,
+      var(--color-primario) 0%,
+      var(--color-secundario) 70%
+    );
+     */
+
+  }
+  
+  /* Overlay solo si necesitás oscurecer el fondo del color primario */
+  .hero-overlay {
+    @apply absolute inset-0 z-0;
+    /* Podés dejarlo vacío o eliminarlo si no lo necesitás */
+  }
+
+  .hero-contenedor {
+    @apply relative z-10 w-full mx-auto px-6 lg:px-16 max-w-7xl;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    align-items: center;
+    gap: 0; /* Sin espacio entre columnas para que se superpongan */
+  }
+
+  /* IMAGEN - Bien visible, a la derecha, invade el centro */
+  .hero-imagen {
+    @apply relative z-20; /* Por encima del texto para superposición */
+    grid-column: 1 / -1; /* Ocupa ambas columnas */
+    grid-row: 1; /* Misma fila que el texto */
+    justify-self: end; /* Alineada a la derecha */
+    width: 65%; /* Ancho controlado - ajustá según necesites */
+    margin-right: -5%; /* Opcional: que sobresalga un poco */
+  }
+
+  .hero-imagen img {
+    @apply w-full h-auto object-contain;
+    /* Sin transparencia, sin filtros */
+  }
+
+  /* TEXTO - A la izquierda, se superpone con la imagen */
+  .hero-texto {
+    @apply relative z-10; /* Debajo de la imagen para que esta lo tape parcialmente */
+    grid-column: 1; /* Primera columna */
+    grid-row: 1; /* Misma fila */
+    max-width: 550px;
+    padding-right: 2rem; /* Espacio antes de que llegue la imagen */
+  }
+
+  .hero-texto h1 {
+    @apply 
+    leading-none
+    uppercase
+    tracking-widest
+    text-5xl md:text-7xl
+    font-bold;
+    color: var(--color-texto-brillo);
+    width: max-content;
+  }
+
+  .hero-destacar {    
+    color: var(--color-acento);
+  }
+  
+  .hero-texto-destacar {
+    @apply mt-6    
+    text-xl md:text-3xl
+    leading-relaxed;
+    color: var(--color-texto);
+  }
+
+  .hero-accion {
+    @apply flex flex-col sm:flex-row items-start gap-4 mt-12;
+  }
+
+  /* Mobile: imagen centrada debajo del texto */
+  @media (max-width: 768px) {
+    .hero-contenedor {
+      @apply flex flex-col;
+      gap: 2rem;
+    }
+
+    .hero-imagen {
+      @apply relative w-full max-w-md mx-auto;
+      grid-column: auto;
+      grid-row: auto;
+      justify-self: center;
+      margin-right: 0;
+      order: 2; /* Imagen debajo del texto */
+    }
+    
+    .hero-texto {
+      @apply text-center px-4;
+      max-width: 100%;
+      padding-right: 0;
+      order: 1; /* Texto arriba */
+      z-index: 20; /* En mobile, texto arriba */
+    }
+
+    .hero-texto h1 {
+      @apply w-full;
+    }
+
+    .hero-accion {
+      @apply items-center justify-center;
+    }
+  }
+}

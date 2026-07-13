@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* 1. Primero las variables para que todos las conozcan */
+@import "./variables.css";
+
+/* 2. Después los componentes que usan esas variables */
+@import "./components/botones.css";
+@import "./components/navbar.css";
+@import "./components/hero.css";
+@import "./components/sobreMi.css";
+@import "./components/terapias.css";
+@import "./components/videos.css";
+
+
+@import "./components/promocion.css";
+@import "./components/servicioPremium.css";
+@import "./components/paquetes.css";
+@import "./components/contacto.css";
+@import "./components/footer.css";
+@import "./components/botonSubir.css";
+
+
+/* 
+@import "./components/interruptor.css";
+@import "./components/sobre-mi.css";
+@import "./components/detallePlantilla.css";
+@import "./components/carruselPlantilla.css"; */
+
+/* @import "../plantillas/profesional/profesional.css";
+@import "../plantillas/emprendedor/emprendedor.css";
+@import "../plantillas/holistica/holistica.css"; */
+
+/* 3. Por último el layout general de la App */
+@import "./app-layout.css";
+
+/*  Por qué lo separé así:
+  variables.css: Solo define "qué colores existen".
+  app-layout.css: Define "dónde se aplican esos colores por defecto" y cómo se comporta el contenedor principal de tu web.
+  Archivos de componentes: Definen "cómo se ven las piezas específicas" (botones, tarjetas, etc.).
+*/
+

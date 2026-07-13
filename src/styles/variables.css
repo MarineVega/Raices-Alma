@@ -1,0 +1,47 @@
+@layer {
+    :root {
+        --font-size: 16px;
+
+        /* Definimos el "valor" del color sin la función rgb(), para poder aplicar transparencia en navbar */        
+        /* --color-secundario-rgb: 111, 75, 168; */     /* #6F4BA8 */
+        --color-primario-rgb: 143, 107, 196;
+        --color-navbar: rgba(143, 107, 196, 0.5);
+        
+        --color-primario: #8F6BC4;  
+        /* --color-primario-claro: #AD92D4;   */
+        --color-primario-claro: #BBA4DB;  
+        --color-secundario: #6F4BA8;
+
+        --color-acento: #D9B25F;            /* rgb 217, 178, 95  */
+        /* --color-acento: #FFD700; */
+        --color-acento-brillo: #FFC436;     /* rgb 255, 196, 54 */
+        --color-dorado-claro: #F2D998;  /* cambiar el nombre por acento claro */
+
+
+        --color-terciario: #D9B25F;     /* --> definir el color xq es usado */
+       
+        --color-dorado-claro: #F2D998;
+        --color-fondo: #F8F5FC;
+
+        --color-texto: #FFFFFF;
+        --color-texto-oscuro: #2F2A35;        
+        
+
+        --color-borde: rgba(255, 255, 255, 0.1);
+        --color-borde-rgb: 255, 255, 255;
+
+ 
+        --color-acento-rgb: 217, 178, 95;       /* #D9B25F */
+        /* --color-acento-brillo-rgb: 255, 196, 54; */
+        --color-secundario-rgb: 111, 75, 168;     /* #6F4BA8 */
+
+    }
+
+
+}
+/*
+#EAA53B: Un dorado más vivo e intenso.
+#F9BD41: Más brillante, brillante y enérgico.
+#FFC436: Luminoso y con un fuerte toque de amarillo intenso.
+#FFD700: El color oro puro estándar para web, muy reluciente.
+*/

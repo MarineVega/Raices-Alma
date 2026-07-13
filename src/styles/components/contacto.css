@@ -1,0 +1,72 @@
+@layer components {
+  .contacto {
+    @apply py-20 px-6 lg:px-16;
+    /* background-color: var(--color-fondo); */
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+  }
+
+  .contacto-contenedor {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .contacto-header {
+    @apply text-center mb-12;
+  }
+
+  .contacto-titulo {
+    @apply text-4xl md:text-5xl font-bold mb-4 tracking-wider;
+    color: var(--color-texto-brillo);
+  }
+
+  .contacto-subtitulo {
+    @apply text-xl tracking-wider;
+    color: var(--color-texto);
+  }
+
+  .contacto-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+  }
+
+  .contacto-card {
+    @apply p-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2;
+    background-color: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+
+  .contacto-card:hover {
+    border-color: var(--color-acento);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+  }
+
+  .contacto-icono-wrapper {
+    @apply w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4;
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+  }
+
+  .contacto-icono {
+    @apply w-7 h-7;
+    color: var(--color-acento);
+  }
+
+  .contacto-card h3 {
+    @apply text-xl font-bold mb-2;
+    color: var(--color-texto-brillo);
+  }
+
+  .contacto-card p {
+    @apply text-base;
+    color: var(--color-texto);
+  }
+
+  .contacto-subtexto {
+    @apply text-sm block mt-2;
+    color: var(--color-texto);
+    opacity: 0.7;
+  }
+
+  .contacto-link {
+    @apply inline-block mt-3 text-sm font-semibold;
+    color: var(--color-acento);
+  }
+}

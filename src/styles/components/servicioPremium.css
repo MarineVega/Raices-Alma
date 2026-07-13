@@ -1,0 +1,181 @@
+@layer components {
+  .servicio-premium {
+    @apply py-20;    
+    background-color: rgba(var(--color-acento-rgb), 0.1);    
+  }
+
+  /* Glow de fondo */
+  .servicio-premium-bg-glow {
+    @apply absolute inset-0 opacity-10;
+  }
+
+  .servicio-premium-glow-1 {
+    @apply absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl;
+    background-color: var(--color-acento);
+  }
+/* 
+  .servicio-premium-glow-2 {
+    @apply absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl;
+    background-color: var(--color-acento);
+  } */
+
+  .servicio-premium-contenedor {
+    @apply relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Header */
+  .servicio-premium-header {
+    @apply text-center mb-16;
+  }
+
+  .servicio-premium-badge {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4;
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+    border: 1px solid rgba(var(--color-acento-rgb), 0.3);
+  }
+
+  .servicio-premium-badge-icon {
+    @apply w-5 h-5;
+    color: var(--color-acento);
+    fill: var(--color-acento);
+  }
+
+  .servicio-premium-badge span {
+    @apply font-semibold tracking-widest;
+    color: var(--color-acento);
+  }
+
+  .servicio-premium-titulo {
+    @apply text-4xl md:text-5xl font-bold mb-4 tracking-wider;
+    color: var(--color-texto-brillo);
+  }
+
+  .servicio-premium-subtitulo {
+    @apply text-xl max-w-2xl mx-auto tracking-wider;
+    color: var(--color-texto);
+  }
+
+  /* Grid */
+  .servicio-premium-grid {
+    @apply grid lg:grid-cols-2 gap-12 items-start;
+  }
+
+  /* Columna izquierda */
+  .servicio-premium-col-izq {
+    @apply w-full;
+  }
+
+  .servicio-premium-card {
+    @apply rounded-2xl p-8 md:p-10;
+    background: linear-gradient(135deg, rgba(var(--color-acento-rgb), 0.2) 0%, rgba(var(--color-acento-rgb), 0.05) 100%);
+    border: 1px solid rgba(var(--color-acento-rgb), 0.3);
+  }
+
+  .servicio-premium-card-header {
+    @apply flex items-center gap-3 mb-6;
+  }
+
+  .servicio-premium-sparkles {
+    @apply w-8 h-8;
+    color: var(--color-acento);
+  }
+
+  .servicio-premium-card-header h3 {
+    @apply text-2xl font-bold;
+    color: var(--color-texto-brillo);
+  }
+
+  .servicio-premium-lista {
+    @apply space-y-4;
+  }
+
+  .servicio-premium-lista li {
+    @apply flex items-start gap-3 text-lg;
+  }
+
+  .servicio-premium-check {
+    @apply w-5 h-5 shrink-0 mt-0.5;
+    color: var(--color-acento);
+  }
+
+  .servicio-premium-lista li span {
+    color: var(--color-texto);
+  }
+
+  .servicio-premium-info {
+    @apply mt-8 p-6 rounded-xl;
+    background-color: rgba(var(--color-fondo-rgb), 0.5);
+    border: 1px solid var(--color-borde);
+  }
+
+  .servicio-premium-info-item {
+    @apply flex items-center justify-between;
+  }
+
+  .servicio-premium-info-item:first-child {
+    @apply mb-2 pb-2 border-b;
+    border-color: var(--color-borde);
+  }
+
+  .servicio-premium-info-label {
+    color: var(--color-texto);
+  }
+
+  .servicio-premium-info-valor {
+    @apply font-semibold;
+    color: var(--color-texto-brillo);
+  }
+
+  .servicio-premium-info-valor-destacado {
+    @apply font-semibold;
+    color: var(--color-acento);
+  }
+
+  /* Columna derecha */
+  .servicio-premium-col-der {
+    @apply space-y-6;
+  }
+
+  .servicio-premium-porque {
+    @apply rounded-xl p-8 text-lg;
+    background-color: var(--color-secundario);
+    border: 1px solid rgba(var(--borde-rgb), 0.4);
+  }
+
+  .servicio-premium-porque h3 {
+    @apply text-2xl font-bold mb-4;
+    color: var(--color-texto-brillo);
+  }
+
+  .servicio-premium-porque-textos {
+    @apply space-y-5 ;
+    color: var(--color-texto);
+  }
+
+  .servicio-premium-consulta {
+    @apply rounded-xl p-8;
+    background: linear-gradient(135deg, var(--color-acento) 0%, rgba(var(--color-acento-rgb), 0.8) 100%);
+  }
+
+  .servicio-premium-consulta h4 {
+    @apply text-xl font-bold mb-3;
+    color: var(--color-texto);
+  }
+
+  .servicio-premium-consulta p {
+    @apply mb-6 text-lg;
+    color: var(--color-texto);
+    opacity: 0.9;
+  }
+
+  .servicio-premium-boton {
+    @apply inline-block px-6 py-3 rounded-lg font-semibold transition-colors;
+    background-color: var(--color-primario);
+    color: var(--color-texto-brillo);
+  }
+
+  .servicio-premium-boton:hover {
+    background-color: var(--color-primario);
+    opacity: 0.9;
+  }
+}
