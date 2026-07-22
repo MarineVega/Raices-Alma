@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { 
   BrowserRouter as Router, 
   Routes, 
@@ -15,6 +15,7 @@ import Rituales from './components/Rituales';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import BotonSubir from './components/BotonSubir';
+import RitualDetalle from './components/RitualDetalle';
 
 
 // import ScrollTop from "./components/ScrollTop";
@@ -41,18 +42,35 @@ function AppContent() {
 
   const location = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect (() => {
     if (location.pathname === "/") {
       const section = localStorage.getItem("scrollto");
 
       if (section) {
         const element = document.getElementById(section);
-
+/*
         if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: "smooth" });
-          }, 100);
+          //setTimeout(() => {
+            element.scrollIntoView({ 
+              // behavior: "smooth" 
+              behavior: "auto",
+              block: "start",
+            });
+          //}, 100);
         }
+*/
+      if (element) {
+        document.documentElement.style.visibility = "hidden";
+
+        requestAnimationFrame(() => {
+          element.scrollIntoView({
+            behavior: "auto",
+            block: "start",
+          });
+
+          document.documentElement.style.visibility = "visible";
+        });
+      }
 
         localStorage.removeItem("scrollto");
       }
@@ -101,9 +119,10 @@ function AppContent() {
             }
           />
 
-          {/* Ruta Dinámica para los servicios */}
-          {/* El :id permite que la misma página sirva para varios servicios. */}
-          {/* <Route path="/servicio/:id" element={<DetalleServicio />} />           */}
+          {/* Ruta Dinámica para los rituales */}
+          {/* El :id permite que la misma página sirva para varios rituales. */}
+          <Route path="/ritual/:id" element={<RitualDetalle />} />           
+
         </Routes>
 
         <Footer />

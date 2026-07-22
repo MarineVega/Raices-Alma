@@ -6,20 +6,19 @@
       var(--color-primario-claro) 10%,
       var(--color-primario) 50%
     );
-    /* background-color: var(--color-fondo); */
   }
 
   .rituales-contenedor {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto;
   }
 
-  /* Header */
+  /* Header - IGUAL QUE TERAPIAS */
   .rituales-header {
     @apply text-center mb-16;
   }
 
   .rituales-badge {
-    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4;
+    @apply inline-flex items-center gap-3 rounded-full px-4 py-2 mb-4;
     background-color: rgba(var(--color-acento-rgb), 0.1);
     border: 1px solid rgba(var(--color-acento-rgb), 0.3);
   }
@@ -35,46 +34,131 @@
   }
 
   .rituales-titulo {
-    @apply text-4xl md:text-5xl font-bold mb-4 tracking-wider;
+    @apply text-4xl md:text-5xl font-bold tracking-wider;
     color: var(--color-secundario);
   }
 
-  .rituales-subtitulo {    
+  .rituales-subtitulo {
     @apply text-xl mt-4 max-w-2xl mx-auto tracking-widest;
     color: var(--color-texto);
   }
 
-  /* Grid */
-  .rituales-grid {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  /* ======================================== */
+  /* CARRUSEL - IGUAL QUE VIDEOS */
+  /* ======================================== */
+  
+  .rituales-carrusel-wrapper {
+    @apply relative px-4 md:px-12;
   }
 
-  /* Card */
-  .rituales-card {
-    /* @apply relative rounded-2xl p-8 transition-all;
-    background-color: var(--color-secundario);
-    border: 1px solid var(--color-borde); */
-    @apply p-6 rounded-2xl transition-all duration-300 hover:-translate-y-2;
+  /* Controles de navegación */
+  /* .rituales-controles {
+    @apply hidden md:flex absolute -left-2 top-1/2 -translate-y-1/2 z-10 w-full justify-between pointer-events-none;
+    padding: 0 -12px;
+  } */
+
+  .rituales-controles {
+    @apply hidden md:block absolute inset-0 pointer-events-none;
+  }
+  .rituales-prev,
+  .rituales-next {
+    @apply pointer-events-auto w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
+    background-color: rgba(var(--color-secundario-rgb), 0.9);
+    color: var(--color-texto-brillo);
+    border: 2px solid rgba(var(--color-acento-rgb), 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .rituales-prev {
+    @apply absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto ;
+    @apply -left-4;
+  }
+
+  .rituales-next {
+    @apply absolute right-0 top-1/2 -translate-y-1/2 pointer-events-auto;
+    @apply -right-4
+  }
+  .rituales-prev:hover,
+  .rituales-next:hover {
+    background-color: var(--color-acento);
+    transform: scale(1.1);
+    border-color: var(--color-acento);
+  }
+
+  .rituales-prev {
+    @apply -ml-2;
+  }
+
+  .rituales-next {
+    @apply -mr-2;
+  }
+
+  /* Swiper */
+  .rituales-swiper {
+    @apply py-6 px-2 overflow-visible;
+  }
+
+  .rituales-swiper .swiper-pagination {
+    @apply relative mt-8;
+  }
+
+  .rituales-swiper .swiper-pagination-bullet {
+    @apply w-3 h-3;
+    background-color: rgba(var(--color-acento-rgb), 0.4);
+    opacity: 1;
+  }
+
+  .rituales-swiper .swiper-pagination-bullet-active {
+    background-color: var(--color-acento);
+  }
+  .rituales-swiper .swiper-wrapper {
+    @apply overflow-visible;
+  }
+
+  .rituales-swiper .swiper-slide {
+    @apply overflow-visible py-3;
+  }
+
+  /* ======================================== */
+  /* TARJETAS - IGUAL QUE TERAPIAS */
+  /* ======================================== */
+
+  .rituales-card {    
+    @apply p-6 rounded-2xl transition-all duration-300 hover:-translate-y-2 overflow-visible;
     background-color: var(--color-primario-claro);
     border: 1px solid rgba(var(--color-primario-rgb), 0.8);
+    position: relative;    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-
   .rituales-card:hover {
+    @apply z-10;
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
     border-color: var(--color-acento);
   }
 
-  /* Header del card */
+  /* Badge destacado */
+  .rituales-badge-popular {
+    @apply absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold tracking-wider z-10;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    animation: pulse-badge 2s infinite;
+  }
+
+  @keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Header de la tarjeta - IGUAL QUE TERAPIAS */
   .rituales-card-header {
-    @apply flex items-start gap-3 mb-6;
-    color: var(--color-secundario);
+    @apply flex items-center gap-3 mb-4;
   }
 
   .rituales-icono-wrapper {
-    /* @apply p-3 rounded-xl;
-    background-color: rgba(var(--color-acento-rgb), 0.2); */
-    @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+    @apply w-12 h-12 rounded-xl flex items-center justify-center shrink-0;
     background-color: rgba(var(--color-acento-rgb), 0.7);
   }
 
@@ -84,77 +168,140 @@
   }
 
   .rituales-card-titulo {
-    /* @apply text-2xl font-bold;
-    color: var(--color-texto-brillo);    */
-    
-    @apply text-2xl font-bold tracking-wider;
+    @apply text-xl font-bold tracking-wider;
     color: var(--color-secundario);
   }
 
   .rituales-card-tagline {
-    @apply text-sm tracking-wider;
+    @apply text-sm tracking-wider block;
     color: var(--color-texto);
   }
 
-  .rituales-card-descripcion {    
+  .rituales-card-descripcion {
     @apply text-lg leading-relaxed mb-4 pb-4 text-center;
     color: var(--color-texto-oscuro);
     border-bottom: 2px solid rgba(var(--color-acento-rgb), 1);
+    flex: 1;
   }
 
-  /* Pasos */
-  .rituales-pasos {
-    @apply space-y-3 mb-8;
+  /* Info rápida */
+  .rituales-card-info {
+    @apply flex gap-4 my-3;
   }
 
-  .rituales-pasos-titulo {
-    @apply font-bold flex items-center gap-2 text-lg;
-    color: var(--color-secundario);
+  .rituales-card-info-item {
+    @apply flex items-center gap-2 text-sm;
+    color: var(--color-texto-oscuro);
   }
 
-  .rituales-pasos-icono {
-    @apply w-5 h-5;
-    color: var(--color-secundario);
-  }
-
-  .rituales-pasos-lista {
-    @apply space-y-2;
-  }
-  
-  .rituales-pasos-lista li {
-    /* @apply flex items-start gap-3; */
-    @apply flex items-start gap-2 text-lg;
-    /* color: var(--color-texto); */
-    color: var(--color-secundario);
-  }
-
-  .rituales-pasos-bullet {
-    @apply w-1.5 h-1.5 rounded-full shrink-0 mt-2;
+  /* Botón Ver más */
+  .rituales-boton-ver-mas {
+    @apply w-full flex items-center justify-center gap-2 py-3 rounded-lg font-semibold transition-all tracking-wider mt-3;
     background-color: var(--color-secundario);
-  }
-
-  /* Botón */
-  .rituales-boton {
-    @apply block w-full text-center py-3 rounded-lg font-semibold transition-all tracking-wider;
-    background-color: rgba(var(--color-acento-rgb), 0.1);
-    color: var(--color-acento);
-    border: 1px solid rgba(var(--color-acento-rgb), 0.3);
-  }
-
-  .rituales-boton:hover {
-    background-color: rgba(var(--color-acento-rgb), 0.2);
+    color: var(--color-texto-brillo);
+    border: none;
     cursor: pointer;
   }
 
-  .rituales-boton.destacado {
-    background-color: var(--color-acento);
-    color: var(--color-texto);
-    border: none;
+  .rituales-boton-ver-mas:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
   }
 
-  .rituales-boton.destacado:hover {
-    background-color: var(--color-acento);
-    opacity: 0.9;
+  /* ======================================== */
+  /* RESPONSIVE */
+  /* ======================================== */
+
+  @media (max-width: 768px) {
+    .rituales {
+      @apply py-12 px-4;
+    }
+
+    .rituales-titulo {
+      @apply text-3xl;
+    }
+
+    .rituales-subtitulo {
+      @apply text-lg;
+    }
+
+    .rituales-card {
+      @apply p-4;
+    }
+
+    .rituales-card-titulo {
+      @apply text-lg;
+    }
+
+    .rituales-card-descripcion {
+      @apply text-base;
+    }
+
+    .rituales-carrusel-wrapper {
+      @apply px-0;
+    }
+
+    .rituales-controles {
+      @apply hidden;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rituales {
+      @apply py-8 px-3;
+    }
+
+    .rituales-header {
+      @apply mb-8;
+    }
+
+    .rituales-badge {
+      @apply px-3 py-1 text-sm;
+    }
+
+    .rituales-titulo {
+      @apply text-2xl;
+    }
+
+    .rituales-subtitulo {
+      @apply text-base;
+    }
+
+    .rituales-card {
+      @apply p-3;
+    }
+
+    .rituales-card-header {
+      @apply gap-2;
+    }
+
+    .rituales-icono-wrapper {
+      @apply w-10 h-10;
+    }
+
+    .rituales-icono {
+      @apply w-5 h-5;
+    }
+
+    .rituales-card-titulo {
+      @apply text-base;
+    }
+
+    .rituales-card-descripcion {
+      @apply text-sm mb-3 pb-3;
+    }
+
+    .rituales-card-info {
+      @apply gap-2 text-xs;
+    }
+
+    .rituales-boton-ver-mas {
+      @apply py-2 text-sm;
+    }
+
+    .rituales-badge-popular {
+      @apply top-2 right-2 px-2 py-0.5 text-xs;
+    }
   }
 
 }

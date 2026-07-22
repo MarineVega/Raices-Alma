@@ -1,0 +1,218 @@
+@layer components { 
+  .ritual-detalle-container {
+    /* @apply min-h-screen py-20 px-6 lg:px-16; */
+    @apply py-20 px-6 lg:px-16;
+    background: radial-gradient(
+      circle at center,
+      var(--color-primario-claro) 0%,
+      var(--color-primario) 100%
+    );
+  }
+
+  .ritual-detalle-contenido {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Botón volver */
+  .ritual-detalle-volver {
+    @apply text-lg font-bold inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-lg transition-all;
+    color: var(--color-secundario);
+    /* background-color: rgba(var(--color-secundario-rgb), 0.1); */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .ritual-detalle-volver:hover {
+    /* background-color: rgba(var(--color-secundario-rgb), 0.2); */
+    transform: translateX(-4px);
+  }
+
+  /* Header */
+  .ritual-detalle-header {
+    @apply text-center mb-12;
+  }
+
+  .ritual-detalle-icono-container {
+    @apply w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6;
+    background-color: rgba(var(--color-acento-rgb), 0.15);
+  }
+
+  .ritual-detalle-icono-grande {
+    @apply w-10 h-10;
+    color: var(--color-acento);
+  }
+
+  .ritual-detalle-titulo {
+    @apply text-4xl md:text-5xl font-bold mb-2;
+    color: var(--color-secundario);
+  }
+
+  .ritual-detalle-subtitulo {
+    @apply text-xl mb-4;
+    color: var(--color-texto);
+  }
+
+  /* Galería */
+  .ritual-detalle-galería {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-12;
+  }
+
+  .ritual-detalle-imagen {
+    @apply rounded-2xl w-full h-64 object-cover;
+    border: 2px solid rgba(var(--color-acento-rgb), 0.1);
+  }
+
+  /* Grid información */
+  .ritual-detalle-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 mb-8;
+  }
+
+  .ritual-detalle-card {
+    @apply p-6 rounded-2xl;
+    background-color: rgba(var(--color-secundario-rgb), 0.05);
+    border: 1px solid rgba(var(--color-secundario-rgb), 0.1);
+  }
+
+  .ritual-detalle-card-titulo {
+    @apply flex items-center gap-2 text-xl font-bold mb-4;
+    color: var(--color-secundario);
+  }
+
+  /* Beneficios */
+  .ritual-detalle-beneficios-lista {
+    @apply space-y-2;
+  }
+
+  .ritual-detalle-beneficios-lista li {
+    @apply flex items-start gap-2;
+    color: var(--color-texto);
+  }
+
+  .ritual-detalle-beneficio-bullet {
+    @apply text-lg;
+    color: var(--color-acento);
+  }
+
+  /* Materiales */
+  .ritual-detalle-materiales {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .ritual-detalle-material-tag {
+    @apply px-4 py-2 rounded-full text-base;
+    background-color: rgba(var(--color-acento-rgb), 0.2);
+    color: var(--color-acento-brillo);
+    border: 1px solid rgba(var(--color-acento-rgb), 0.6);
+  }
+
+  /* Pasos */
+  .ritual-detalle-pasos {
+    @apply space-y-4;
+  }
+
+  .ritual-detalle-paso {
+    @apply flex gap-4 items-start;
+  }
+
+  .ritual-detalle-paso-numero {
+    @apply w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0;
+    background-color: var(--color-acento);
+    color: white;
+  }
+
+  .ritual-detalle-paso p {
+    @apply text-base leading-relaxed;
+    color: var(--color-texto);
+  }
+
+  /* CTA */
+  .ritual-detalle-cta {
+    @apply mt-12 text-center;
+  }
+
+  .ritual-detalle-boton-whatsapp {
+    @apply inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold transition-all;
+    background-color: var(--color-acento-brillo);
+    color: var(--color-texto);
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .ritual-detalle-boton-whatsapp:hover {
+      @apply scale-105 opacity-90;
+      box-shadow: 0 4px 15px rgba(var(--color-acento-rgb), 0.4); 
+  }
+
+  .ritual-detalle-cta-texto {
+    @apply mt-4 text-base;
+    color: var(--color-texto-oscuro);
+  }
+
+  /* Error */
+  .ritual-detalle-error {
+    @apply min-h-screen flex items-center justify-center;
+    background: radial-gradient(
+      circle at center,
+      var(--color-primario-claro) 0%,
+      var(--color-primario) 100%
+    );
+  }
+
+  /* ======================================== */
+  /* RESPONSIVE */
+  /* ======================================== */
+
+  @media (max-width: 768px) {
+    .ritual-detalle-container {
+      @apply py-12 px-4;
+    }
+
+    .ritual-detalle-titulo {
+      @apply text-3xl;
+    }
+
+    .ritual-detalle-galería {
+      @apply grid-cols-1;
+    }
+
+    .ritual-detalle-imagen {
+      @apply h-48;
+    }
+
+    .ritual-detalle-grid {
+      @apply grid-cols-1;
+    }
+
+    .ritual-detalle-card {
+      @apply p-4;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ritual-detalle-container {
+      @apply py-8 px-3;
+    }
+
+    .ritual-detalle-titulo {
+      @apply text-2xl;
+    }
+
+    .ritual-detalle-icono-container {
+      @apply w-16 h-16;
+    }
+
+    .ritual-detalle-icono-grande {
+      @apply w-8 h-8;
+    }
+
+    .ritual-detalle-imagen {
+      @apply h-40;
+    }
+
+    .ritual-detalle-boton-whatsapp {
+      @apply w-full justify-center px-4 py-3 text-sm;
+    }
+  }
+}

@@ -1,25 +1,32 @@
 import { rituales } from "../data/rituales";
-import { CheckCircle2, Gem, Sparkle } from "lucide-react";
-import { useState } from "react";
-import { generarLinkWhatsApp } from "../utils/whatsapp";
+import { Sparkle, Clock, Package, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";  // Autoplay -> el carrusel se mueve automáticamente
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Rituales({ onSeleccionarRitual }) {
-  
-  // Cuando se clickea "Solicitar", guardo el ritual
+  const navigate = useNavigate();
+
   const handleSolicitar = (titulo) => {
-    onSeleccionarRitual(titulo);   // Llamo a la función que viene de App.jsx
-
-    // Abre WhatsApp directamente
-    const url = generarLinkWhatsApp("ritual", titulo);
-    window.open(url, "_blank");
-
-    // Scroll a contacto
-    //document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+    onSeleccionarRitual(titulo);
   };
+
+  const handleVerDetalle = (ritualId, titulo) => {
+    handleSolicitar(titulo);
+    
+    navigate(`/ritual/${ritualId}`);
+  };
+
 
   return (
     <section id="rituales" className="rituales">
       <div className="rituales-contenedor">
+        {/* Header con badge */}
         <div className="rituales-header">
           <div className="rituales-badge">
             <Sparkle className="rituales-badge-icon" />
@@ -31,60 +38,91 @@ export default function Rituales({ onSeleccionarRitual }) {
           </p>
         </div>
 
-        <div className="rituales-grid">
-          {Object.values(rituales).map((pkg, index) => {
-            const Icono = pkg.icono;
-            return (
-              <div
-                key={index}
-                // className={`ritual-card ${pkg.destacado ? "destacado" : ""}`}
-                className= "rituales-card"
-              >
-{/*                 
-                {pkg.destacado && (
-                  <div className="rituales-badge-popular">
-                    <div className="rituales-badge-popular-inner">MÁS UTILIZADO</div>
+        {/* Carrusel */}
+        <div className="rituales-carrusel-wrapper">
+          {/* Controles de navegación */}
+          <div className="rituales-controles">
+            <button className="rituales-prev">
+              <ChevronLeft size={24} />
+            </button>
+            <button className="rituales-next">
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination]}      // Autoplay
+            spaceBetween={24}
+            slidesPerView={1}
+            // 👇 PROPERTY PARA QUE SEA INFINITO
+            loop={true}
+            navigation={{
+              prevEl: ".rituales-prev",
+              nextEl: ".rituales-next",
+            }}
+            pagination={{ 
+              clickable: true,
+              dynamicBullets: true 
+            }}
+           /* autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true, // 👈 Pausa al pasar el mouse
+            }}*/
+            breakpoints={{
+              640: { slidesPerView: 1.5 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 3 },
+            }}
+            className="rituales-swiper"
+          >
+            {Object.values(rituales).map((ritual) => {
+              const Icono = ritual.icono;
+              return (
+                <SwiperSlide key={ritual.id}>
+                  <div className="rituales-card">                    
+                    <div className="rituales-card-header">
+                      <div className="rituales-icono-wrapper">
+                        <Icono className="rituales-icono" />
+                      </div>
+                      <div>
+                        <h3 className="rituales-card-titulo">{ritual.titulo}</h3>
+                        <span className="rituales-card-tagline">{ritual.subtitulo}</span>
+                      </div>
+                    </div>
+
+                    <p className="rituales-card-descripcion">{ritual.descripcion}</p>
+
+                    <div className="rituales-card-info">
+                      {ritual.tiempo && (
+                        <div className="rituales-card-info-item">
+                          <Clock className="w-4 h-4" />
+                          <span>{ritual.tiempo}</span>
+                        </div>
+                      )}
+                      {ritual.materiales && (
+                        <div className="rituales-card-info-item">
+                          <Package className="w-4 h-4" />
+                          <span>{ritual.materiales.length} materiales</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <button                       
+                      onClick={() => handleVerDetalle(ritual.id, ritual.titulo)}
+                      className="rituales-boton-ver-mas"
+                    >
+                      <span>Ver ritual completo</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
-                )} */}
-
-                <div className="rituales-card-header">
-                  {/* <div className={`rituales-icono-wrapper ${pkg.destacado ? "destacado" : ""}`}> */}
-                  <div className= "rituales-icono-wrapper">
-                    <Icono className="rituales-icono" />
-                  </div>
-                  <div>
-                    <h3 className="rituales-card-titulo">{pkg.titulo}</h3>
-                    <span className="rituales-card-tagline">{pkg.subtitulo}</span>
-                  </div>
-                </div>
-
-                <p className="rituales-card-descripcion">{pkg.descripcion}</p>
-
-                <div className="rituales-pasos">
-                  <h4 className="rituales-pasos-titulo">
-                    <CheckCircle2 className="rituales-pasos-icono" />
-                    Paso a paso:
-                  </h4>
-                  <ul className="rituales-pasos-lista">
-                    {pkg.items.map((item, idx) => (
-                      <li key={idx}>
-                        <div className="rituales-pasos-bullet"></div>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-               
-              </div>
-            );
-          })}
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
-
-     
-
       </div>
-     
     </section>
   );
 }

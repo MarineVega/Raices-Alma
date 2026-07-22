@@ -88,6 +88,8 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
             >
               Rituales
             </Link>
+
+            {/* <Link to="/#rituales" className="nav-link">Rituales</Link> */}
           </li>
 
           <li>
@@ -234,6 +236,7 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
             >
               Rituales
             </Link>
+            {/* <Link to="/#rituales" className="nav-link">Rituales</Link> */}
           </li>
 
           <li>

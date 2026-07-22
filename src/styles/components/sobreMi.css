@@ -14,21 +14,36 @@
   }
 
   /* IMAGEN DE LA TERAPEUTA */
-  .sobreMi-imagen {
+  /* .sobreMi-imagen {
     @apply relative flex justify-center;
   }
 
   .sobreMi-imagen img {
     @apply w-full max-w-md object-contain;
     /* Efecto opcional: marco sutil */
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     /* Sombra suave para destacar */
-    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
-    max-width: 360px;
+    /* filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1)); */
+    /* max-width: 360px;
     transform: rotate(-1.5deg);
-  }
+  } */
+ 
 
+  .sobreMi-imagen {
+  @apply relative flex justify-center;
+  /* Que la imagen invada un poco el espacio del texto */
+  margin-right: -3rem;
+  z-index: 10;
+}
 
+.sobreMi-imagen img {
+  @apply w-full object-contain;
+  max-width: 450px; /* Más grande, de 360px a 450px */
+  border-radius: 2rem;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+  transform: rotate(-1.5deg);
+}
+/* 
 .sobreMi-imagen::after {
     content: "";
     position: absolute;
@@ -41,6 +56,20 @@
             var(--color-primario-claro) 100%);
 
     pointer-events: none;
+} */
+
+.sobreMi-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Difuminado solo del lado derecho (hacia el texto) */
+  background: linear-gradient(
+    to right,
+    transparent 60%,
+    var(--color-primario-claro) 100%
+  );
+  pointer-events: none;
+  border-radius: 2rem; /* Mismo radio que la imagen */
 }
 
 /*
@@ -132,10 +161,18 @@
     .sobreMi {
       @apply py-16;
     }
-
+/* 
     .sobreMi-contenedor {
       @apply grid-cols-1 gap-8;
-    }
+    } */
+
+    .sobreMi-contenedor {
+  @apply relative z-10 w-full mx-auto px-6 lg:px-16 max-w-7xl;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Mitad y mitad */
+  align-items: center;
+  gap: 2rem; /* Menos gap para que se superpongan */
+}
 
     .sobreMi-imagen {
       @apply order-1 max-w-xs mx-auto;
@@ -144,10 +181,25 @@
     .sobreMi-imagen img {
       @apply max-w-62.5;
     }
-
+/* 
     .sobreMi-texto {
       @apply order-2 text-center;
-    }
+    } */
+
+    .sobreMi-texto {
+  @apply flex flex-col relative;
+  z-index: 5;
+  /* Fondo sutil para legibilidad sobre la imagen */
+  background: linear-gradient(
+    to right,
+    var(--color-primario-claro) 0%,
+    rgba(248, 245, 252, 0.7) 100%
+  );
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-left: -2rem; /* Que el texto también invada el espacio de la imagen */
+}
+
 
     .sobreMi-titulo {
       @apply text-3xl;
