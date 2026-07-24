@@ -125,7 +125,15 @@ function VideoCard({ video, color }) {
       {/* Info del video */}
       <div className="video-info">
         <h3 className="video-titulo">{video.titulo}</h3>
-        <p className="video-descripcion">{video.descripcion}</p>
+        {/* <p className="video-descripcion">{video.descripcion}</p> */}
+        <div className="video-descripcion">
+          {Array.isArray(video.descripcion)
+            ? video.descripcion.map((texto, index) => (
+                <p key={index}>{texto}</p>
+              ))
+            : <p>{video.descripcion}</p>}
+        </div>
+
         
         <div className="video-fecha">
           <Calendar size={16} />

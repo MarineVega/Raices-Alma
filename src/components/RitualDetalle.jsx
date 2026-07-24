@@ -133,11 +133,24 @@ export default function RitualDetalle() {
             <Clock className="w-5 h-5" />
             Paso a Paso
           </h3>
+
           <div className="ritual-detalle-pasos">
             {ritual.items.map((item, idx) => (
               <div key={idx} className="ritual-detalle-paso">
                 <span className="ritual-detalle-paso-numero">{idx + 1}</span>
-                <p>{item}</p>
+                 <div>
+                    <h4 className="ritual-detalle-paso-titulo">
+                      {item.titulo}
+                    </h4>
+
+                    <ul className="ritual-detalle-paso-lista">
+                      {item.descripciones.map((descripcion, i) => (
+                        <li key={i}>
+                          {descripcion}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>                  
               </div>
             ))}
           </div>

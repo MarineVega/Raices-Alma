@@ -34,7 +34,8 @@ export default function Rituales({ onSeleccionarRitual }) {
           </div>
           <h2 className="rituales-titulo">Rituales Sagrados</h2>
           <p className="rituales-subtitulo">
-            Ceremonias para conectar con tu esencia y elevar tu energía
+            {/* Ceremonias para conectar con tu esencia y elevar tu energía */}
+            Los rituales no cambian tu destino; transforman tu manera de caminar hacia él. Cuando la mente comprende, el cuerpo acompaña y el alma guía, la verdadera transformación comienza.
           </p>
         </div>
 
