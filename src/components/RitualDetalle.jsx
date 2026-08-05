@@ -68,9 +68,19 @@ export default function RitualDetalle() {
           </div>
           <h1 className="ritual-detalle-titulo">{ritual.titulo}</h1>
           <p className="ritual-detalle-subtitulo">{ritual.subtitulo}</p>
+
+          <div className="ritual-detalle-galería">            
+            <img                 
+              src={ritual.images} 
+              alt={`${ritual.titulo}`}
+              className="ritual-detalle-imagen"
+            />            
+          </div>
+
         </div>
 
         {/* Imágenes - Galería */}
+{/*         
         {ritual.images && ritual.images.length > 0 && (
           <div className="ritual-detalle-galería">
             {ritual.images.map((img, idx) => (
@@ -82,7 +92,7 @@ export default function RitualDetalle() {
               />
             ))}
           </div>
-        )}
+        )} */}
 
         {/* Grid de información */}
         <div className="ritual-detalle-grid">

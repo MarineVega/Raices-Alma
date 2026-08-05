@@ -16,8 +16,7 @@
   /* Botón volver */
   .ritual-detalle-volver {
     @apply text-lg font-bold inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-lg transition-all;
-    color: var(--color-secundario);
-    /* background-color: rgba(var(--color-secundario-rgb), 0.1); */
+    color: var(--color-texto);
     border: none;
     cursor: pointer;
     text-decoration: none;
@@ -216,3 +215,4 @@
     }
   }
 }
+

@@ -27,18 +27,18 @@ export const rituales = {
         beneficios_titulo: "¿Para qué sirve?" ,
         beneficios_subtitulo: "Este ritual puede ayudarte a:" ,
         beneficios: [
-            "✨ Iniciar nuevos proyectos.",
-            "✨ Abrirte a nuevas oportunidades.",
-            "✨ Fortalecer la confianza en vos mismo.",
-            "✨ Dejar atrás pensamientos limitantes.",
-            "✨ Manifestar objetivos desde la consciencia.",
-            "✨ Conectar con tu propósito.",
-            "✨ Recuperar esperanza y motivación."
+            "Iniciar nuevos proyectos.",
+            "Abrirte a nuevas oportunidades.",
+            "Fortalecer la confianza en vos mismo.",
+            "Dejar atrás pensamientos limitantes.",
+            "Manifestar objetivos desde la consciencia.",
+            "Conectar con tu propósito.",
+            "Recuperar esperanza y motivación."
         ],
         items_titulo: "Mente · Cuerpo · Alma",
         items : [
             {
-                titulo: "🧠 Mente",
+                titulo: "Mente",
                 descripciones: [
                     "Preguntate:",
                     "¿Qué deseo crear en esta nueva etapa de mi vida?",
@@ -47,7 +47,7 @@ export const rituales = {
                 ],
             },
             {
-                titulo: "🌿 Cuerpo",
+                titulo: "Cuerpo",
                 descripciones: [
                    "El cuerpo necesita participar del cambio.",
                    "",
@@ -57,7 +57,7 @@ export const rituales = {
                 ]
             },
             {
-                titulo: "✨ Alma",
+                titulo: "Alma",
                 descripciones: [
                     "La Luna Nueva nos recuerda que toda creación comienza siendo invisible.",
                     "Confiar en el proceso también forma parte de la manifestación.",
@@ -70,12 +70,12 @@ export const rituales = {
         preparacion_subtitulo: "Prepará un espacio tranquilo.",
         preparacion_items: [
             "Podés colocar:",            
-            "• Una vela blanca o violeta.",
-            "• Un cuenco con agua.",
-            "• Incienso o sahumo.",
-            "• Un cuarzo transparente o amatista (opcional).",
-            "• Un cuaderno o una hoja.",
-            "• Una lapicera.",
+            "Una vela blanca o violeta.",
+            "Un cuenco con agua.",
+            "Incienso o sahumo.",
+            "Un cuarzo transparente o amatista (opcional).",
+            "Un cuaderno o una hoja.",
+            "Una lapicera.",
             "",
             "Si lo deseás, podés acompañar el momento con música suave.",
             "",
@@ -140,7 +140,7 @@ export const rituales = {
             'Mi mente crea, mi cuerpo sostiene y mi alma guía el camino.',
             'Así es. Así será."'
         ],
-        reflexion_titulo: "💜 Reflexión",
+        reflexion_titulo: "Reflexión",
         reflexion_items: [
             'Cada Luna Nueva nos recuerda que siempre existe la posibilidad de comenzar otra vez.',
             'No importa cuántas veces hayas sentido que te alejaste de tu camino. La transformación empieza en el instante en que elegís mirar hacia adentro y sembrar una nueva intención.',
@@ -179,18 +179,18 @@ export const rituales = {
         beneficios_titulo: "¿Para qué sirve?" ,
         beneficios_subtitulo: "Este ritual puede ayudarte a:" ,
         beneficios: [
-            '✨ Liberar creencias de escasez.',
-            '✨ Trabajar el merecimiento.',
-            '✨ Abrirte a nuevas oportunidades laborales.',
-            '✨ Mejorar tu relación con el dinero.',
-            '✨ Agradecer lo que ya existe en tu vida.',
-            '✨ Manifestar prosperidad desde la consciencia.',
-            '✨ Conectar con la confianza y la gratitud.'
+            'Liberar creencias de escasez.',
+            'Trabajar el merecimiento.',
+            'Abrirte a nuevas oportunidades laborales.',
+            'Mejorar tu relación con el dinero.',
+            'Agradecer lo que ya existe en tu vida.',
+            'Manifestar prosperidad desde la consciencia.',
+            'Conectar con la confianza y la gratitud.'
         ],
         items_titulo: "Mente · Cuerpo · Alma",
         items : [
             {
-                titulo: "🧠 Mente",
+                titulo: "Mente",
                 descripciones: [
                     "Preguntate:",
                     "¿Qué pienso realmente sobre el dinero y la abundancia?",
@@ -201,7 +201,7 @@ export const rituales = {
                 ],
             },
             {
-                titulo: "🌿 Cuerpo",
+                titulo: "Cuerpo",
                 descripciones: [
                    "El cuerpo necesita experimentar aquello que la mente desea cambiar.",
                    "",
@@ -211,7 +211,7 @@ export const rituales = {
                 ]
             },
             {
-                titulo: "✨ Alma",
+                titulo: "Alma",
                 descripciones: [
                     "La abundancia nace cuando comprendemos que somos parte de una vida que constantemente crea, nutre y sostiene.",
                     "Abrirnos a recibir no significa esperar pasivamente.",
@@ -223,14 +223,14 @@ export const rituales = {
         preparacion_subtitulo: "Buscá un lugar tranquilo donde puedas permanecer sin interrupciones.",
         preparacion_items: [
             "Podés preparar tu espacio con:",            
-            "• Una vela dorada, verde o blanca.",
-            "• Un cuenco con agua.",
-            "• Incienso o sahumo.",
-            "• Una moneda o un billete.",
-            "• Canela en polvo.",
-            "• Laurel.",
-            "• Un cuarzo citrino o pirita (opcional).",
-            "• Papel y lapicera.",
+            "Una vela dorada, verde o blanca.",
+            "Un cuenco con agua.",
+            "Incienso o sahumo.",
+            "Una moneda o un billete.",
+            "Canela en polvo.",
+            "Laurel.",
+            "Un cuarzo citrino o pirita (opcional).",
+            "Papel y lapicera.",
             "",
             "Antes de comenzar, respirás profundamente varias veces y disponete a vivir este momento con presencia y gratitud."
         ],
@@ -313,7 +313,7 @@ export const rituales = {
             'Hoy abro mis manos, mi corazón y mi camino para recibir con gratitud.',
             'Así es. Así será."'
         ],
-        reflexion_titulo: "💜 Reflexión",
+        reflexion_titulo: "Reflexión",
         reflexion_items: [
             'La abundancia no comienza cuando obtenemos más.',
             'Comienza cuando dejamos de sentir que somos menos.',
@@ -354,18 +354,18 @@ export const rituales = {
         beneficios_titulo: "¿Para qué sirve?" ,
         beneficios_subtitulo: "Este ritual puede ayudarte a:" ,
         beneficios: [
-            '✨ Comenzar el mes con claridad.',
-            '✨ Organizar tus prioridades desde la consciencia.',
-            '✨ Atraer nuevas oportunidades.',
-            '✨ Fortalecer la confianza en vos mismo.',
-            '✨ Liberar la energía del mes anterior.',
-            '✨ Conectar con tu propósito.',
-            '✨ Vivir cada día con mayor presencia.'
+            'Comenzar el mes con claridad.',
+            'Organizar tus prioridades desde la consciencia.',
+            'Atraer nuevas oportunidades.',
+            'Fortalecer la confianza en vos mismo.',
+            'Liberar la energía del mes anterior.',
+            'Conectar con tu propósito.',
+            'Vivir cada día con mayor presencia.'
         ],
         items_titulo: "Mente · Cuerpo · Alma",
         items : [
             {
-                titulo: "🧠 Mente",
+                titulo: "Mente",
                 descripciones: [
                     'Antes de comenzar preguntate:',
                     '¿Cómo quiero sentirme este mes?',
@@ -380,7 +380,7 @@ export const rituales = {
                 ],
             },
             {
-                titulo: "🌿 Cuerpo",
+                titulo: "Cuerpo",
                 descripciones: [
                    "El cuerpo también necesita reconocer que un nuevo ciclo comienza.",
                    "",
@@ -390,7 +390,7 @@ export const rituales = {
                 ]
             },
             {
-                titulo: "✨ Alma",
+                titulo: "Alma",
                 descripciones: [
                     "Cada comienzo trae consigo una energía de renovación.",
                     "El alma comprende que cada experiencia es una oportunidad para crecer.",
@@ -402,13 +402,13 @@ export const rituales = {
         preparacion_subtitulo: "Prepará un espacio tranquilo.",
         preparacion_items: [
             "Podés colocar:",            
-            "• Una vela blanca o dorada.",
-            "• Un vaso con agua.",
-            "• Incienso o sahumo.",
-            "• Una flor fresca.",
-            "• Un cuaderno.",
-            "• Una lapicera.",
-            "• Un cuarzo transparente o amatista (opcional).",
+            "Una vela blanca o dorada.",
+            "Un vaso con agua.",
+            "Incienso o sahumo.",
+            "Una flor fresca.",
+            "Un cuaderno.",
+            "Una lapicera.",
+            "Un cuarzo transparente o amatista (opcional).",
             "",
             "Respirá profundamente varias veces y disponete a vivir este momento con calma."
         ],
@@ -498,7 +498,7 @@ export const rituales = {
             'Hoy comienzo un nuevo ciclo lleno de posibilidades.',
             'Así es. Así será."'
         ],
-        reflexion_titulo: "💜 Reflexión",
+        reflexion_titulo: "Reflexión",
         reflexion_items: [
             'Los meses no cambian nuestra vida por sí solos.',
             'Lo que transforma nuestro camino es la decisión de vivir cada nuevo comienzo con presencia, gratitud y propósito.',
@@ -528,11 +528,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '🌑 Ritual de Luna Nueva',
-            '🌕 Ritual de Luna Llena',
-            '🌿 Ritual de Conexión con el Ser Interior',
-            '✨ Ritual de Gratitud Profunda',
-            '🙏 Ritual de Silencio y Escucha del Alma'
+            'Ritual de Luna Nueva',
+            'Ritual de Luna Llena',
+            'Ritual de Conexión con el Ser Interior',
+            'Ritual de Gratitud Profunda',
+            'Ritual de Silencio y Escucha del Alma'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -553,11 +553,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '🍂 Ritual para Soltar el Pasado',
-            '🔥 Ritual para Transmutar el Dolor',
-            '🕊 Ritual del Perdón',
-            '🌈 Ritual para Abrir Nuevos Caminos',
-            '🌱 Ritual de Renacimiento Personal'
+            'Ritual para Soltar el Pasado',
+            'Ritual para Transmutar el Dolor',
+            'Ritual del Perdón',
+            'Ritual para Abrir Nuevos Caminos',
+            'Ritual de Renacimiento Personal'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -578,11 +578,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '💰 Ritual de la Abundancia',
-            '❤️ Ritual del Amor Propio',
-            '🌟 Ritual para Manifestar Sueños',
-            '🌺 Ritual para Elevar la Autoestima',
-            '🌻 Ritual para Conectar con el Merecimiento'
+            'Ritual de la Abundancia',
+            'Ritual del Amor Propio',
+            'Ritual para Manifestar Sueños',
+            'Ritual para Elevar la Autoestima',
+            'Ritual para Conectar con el Merecimiento'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -603,11 +603,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '☀ Ritual para Comenzar el Día',
-            '🌙 Ritual para Cerrar el Día',
-            '🌬 Ritual de Respiración y Presencia',
-            '📖 Ritual de Escritura Consciente',
-            '🕯 Ritual Semanal de Limpieza Energética'
+            'tual para Comenzar el Día',
+            'tual para Cerrar el Día',
+            'tual de Respiración y Presencia',
+            'tual de Escritura Consciente',
+            'tual Semanal de Limpieza Energética'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -628,11 +628,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '🎂 Ritual de Cumpleaños',
-            '🏡 Ritual para un Nuevo Hogar',
-            '💍 Ritual para Bendecir una Relación',
-            '👶 Ritual para Nuevos Comienzos',
-            '🎓 Ritual para Iniciar un Proyecto'
+            'Ritual de Cumpleaños',
+            'Ritual para un Nuevo Hogar',
+            'Ritual para Bendecir una Relación',
+            'Ritual para Nuevos Comienzos',
+            'Ritual para Iniciar un Proyecto'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -653,11 +653,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '🌹 Ritual para Sanar el Linaje Femenino',
-            '🔥 Ritual para Sanar el Linaje Masculino',
-            '👶 Ritual para Abrazar al Niño Interior',
-            '🤲 Ritual para Honrar a los Ancestros',
-            '💜 Ritual para Cortar Lazos Energéticos'
+            'Ritual para Sanar el Linaje Femenino',
+            'Ritual para Sanar el Linaje Masculino',
+            'Ritual para Abrazar al Niño Interior',
+            'Ritual para Honrar a los Ancestros',
+            'Ritual para Cortar Lazos Energéticos'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -678,11 +678,11 @@ export const rituales = {
         importancia_titulo: "Incluye",
         importancia_subtitulo: "",
         importancia: [
-            '🌑 Ritual de Luna Nueva',
-            '🌕 Ritual de Luna Llena',
-            '💰 Ritual de la Abundancia',
-            '🌹 Ritual para Sanar el Linaje Femenino',
-            '🔥 Ritual para Sanar el Linaje Masculino'
+            'Ritual de Luna Nueva',
+            'Ritual de Luna Llena',
+            'Ritual de la Abundancia',
+            'Ritual para Sanar el Linaje Femenino',
+            'Ritual para Sanar el Linaje Masculino'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
