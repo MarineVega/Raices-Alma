@@ -118,6 +118,24 @@
     color: var(--color-texto-oscuro);
   }
 
+  .ritual-detalle-card-preparacion{
+    max-width: 720px;
+    margin: 0 auto 5rem;
+  }
+
+  .ritual-detalle-card-preparacion
+  .ritual-detalle-card-subtitulo{
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .ritual-detalle-card-preparacion
+  .ritual-detalle-card-descripcion{
+      max-width: 520px;
+      margin: 0 auto;
+  }
+
   .ritual-detalle-card-descripcion {
     @apply text-lg mb-1;    
     color: var(--color-texto);
@@ -202,12 +220,17 @@
   .ritual-detalle-paso-numero {
     @apply w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0;
     background-color: var(--color-acento);
-    color: white;
+    color: var(--color-texto);
   }
 
-  .ritual-detalle-paso p {
+  .ritual-detalle-paso-titulo {
+    @apply text-xl;
+    color: var(--color-acento-brillo);
+  }
+
+  .ritual-detalle-paso li {
     @apply text-base leading-relaxed;
-    color: var(--color-texto);
+    color: var(--color-texto);    
   }
 
   /* CTA */

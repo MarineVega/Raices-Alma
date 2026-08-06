@@ -172,15 +172,18 @@ export default function RitualDetalle() {
         
 
         {/* Materiales */}
-        <div className="ritual-detalle-card">
-          <h3 className="ritual-detalle-card-titulo">
-            <HouseHeart className="w-5 h-5" />
-            <p>{ritual.preparacion_titulo}</p>
-          </h3>
-          <h4 className="ritual-detalle-card-subtitulo">              
-            <p>{ritual.preparacion_subtitulo}</p>              
-          </h4>
+        <h2 className="ritual-detalle-seccion-titulo">
+          {ritual.preparacion_titulo}
+        </h2>
 
+        
+
+        <div className="ritual-detalle-card ritual-detalle-card-preparacion">
+
+          <h4 className="ritual-detalle-card-subtitulo">              
+            {ritual.preparacion_subtitulo}
+          </h4>
+        
           <ul className="ritual-detalle-card-descripcion">
             {ritual.preparacion_items?.map((item, idx) => 
               item === null ? (
@@ -195,13 +198,7 @@ export default function RitualDetalle() {
               )
             )}
           </ul>
-          {/* <div className="ritual-detalle-materiales">
-            {ritual.materiales?.map((material, idx) => (
-              <span key={idx} className="ritual-detalle-material-tag">
-                {material}
-              </span>
-            ))}
-          </div> */}
+        
         </div>
 
 
@@ -213,7 +210,7 @@ export default function RitualDetalle() {
           </h3>
 
           <div className="ritual-detalle-pasos">
-            {ritual.items.map((item, idx) => (
+            {ritual.paso_paso.map((item, idx) => (
               <div key={idx} className="ritual-detalle-paso">
                 <span className="ritual-detalle-paso-numero">{idx + 1}</span>
                  <div>
@@ -222,10 +219,13 @@ export default function RitualDetalle() {
                     </h4>
 
                     <ul className="ritual-detalle-paso-lista">
-                      {item.descripciones.map((descripcion, i) => (
-                        <li key={i}>
-                          {descripcion}
-                        </li>
+                      {item.descripciones.map((descripcion, i) => 
+                        descripcion === null ? (
+                          <li key={i} className="ritual-detalle-espacio"></li>
+                        ) : (
+                          <li key={i}>
+                            {descripcion}
+                          </li>
                       ))}
                     </ul>
                   </div>                  

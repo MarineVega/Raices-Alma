@@ -122,7 +122,7 @@ export const rituales = {
         paso_paso_titulo: "El Ritual",
         paso_paso: [
             {
-                titulo: "1. Respirar",
+                titulo: "Respirar",
                 descripciones: [
                     "Cerrá los ojos.",
                     "Realizá siete respiraciones profundas.",
@@ -130,7 +130,7 @@ export const rituales = {
                 ]
             },
             {
-                titulo: '2. Encender la vela',
+                titulo: 'Encender la vela',
                 descripciones: [
                     'Mientras la encendés decí:',
                     '"Hoy elijo abrirme a un nuevo comienzo.',
@@ -138,22 +138,24 @@ export const rituales = {
                 ]
             },
             {
-                titulo: '3. Escribir tus intenciones',
+                titulo: 'Escribir tus intenciones',
                 descripciones: [
                     'Escribí entre cinco y diez intenciones.',
                     'Siempre en presente.',
-                    'Ejemplos:',
+                    null,
+                    'Ejemplos:',                    
                     '"Abro mi corazón a relaciones sanas."',
                     '"Confío plenamente en mis capacidades."',
                     '"Recibo abundancia con gratitud."',
                     '"Vivo en paz."',
                     '"Me permito crecer."',
+                    null,
                     'No escribas desde la carencia.',
                     'Escribí como si ya estuvieras caminando ese proceso.'
                 ]
              },
             {
-                titulo: '4. Visualizar',
+                titulo: 'Visualizar',
                 descripciones: [
                     'Leé lentamente cada intención.',
                     'Luego cerrá los ojos.',
@@ -164,9 +166,10 @@ export const rituales = {
                 ]
              },
             { 
-                titulo: '5. Agradecer',
+                titulo: 'Agradecer',
                 descripciones: [
                     'Colocá ambas manos sobre el corazón.',
+                    null,
                     'Decí:',
                     '"Gracias por las oportunidades que comienzan a manifestarse.',
                     'Confío en los tiempos de la vida.',
@@ -174,7 +177,7 @@ export const rituales = {
                 ]
              },
             {
-                titulo: '6. Cierre',
+                titulo: 'Cierre',
                 descripciones: [
                     'Dejá que la vela se consuma de forma segura o apagala con respeto, sin soplarla si esa práctica tiene un significado para vos.',
                     'Guarda tus intenciones en un lugar especial.',
