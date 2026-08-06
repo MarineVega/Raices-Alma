@@ -13,21 +13,21 @@ export const rituales = {
         introduccion_subtitulo: "",
         introduccion : [
             'Cada Luna Nueva marca el comienzo de un nuevo ciclo. Es el momento en que el cielo parece quedar en silencio para invitarnos a mirar hacia nuestro interior.',
-            ' ',
+            null,
             'Así como la naturaleza se prepara para un nuevo crecimiento, nosotros también tenemos la oportunidad de sembrar nuevas intenciones, dejar atrás aquello que ya no nos representa y abrir espacio para una nueva versión de nosotros mismos.',
-            ' ',
+            null,
             'Este ritual no busca "hacer magia". Su verdadero propósito es ayudarnos a detenernos, conectar con nuestra esencia y dar un paso consciente hacia la vida que deseamos construir.',
-            ' '
+            null
         ],
         importancia_titulo: "¿Por qué realizar este ritual?",
         importancia_subtitulo: "",
         importancia: [
             'Vivimos inmersos en el hacer constante y pocas veces nos regalamos un momento para preguntarnos qué queremos realmente.',
-            ' ',
+            null,
             'La Luna Nueva simboliza el vacío fértil: un espacio donde todo es posible antes de manifestarse.',
-            ' ',
+            null,
             'Cuando realizamos un ritual con una intención clara, nuestra mente se enfoca, nuestro cuerpo participa activamente en el cambio y nuestra alma encuentra un camino para expresar aquello que anhela.',
-            ' ',
+            null,
             'No es la Luna quien cambia nuestra vida.',
             'Somos nosotros quienes, al detenernos conscientemente, elegimos transformarla.'
         ],        
@@ -49,7 +49,7 @@ export const rituales = {
                 icono: Brain,
                 descripciones: [
                     "Preguntate:",
-                    "",
+                    null,
                     "¿Qué deseo crear en esta nueva etapa de mi vida?",
                     "No escribas lo que otros esperan de vos.",
                     "Escribí aquello que hace vibrar tu corazón."
@@ -60,9 +60,9 @@ export const rituales = {
                 icono: HeartPulse,
                 descripciones: [
                    "El cuerpo necesita participar del cambio.",
-                   "",
+                   null,
                     "Cuando escribimos, respiramos profundamente, encendemos una vela o sembramos una semilla, nuestro sistema nervioso registra que estamos iniciando un nuevo capítulo.",
-                    "",
+                    null,
                     "El ritual convierte una intención en una experiencia vivida."
                 ]
             },
@@ -188,9 +188,9 @@ export const rituales = {
         afirmacion_titulo: "Afirmación Final",
         afimacion_items: [
             '"Hoy siembro con amor las semillas de mi futuro.',
-            'Confío en la sabiduría de la vida.',
+            'Confío en la sabiduría de la vida.',                 
             'Cada paso que doy me acerca a mi propósito.',
-            'Mi mente crea, mi cuerpo sostiene y mi alma guía el camino.',
+            'Mi mente crea, mi cuerpo sostiene y mi alma guía el camino.',            
             'Así es. Así será."'
         ],
         reflexion_titulo: "Reflexión",
@@ -213,6 +213,7 @@ export const rituales = {
         subtitulo: "Conectá con la energía de la abundancia",
         descripcion: "Abrirte a recibir, transformar creencias y conectar con la prosperidad",
         icono: Gem ,
+        icono_detalle: "",
         introduccion_titulo: "Introducción",
         introduccion_subtitulo: "",
         introduccion : [

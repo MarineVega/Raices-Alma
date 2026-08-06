@@ -210,29 +210,102 @@
 
   /* Pasos */
   .ritual-detalle-pasos {
-    @apply space-y-4;
+    /* @apply space-y-4; */
+    @apply max-w-4xl mx-auto;
   }
 
   .ritual-detalle-paso {
-    @apply flex gap-4 items-start;
+    @apply flex items-start gap-5 relative;
+    margin-bottom: 2.5rem;
+  }
+
+  .ritual-detalle-paso::after{
+    content:"";
+    @apply absolute w-0.5;
+    left:1.5rem;
+    top:3rem;
+    bottom: 0;    
+    background:rgba(var(--color-acento-rgb),.35);
+  }
+
+  .ritual-detalle-paso:last-child::after{
+    content: none;
+  }
+
+  .ritual-detalle-paso-card{
+    @apply flex-1 rounded-2xl p-6 transition-all duration-300 min-w-0;  
+    background-color: rgba(var(--color-secundario-rgb), .20);
+    border: 1px solid rgba(var(--color-secundario-rgb), .30);
+  }
+
+  .ritual-detalle-paso-card:hover{
+    @apply -translate-y-1;
+    border-color: var(--color-acento);
+    /* box-shadow: 0 12px 30px rgba(0,0,0,.25); */
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.25),
+      0 0 18px rgba(var(--color-acento-rgb),.18);
   }
 
   .ritual-detalle-paso-numero {
-    @apply w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0;
+    @apply relative w-12 h-12 rounded-full flex items-center justify-center font-bold text-base shrink-0;
     background-color: var(--color-acento);
     color: var(--color-texto);
+    margin-top:.35rem;
+    z-index: 2;
   }
 
   .ritual-detalle-paso-titulo {
-    @apply text-xl;
-    color: var(--color-acento-brillo);
+    @apply text-xl font-bold mb-4;
+    color: var(--color-acento);
   }
 
+  .ritual-detalle-paso-titulo::after{
+    content: "";
+    @apply block mt-3 h-0.5 rounded-full;
+    width: 360px;
+ 
+    background: linear-gradient(
+      to right,
+      rgba(var(--color-acento-rgb), 1.7),
+      transparent
+    );    
+  }
+
+  .ritual-detalle-paso-lista{
+    @apply space-y-3;
+  }
   .ritual-detalle-paso li {
-    @apply text-base leading-relaxed;
+    @apply text-base leading-7;
     color: var(--color-texto);    
   }
+  .ritual-detalle-card-afirmacion-reflexion {
+    @apply -translate-y-1;
+      border-color: var(--color-acento);
+      /* box-shadow: 0 12px 30px rgba(0,0,0,.25); */
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.25),
+        0 0 18px rgba(var(--color-acento-rgb),.18);
 
+  }
+
+  /* space-y-3 -> espacioado entre línea y línea */
+  .ritual-detalle-card-afirmacion {
+    @apply text-xl mb-1 text-center space-y-3;    
+    color: var(--color-texto);
+    
+  }
+
+   .ritual-detalle-card:hover{
+    @apply -translate-y-1;
+    border-color: var(--color-acento);
+    /* box-shadow: 0 12px 30px rgba(0,0,0,.25); */
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.25),
+      0 0 18px rgba(var(--color-acento-rgb),.18);
+  }
+
+  
   /* CTA */
   .ritual-detalle-cta {
     @apply mt-12 text-center;
@@ -290,6 +363,21 @@
 
     .ritual-detalle-card {
       @apply p-4;
+    }
+    .ritual-detalle-paso{
+    @apply flex-col gap-3;
+    }
+
+    .ritual-detalle-paso::after{
+      display:none;
+    }
+
+    .ritual-detalle-paso-card{
+      @apply ml-0 w-full;
+    }
+
+    .ritual-detalle-paso-numero{
+      @apply self-start;
     }
   }
 
