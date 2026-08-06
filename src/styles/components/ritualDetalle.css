@@ -13,6 +13,9 @@
     @apply max-w-7xl mx-auto;
   }
 
+  .ritual-detalle-header-contenido{
+    @apply relative z-10 flex flex-col items-center;
+  }
   /* Botón volver */
   .ritual-detalle-volver {
     @apply text-lg font-bold inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-lg transition-all;
@@ -28,10 +31,36 @@
   }
 
   /* Header */
-  .ritual-detalle-header {
-    @apply text-center mb-12;
+  .ritual-detalle-header {    
+    @apply text-center mb-12 relative overflow-hidden rounded-3xl;
+    min-height: 420px;
   }
 
+  .ritual-detalle-header-bg{
+    @apply absolute inset-0 w-full h-full object-cover;
+    opacity: .50;
+    filter: blur(2px);
+    /* opacity: .08; */
+    /* filter: grayscale(100%) blur(2px); */
+    pointer-events: none;
+  }
+
+  /* Con eso la parte inferior de la imagen se va desvaneciendo suavemente hasta mezclarse con el fondo de la página */
+  /* .ritual-detalle-header::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0) 55%,
+      rgba(var(--color-primario-rgb), .35) 75%,
+      rgba(var(--color-primario-rgb), .75) 90%,
+      var(--color-primario) 100%
+    );
+  } */
   .ritual-detalle-icono-container {
     @apply w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6;
     background-color: rgba(var(--color-acento-rgb), 0.15);
@@ -42,60 +71,116 @@
     color: var(--color-acento);
   }
 
+  /* Cuando no se muestra un ícono, que deje un espacio */
+  .ritual-detalle-icono-placeholder {
+    @apply w-20 h-20 mx-auto mb-6;
+  }
   .ritual-detalle-titulo {
-    @apply text-4xl md:text-5xl font-bold mb-2;
-    color: var(--color-secundario);
+    @apply text-4xl md:text-5xl font-bold mb-4;  
+    color: var(--color-fondo);   
   }
 
   .ritual-detalle-subtitulo {
+    @apply text-2xl mb-8;
+    color: var(--color-acento-brillo);    
+  }
+
+  .ritual-detalle-descripcion {
     @apply text-xl mb-4;
     color: var(--color-texto);
   }
-
-  /* Galería */
-  .ritual-detalle-galería {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-12;
+  .ritual-detalle-espacio {
+    @apply h-4 list-none;
   }
-
-  .ritual-detalle-imagen {
-    @apply rounded-2xl w-full h-64 object-cover;
-    border: 2px solid rgba(var(--color-acento-rgb), 0.1);
-  }
+ 
 
   /* Grid información */
   .ritual-detalle-grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-6 mb-8;
   }
 
+  /* Para ubicar 3 card en la misma fila */
+  .ritual-detalle-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8;
+  }
   .ritual-detalle-card {
     @apply p-6 rounded-2xl;
-    background-color: rgba(var(--color-secundario-rgb), 0.05);
-    border: 1px solid rgba(var(--color-secundario-rgb), 0.1);
+    background-color: rgba(var(--color-secundario-rgb), 0.2);
+    border: 1px solid rgba(var(--color-secundario-rgb), 0.3);
   }
-
   .ritual-detalle-card-titulo {
     @apply flex items-center gap-2 text-xl font-bold mb-4;
     color: var(--color-secundario);
   }
 
-  /* Beneficios */
-  .ritual-detalle-beneficios-lista {
-    @apply space-y-2;
+  .ritual-detalle-card-subtitulo {
+    @apply flex items-center gap-2 text-lg mb-4 mt-3;
+    color: var(--color-texto-oscuro);
   }
 
-  .ritual-detalle-beneficios-lista li {
-    @apply flex items-start gap-2;
+  .ritual-detalle-card-descripcion {
+    @apply text-lg mb-1;    
     color: var(--color-texto);
   }
 
-  .ritual-detalle-beneficio-bullet {
+  .ritual-detalle-card-icono {
+    @apply w-6 h-6 shrink-0;
+    color: var(--color-acento);
+  }
+
+  /* Beneficios */
+  .ritual-detalle-beneficios-lista {
+    @apply space-y-2 text-lg;
+  }
+
+  .ritual-detalle-beneficios-lista li {
+    @apply flex items-start gap-2 text-lg mb-4;
+    color: var(--color-texto);
+  }
+
+  .ritual-detalle-bullet {
     @apply text-lg;
     color: var(--color-acento);
   }
 
+  .ritual-detalle-seccion-titulo{
+    @apply text-3xl font-bold text-center mt-14 mb-10 relative;
+    color: var(--color-secundario);
+    letter-spacing: .05em;
+  }
+
+  .ritual-detalle-seccion-titulo::before{
+    content: "";
+    display: block;
+    width: 200px;
+    height: 3px;
+    margin: 14px auto 14px;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-acento),
+        transparent
+    );
+  }
+  .ritual-detalle-seccion-titulo::after{
+    content: "";
+    display: block;
+    width: 200px;
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-acento),
+        transparent
+    );
+  }
+
   /* Materiales */
   .ritual-detalle-materiales {
-    @apply flex flex-wrap gap-2;
+    @apply flex flex-wrap gap-3;
   }
 
   .ritual-detalle-material-tag {
@@ -175,11 +260,7 @@
     .ritual-detalle-galería {
       @apply grid-cols-1;
     }
-
-    .ritual-detalle-imagen {
-      @apply h-48;
-    }
-
+    
     .ritual-detalle-grid {
       @apply grid-cols-1;
     }
@@ -205,14 +286,11 @@
     .ritual-detalle-icono-grande {
       @apply w-8 h-8;
     }
-
-    .ritual-detalle-imagen {
-      @apply h-40;
-    }
-
     .ritual-detalle-boton-whatsapp {
       @apply w-full justify-center px-4 py-3 text-sm;
     }
   }
 }
+
+
 

@@ -65,11 +65,7 @@ export default function Rituales({ onSeleccionarRitual }) {
               clickable: true,
               dynamicBullets: true 
             }}
-           /* autoplay={{
-              delay: 5000,
-              disableOnInteraction: true,
-              pauseOnMouseEnter: true, // 👈 Pausa al pasar el mouse
-            }}*/
+          
             breakpoints={{
               640: { slidesPerView: 1.5 },
               768: { slidesPerView: 2 },
@@ -80,6 +76,9 @@ export default function Rituales({ onSeleccionarRitual }) {
           >
             {Object.values(rituales).map((ritual) => {
               const Icono = ritual.icono;
+              // uso ? cuando preparacion_items es undefined y que no tire error
+              const cantidadMateriales = ritual.preparacion_items?.filter(item => item?.mostrarBullet).length ?? 0;              
+
               return (
                 <SwiperSlide key={ritual.id}>
                   <div className="rituales-card">                    
@@ -102,10 +101,11 @@ export default function Rituales({ onSeleccionarRitual }) {
                           <span>{ritual.tiempo}</span>
                         </div>
                       )}
-                      {ritual.materiales && (
+                      {ritual.preparacion_items && (
                         <div className="rituales-card-info-item">
                           <Package className="w-4 h-4" />
-                          <span>{ritual.materiales.length} materiales</span>
+                          {/* <span>{ritual.materiales.length} materiales</span> */}
+                          <span>{cantidadMateriales} materiales</span>
                         </div>
                       )}
                     </div>

@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { rituales } from "../data/rituales";
-import { ArrowLeft, Clock, Package, CheckCircle2, Calendar, Sparkle } from "lucide-react";
+import { ArrowLeft, Clock, Package, CheckCircle2, Calendar, Sparkle, HouseHeart } from "lucide-react";
 import { generarLinkWhatsApp } from "../utils/whatsapp";
 import { useEffect } from "react";
 
@@ -19,7 +19,7 @@ export default function RitualDetalle() {
     );
   }
 
-  const Icono = ritual.icono;
+  const Icono = ritual.icono_detalle;
 
   const handleSolicitar = () => {
     const url = generarLinkWhatsApp("ritual", ritual.titulo);
@@ -48,11 +48,6 @@ export default function RitualDetalle() {
     <div className="ritual-detalle-container">
       <div className="ritual-detalle-contenido">
         {/* Botón volver */}
-        {/* <Link to="/#rituales" className="ritual-detalle-volver">
-          <ArrowLeft className="w-5 h-5" />
-          <span>Volver a rituales</span>
-        </Link> */}
-
         <button
           onClick={handleVolver}
           className="ritual-detalle-volver"
@@ -63,85 +58,158 @@ export default function RitualDetalle() {
 
         {/* Header */}
         <div className="ritual-detalle-header">
-          <div className="ritual-detalle-icono-container">
-            <Icono className="ritual-detalle-icono-grande" />
-          </div>
-          <h1 className="ritual-detalle-titulo">{ritual.titulo}</h1>
-          <p className="ritual-detalle-subtitulo">{ritual.subtitulo}</p>
+          <img
+            src={ritual.images?.[0]}
+            alt={ritual.titulo}
+            className="ritual-detalle-header-bg"
+          />
 
-          <div className="ritual-detalle-galería">            
-            <img                 
-              src={ritual.images} 
-              alt={`${ritual.titulo}`}
-              className="ritual-detalle-imagen"
-            />            
-          </div>
+          <div className="ritual-detalle-header-contenido">
+            {Icono ? (
+              <div className="ritual-detalle-icono-container">
+                <Icono className="ritual-detalle-icono-grande" />
+              </div>
+            ) : (
+              <div className="ritual-detalle-icono-placeholder" />
+            )}
 
+            <h1 className="ritual-detalle-titulo">{ritual.titulo}</h1>
+            <p className="ritual-detalle-subtitulo">{ritual.descripcion}</p>
+
+            <ul className="ritual-detalle-descripcion">
+              {ritual.introduccion?.map((introduccion, idx) => (
+                introduccion.trim() === "" ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                ) : (                  
+                <li key={idx}>{introduccion}</li>
+                )
+              ))}
+            </ul>
+
+          </div>
         </div>
-
-        {/* Imágenes - Galería */}
-{/*         
-        {ritual.images && ritual.images.length > 0 && (
-          <div className="ritual-detalle-galería">
-            {ritual.images.map((img, idx) => (
-              <img 
-                key={idx} 
-                src={img} 
-                alt={`${ritual.titulo} - paso ${idx + 1}`}
-                className="ritual-detalle-imagen"
-              />
-            ))}
-          </div>
-        )} */}
 
         {/* Grid de información */}
         <div className="ritual-detalle-grid">
+
           {/* Importancia */}
           <div className="ritual-detalle-card">
             <h3 className="ritual-detalle-card-titulo">
               <Sparkle className="w-5 h-5" />
-              Importancia del Ritual
+              <p>{ritual.importancia_titulo}</p>
             </h3>
-            <p>{ritual.importancia}</p>
+            
+            <h4 className="ritual-detalle-card-subtitulo">              
+              <p>{ritual.importancia_subtitulo}</p>              
+            </h4>
+
+            <ul className="ritual-detalle-card-descripcion">
+              {ritual.importancia?.map((importancia, idx) => (
+                importancia.trim() === "" ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                ) : (                  
+                <li key={idx}>{importancia}</li>
+                )
+              ))}
+            </ul>
           </div>
 
           {/* Beneficios */}
           <div className="ritual-detalle-card">
             <h3 className="ritual-detalle-card-titulo">
               <CheckCircle2 className="w-5 h-5" />
-              Beneficios
+              <p>{ritual.beneficios_titulo}</p>
             </h3>
+            <h4 className="ritual-detalle-card-subtitulo">              
+              <p>{ritual.beneficios_subtitulo}</p>              
+            </h4>
+
             <ul className="ritual-detalle-beneficios-lista">
               {ritual.beneficios?.map((beneficio, idx) => (
                 <li key={idx}>
-                  <span className="ritual-detalle-beneficio-bullet">✦</span>
+                  <span className="ritual-detalle-bullet">✦</span>
                   {beneficio}
                 </li>
               ))}
             </ul>
           </div>
         </div>
+              
+        {/* Grid Mente · Cuerpo · Alma */}
+        {ritual.items?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.items_titulo}
+            </h2>
+            
+            <div className="ritual-detalle-grid-3">
+              {ritual.items.map((item, idx) => (
+                <div key={idx} className="ritual-detalle-card">
+
+                  <h3 className="ritual-detalle-card-titulo">
+                    {item.icono && <item.icono className="ritual-detalle-card-icono" />}
+                    <span>{item.titulo}</span>
+                  </h3>
+
+                  <ul className="ritual-detalle-card-descripcion">
+                    {item.descripciones.map((texto, i) =>
+                      texto.trim() === "" ? (
+                        <li
+                          key={i}
+                          className="ritual-detalle-espacio"
+                        />
+                      ) : (
+                        <li key={i}>{texto}</li>
+                      )
+                    )}
+                  </ul>
+
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+        
 
         {/* Materiales */}
         <div className="ritual-detalle-card">
           <h3 className="ritual-detalle-card-titulo">
-            <Package className="w-5 h-5" />
-            Materiales Necesarios
+            <HouseHeart className="w-5 h-5" />
+            <p>{ritual.preparacion_titulo}</p>
           </h3>
-          <div className="ritual-detalle-materiales">
+          <h4 className="ritual-detalle-card-subtitulo">              
+            <p>{ritual.preparacion_subtitulo}</p>              
+          </h4>
+
+          <ul className="ritual-detalle-card-descripcion">
+            {ritual.preparacion_items?.map((item, idx) => 
+              item === null ? (
+              <li key={idx} className="ritual-detalle-espacio"></li>
+              ) : (
+                <li key={idx}>
+                  {item.mostrarBullet && (
+                    <span className="ritual-detalle-bullet">✦ </span>
+                  )}
+                  {item.texto}
+                </li>
+              )
+            )}
+          </ul>
+          {/* <div className="ritual-detalle-materiales">
             {ritual.materiales?.map((material, idx) => (
               <span key={idx} className="ritual-detalle-material-tag">
                 {material}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
+
 
         {/* Paso a paso */}
         <div className="ritual-detalle-card">
           <h3 className="ritual-detalle-card-titulo">
             <Clock className="w-5 h-5" />
-            Paso a Paso
+            <span>{ritual.paso_paso_titulo}</span>
           </h3>
 
           <div className="ritual-detalle-pasos">
