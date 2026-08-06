@@ -34,15 +34,15 @@ export const rituales = {
         beneficios_titulo: "Este ritual puede ayudarte a:" ,
         beneficios_subtitulo: "",
         beneficios: [
-            "Iniciar nuevos proyectos.",
-            "Abrirte a nuevas oportunidades.",
-            "Fortalecer la confianza en vos mismo.",
-            "Dejar atrás pensamientos limitantes.",
-            "Manifestar objetivos desde la consciencia.",
-            "Conectar con tu propósito.",
-            "Recuperar esperanza y motivación."
+            'Iniciar nuevos proyectos.',
+            'Abrirte a nuevas oportunidades.',
+            'Fortalecer la confianza en vos mismo.',
+            'Dejar atrás pensamientos limitantes.',
+            'Manifestar objetivos desde la consciencia.',
+            'Conectar con tu propósito.',
+            'Recuperar esperanza y motivación.'
         ],
-        items_titulo: "Mente · Cuerpo · Alma",
+        items_titulo: 'Mente · Cuerpo · Alma',
         items : [
             {
                 titulo: "Mente",
@@ -218,20 +218,26 @@ export const rituales = {
         introduccion_subtitulo: "",
         introduccion : [
             'La abundancia es mucho más que el dinero que llega a nuestras manos. Es la capacidad de reconocer que la vida nos sostiene constantemente a través del amor, la salud, las oportunidades, las relaciones, el tiempo y los recursos que nos permiten crecer.',
+            null,
             'Sin embargo, muchas veces aprendimos que recibir era egoísta, que pedir era una molestia o que el sacrificio era el único camino hacia el éxito. Estas creencias, heredadas de nuestra historia personal y familiar, pueden alejarnos de una vida plena.',
+            null,
             'Este ritual es una invitación a mirar esas creencias con amor, agradecer lo que ya existe y abrir el corazón para recibir todo aquello que la vida desea entregarnos.',
+            null,
             'La verdadera abundancia comienza cuando dejamos de vivir desde la escasez y elegimos confiar.'
         ],
         importancia_titulo: "¿Por qué realizar este ritual?",
         importancia_subtitulo: "",
         importancia: [
             'Nuestra relación con la abundancia no depende únicamente del esfuerzo o del trabajo. También está profundamente influenciada por nuestras emociones, nuestras experiencias de vida y los mensajes que recibimos de nuestro sistema familiar acerca del dinero, el merecimiento y el éxito.',
+            null,
             'Realizar un ritual nos permite hacer una pausa consciente, identificar aquello que queremos transformar y generar un nuevo compromiso con nosotros mismos.',
+            null,
             'No es el ritual quien crea la abundancia.',
+            null,
             'Es la transformación interior la que nos permite reconocer y recibir aquello que antes no podíamos ver.'
         ],
-        beneficios_titulo: "¿Para qué sirve?" ,
-        beneficios_subtitulo: "Este ritual puede ayudarte a:" ,
+        beneficios_titulo: "Este ritual puede ayudarte a:"  ,
+        beneficios_subtitulo: "" ,
         beneficios: [
             'Liberar creencias de escasez.',
             'Trabajar el merecimiento.',
@@ -244,9 +250,11 @@ export const rituales = {
         items_titulo: "Mente · Cuerpo · Alma",
         items : [
             {
-                titulo: "🧠 Mente",
+                titulo: "Mente",
+                icono: Brain,
                 descripciones: [
                     "Preguntate:",
+                    null,
                     "¿Qué pienso realmente sobre el dinero y la abundancia?",
                     "¿Creo que debo sufrir para lograr mis objetivos?",
                     "¿Siento culpa cuando recibo?",
@@ -255,20 +263,24 @@ export const rituales = {
                 ],
             },
             {
-                titulo: "🌿 Cuerpo",
+                titulo: "Cuerpo",
+                icono: HeartPulse,
                 descripciones: [
-                   "El cuerpo necesita experimentar aquello que la mente desea cambiar.",
-                   "",
+                    "El cuerpo necesita experimentar aquello que la mente desea cambiar.",
+                    null,
                     "Cuando escribimos nuestras creencias, encendemos una vela, sostenemos una moneda entre nuestras manos o realizamos un acto simbólico de gratitud, enviamos un mensaje claro a nuestro sistema nervioso: estamos disponibles para recibir una nueva realidad.",
-                    "",
+                    null,
                     "La abundancia también se practica."
-                ]
+                ],
             },
             {
-                titulo: "✨ Alma",
+                titulo: "Alma",
+                icono: Sparkles,
                 descripciones: [
                     "La abundancia nace cuando comprendemos que somos parte de una vida que constantemente crea, nutre y sostiene.",
+                    null,
                     "Abrirnos a recibir no significa esperar pasivamente.",
+                    null,
                     "Significa confiar, actuar con coherencia y permitir que aquello que es para nuestro mayor bien encuentre el camino hacia nosotros."
                 ]
             }
@@ -276,81 +288,124 @@ export const rituales = {
         preparacion_titulo: "Antes de comenzar",
         preparacion_subtitulo: "Buscá un lugar tranquilo donde puedas permanecer sin interrupciones.",
         preparacion_items: [
-            "Podés preparar tu espacio con:",            
-            "• Una vela dorada, verde o blanca.",
-            "• Un cuenco con agua.",
-            "• Incienso o sahumo.",
-            "• Una moneda o un billete.",
-            "• Canela en polvo.",
-            "• Laurel.",
-            "• Un cuarzo citrino o pirita (opcional).",
-            "• Papel y lapicera.",
-            "",
-            "Antes de comenzar, respirás profundamente varias veces y disponete a vivir este momento con presencia y gratitud."
+            {
+                texto: "Podés preparar tu espacio con:",
+                mostrarBullet: false,
+            },
+            null,
+            {
+                texto: "Una vela dorada, verde o blanca.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Un cuenco con agua.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Incienso o sahumo.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Una moneda o un billete.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Canela en polvo.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Laurel.",
+                mostrarBullet: true,
+            },
+           {
+                texto: "Un cuarzo citrino o pirita (opcional).",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Papel y lapicera.",
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: "Antes de comenzar, respirás profundamente varias veces y disponete a vivir este momento con presencia y gratitud.",
+                mostrarBullet: false,
+            }
         ],
         paso_paso_titulo: "El Ritual",
-        paso_paso: {
-            titulo: "1. Encender la luz",
-            descripciones: [
-                'Encendé la vela diciendo:',
-                '"Hoy elijo abrir mi corazón a la abundancia infinita de la vida.',
-                'Me permito recibir con amor todo aquello que está destinado para mí."'                
-            ],
-            titulo: '2. Reconocer la abundancia presente',
-            descripciones: [
-                'Tomá la moneda entre tus manos.',
-                'Observala durante unos instantes.',
-                'Pensá en todo aquello que ya existe en tu vida.',
-                'Personas.',
-                'Experiencias.',
-                'Aprendizajes.',
-                'Salud.',
-                'Trabajo.',
-                'Tiempo.',
-                'Respirá profundamente mientras agradecés cada uno de esos regalos.'
-            ],
-            titulo: '3. Liberar la escasez',
-            descripciones: [
-                'Escribí en una hoja todas aquellas creencias que sentís que hoy limitan tu prosperidad.',
-                'Por ejemplo:',
-                '"No soy suficiente."',
-                '"El dinero cuesta demasiado."',
-                '"No merezco ganar más."',
-                '"Siempre falta algo."',
-                'Cuando termines, doblá el papel y quemalo cuidadosamente en un recipiente resistente al fuego, permitiendo que esas creencias se transformen.',
-                'Mientras observás cómo se consume, repetí:',
-                '"Hoy libero todo pensamiento que me impide vivir en abundancia.',
-                'Elijo una nueva manera de relacionarme con la prosperidad."'
-            ],
-            titulo: '4. Sembrar nuevas creencias',
-            descripciones: [
-                'En una nueva hoja escribí entre cinco y diez afirmaciones en presente.',
-                'Ejemplos:',
-                '"Merezco recibir abundancia en todas las áreas de mi vida."',
-                '"El dinero llega a mí de formas conscientes y amorosas."',
-                '"Confío plenamente en la vida."',
-                '"Mi trabajo genera bienestar para mí y para los demás."',
-                '"Cada día recibo nuevas oportunidades."',
-                'Leelas lentamente y permitite sentir que ya forman parte de tu realidad.'
-            ], 
-            titulo: '5. Activar la energía',
-            descripciones: [
-                'Colocá un poco de canela sobre la moneda o el billete.',
-                'Tomalo entre tus manos.',
-                'Visualizá una luz dorada rodeando todo tu cuerpo.',
-                'Imaginá cómo esa energía expande oportunidades, confianza y prosperidad en cada aspecto de tu vida.'
-            ], 
-            titulo: '6. Agradecer',
-            descripciones: [
-                'Llevá ambas manos al corazón y decí:',
-                '"Gracias, vida, por todo lo que ya recibo.',
-                'Gracias por lo que está llegando.',
-                'Confío plenamente en que el universo siempre sostiene mi camino.',
-                'Recibo con amor.',
-                'Comparto con gratitud.',
-                'Vivo en abundancia."'
-            ]
-        },
+        paso_paso: [
+            {
+                titulo: "Encender la luz",                
+                descripciones: [
+                    'Encendé la vela diciendo:',
+                    '"Hoy elijo abrir mi corazón a la abundancia infinita de la vida.',
+                    'Me permito recibir con amor todo aquello que está destinado para mí."'                
+                ],
+            },
+            {
+                titulo: 'Reconocer la abundancia presente',
+                descripciones: [
+                    'Tomá la moneda entre tus manos.',
+                    'Observala durante unos instantes.',
+                    'Pensá en todo aquello que ya existe en tu vida.',
+                    'Personas.',
+                    'Experiencias.',
+                    'Aprendizajes.',
+                    'Salud.',
+                    'Trabajo.',
+                    'Tiempo.',
+                    'Respirá profundamente mientras agradecés cada uno de esos regalos.'
+                ],
+            },
+            {
+                titulo: 'Liberar la escasez',
+                descripciones: [
+                    'Escribí en una hoja todas aquellas creencias que sentís que hoy limitan tu prosperidad.',
+                    'Por ejemplo:',
+                    '"No soy suficiente."',
+                    '"El dinero cuesta demasiado."',
+                    '"No merezco ganar más."',
+                    '"Siempre falta algo."',
+                    'Cuando termines, doblá el papel y quemalo cuidadosamente en un recipiente resistente al fuego, permitiendo que esas creencias se transformen.',
+                    'Mientras observás cómo se consume, repetí:',
+                    '"Hoy libero todo pensamiento que me impide vivir en abundancia.',
+                    'Elijo una nueva manera de relacionarme con la prosperidad."'
+                ],
+            },
+            {
+                titulo: 'Sembrar nuevas creencias',
+                descripciones: [
+                    'En una nueva hoja escribí entre cinco y diez afirmaciones en presente.',
+                    'Ejemplos:',
+                    '"Merezco recibir abundancia en todas las áreas de mi vida."',
+                    '"El dinero llega a mí de formas conscientes y amorosas."',
+                    '"Confío plenamente en la vida."',
+                    '"Mi trabajo genera bienestar para mí y para los demás."',
+                    '"Cada día recibo nuevas oportunidades."',
+                    'Leelas lentamente y permitite sentir que ya forman parte de tu realidad.'
+                ], 
+            },
+            {
+                titulo: 'Activar la energía',
+                descripciones: [
+                    'Colocá un poco de canela sobre la moneda o el billete.',
+                    'Tomalo entre tus manos.',
+                    'Visualizá una luz dorada rodeando todo tu cuerpo.',
+                    'Imaginá cómo esa energía expande oportunidades, confianza y prosperidad en cada aspecto de tu vida.'
+                ],
+            },            
+            {
+                titulo: 'Agradecer',
+                descripciones: [
+                    'Llevá ambas manos al corazón y decí:',
+                    '"Gracias, vida, por todo lo que ya recibo.',
+                    'Gracias por lo que está llegando.',
+                    'Confío plenamente en que el universo siempre sostiene mi camino.',
+                    'Recibo con amor.',
+                    'Comparto con gratitud.',
+                    'Vivo en abundancia."'
+                ],
+            }
+        ],
         cierre_titulo: "Cierre del ritual",
         cierre_items: [
             'Guardá la moneda o el billete en tu billetera durante los próximos treinta días como símbolo de la nueva relación que comenzás a construir con la abundancia.',
@@ -367,7 +422,7 @@ export const rituales = {
             'Hoy abro mis manos, mi corazón y mi camino para recibir con gratitud.',
             'Así es. Así será."'
         ],
-        reflexion_titulo: "💜 Reflexión",
+        reflexion_titulo: "Reflexión",
         reflexion_items: [
             'La abundancia no comienza cuando obtenemos más.',
             'Comienza cuando dejamos de sentir que somos menos.',
@@ -377,8 +432,7 @@ export const rituales = {
             "/img/rituales/abundancia.jpg"
         ],
         mostrarBoton: false,
-        tiempo: "30 minutos",
-        materiales: ["Vela dorada, verde o blanca", "Agua", "Incienso o sahumo", "Moneda o billete", "Canela en polvo", "Laurel", "Cuarzo citrino o pirita", "Papel y lapicera"]
+        tiempo: "30 minutos"
     },
     
     ritual3: {
@@ -392,36 +446,45 @@ export const rituales = {
         introduccion : [
             'Cada mes nos ofrece una nueva oportunidad para comenzar de nuevo.',
             'No importa cómo haya sido el mes anterior. Siempre existe un nuevo amanecer que nos invita a mirar nuestra vida con otros ojos, a aprender de lo vivido y a dar un nuevo paso hacia aquello que deseamos construir.',
+            null,
             'Comenzar un mes de forma consciente es elegir dejar de vivir en piloto automático para convertir el tiempo en un aliado de nuestro crecimiento.',
+            null,
             'Este ritual es una invitación a detenerte, agradecer el camino recorrido y abrirte a las infinitas posibilidades que trae este nuevo ciclo.',
+            null,
             'Porque cada comienzo guarda una semilla de transformación.'
         ],
         importancia_titulo: "¿Por qué realizar este ritual?",
         importancia_subtitulo: "",
         importancia: [
             'Con frecuencia iniciamos los meses repitiendo las mismas rutinas, preocupaciones y pensamientos. Sin detenernos a elegir cómo queremos vivir los días que tenemos por delante.',
+            null,
             'Los rituales nos ayudan a marcar un antes y un después. Son un puente entre lo que dejamos atrás y aquello que elegimos crear.',
+            null,
             'Cuando comenzamos el mes con una intención clara, alineamos nuestra mente, nuestras emociones y nuestras acciones con aquello que realmente queremos manifestar.',
+            null,
             'No es el calendario quien transforma nuestra vida.',
+            null,
             'Somos nosotros quienes decidimos darle un nuevo significado a cada comienzo.'
         ],
         beneficios_titulo: "¿Para qué sirve?" ,
         beneficios_subtitulo: "Este ritual puede ayudarte a:" ,
         beneficios: [
-            '✨ Comenzar el mes con claridad.',
-            '✨ Organizar tus prioridades desde la consciencia.',
-            '✨ Atraer nuevas oportunidades.',
-            '✨ Fortalecer la confianza en vos mismo.',
-            '✨ Liberar la energía del mes anterior.',
-            '✨ Conectar con tu propósito.',
-            '✨ Vivir cada día con mayor presencia.'
+            'Comenzar el mes con claridad.',
+            'Organizar tus prioridades desde la consciencia.',
+            'Atraer nuevas oportunidades.',
+            'Fortalecer la confianza en vos mismo.',
+            'Liberar la energía del mes anterior.',
+            'Conectar con tu propósito.',
+            'Vivir cada día con mayor presencia.'
         ],
         items_titulo: "Mente · Cuerpo · Alma",
         items : [
             {
-                titulo: "🧠 Mente",
+                titulo: "Mente",
+                icono: Brain,
                 descripciones: [
                     'Antes de comenzar preguntate:',
+                    null,
                     '¿Cómo quiero sentirme este mes?',
                     'No pienses solamente en objetivos.',
                     'Pensá en emociones.',
@@ -430,24 +493,29 @@ export const rituales = {
                     'Alegría.',
                     'Calma.',
                     'Abundancia.',
+                    null,
                     'Cuando elegimos primero cómo queremos sentirnos, nuestras decisiones comienzan a alinearse naturalmente.'
                 ],
             },
             {
-                titulo: "🌿 Cuerpo",
+                titulo: "Cuerpo",
+                icono: HeartPulse,
                 descripciones: [
-                   "El cuerpo también necesita reconocer que un nuevo ciclo comienza.",
-                   "",
+                    "El cuerpo también necesita reconocer que un nuevo ciclo comienza.",
+                    null,                    
                     "Encender una vela, escribir nuestras intenciones, respirar profundamente o preparar un espacio sagrado nos ayuda a salir del ritmo automático y entrar en un estado de presencia.",
-                    "",
-                    "l cuerpo recuerda aquello que vivimos con intención."
+                    null,
+                    "El cuerpo recuerda aquello que vivimos con intención."
                 ]
             },
             {
-                titulo: "✨ Alma",
+                titulo: "Alma",
+                icono: Sparkles,
                 descripciones: [
                     "Cada comienzo trae consigo una energía de renovación.",
+                    null,
                     "El alma comprende que cada experiencia es una oportunidad para crecer.",
+                    null,
                     "Cuando abrimos nuestro corazón al nuevo mes con gratitud y confianza, nos permitimos caminar con mayor liviandad, sabiendo que todo aquello que llega tiene un propósito para nuestra evolución."
                 ]
             }
@@ -455,85 +523,128 @@ export const rituales = {
         preparacion_titulo: "Antes de comenzar",
         preparacion_subtitulo: "Prepará un espacio tranquilo.",
         preparacion_items: [
-            "Podés colocar:",            
-            "• Una vela blanca o dorada.",
-            "• Un vaso con agua.",
-            "• Incienso o sahumo.",
-            "• Una flor fresca.",
-            "• Un cuaderno.",
-            "• Una lapicera.",
-            "• Un cuarzo transparente o amatista (opcional).",
-            "",
-            "Respirá profundamente varias veces y disponete a vivir este momento con calma."
+            {
+                texto: "Podés colocar:",
+                mostrarBullet: false,
+            },
+            null,
+            {
+                texto: "Una vela blanca o dorada.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Un vaso con agua.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Incienso o sahumo.",
+                mostrarBullet: true,
+            },               
+            {
+                texto: "Una flor fresca.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Un cuaderno.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Una lapicera.",
+                mostrarBullet: true,
+            },
+            {
+                texto: "Un cuarzo transparente o amatista (opcional).",
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: "Respirá profundamente varias veces y disponete a vivir este momento con calma.",
+                mostrarBullet: false,
+            },
         ],
         paso_paso_titulo: "El Ritual",
-        paso_paso: {
-            titulo: "1. Encender la luz",
-            descripciones: [
-                'Encendé la vela diciendo:',
-                '"Hoy abro las puertas a un nuevo mes lleno de oportunidades, aprendizajes y bendiciones.',
-                'Que esta luz ilumine cada uno de mis pasos."'
-            ],
-            titulo: '2. Agradecer el ciclo que termina',
-            descripciones: [
-                'Antes de mirar hacia adelante, agradecé.',
-                'Escribí tres cosas que el mes anterior te enseñó.',
-                'Tres personas por las que sentís gratitud.',
-                'Tres momentos que querés conservar en tu corazón.',
-                'El agradecimiento abre espacio para recibir.'
-            ],
-            titulo: '3. Liberar',
-            descripciones: [
-                'Escribí aquello que decidís dejar atrás.',
-                'Miedos.',
-                'Preocupaciones.',
-                'Culpas.',
-                'Enojos.',
-                'Creencias limitantes.',
-                'Cuando termines, rompé el papel o quemalo de manera segura mientras repetís:',
-                '"Honro lo vivido.',
-                'Libero lo que ya cumplió su propósito.',
-                'Elijo avanzar con el corazón liviano."'
-            ],
-            titulo: '4. Crear la intención del mes',
-            descripciones: [
-                'En una nueva hoja escribí:',
-                'Mi palabra para este mes.',
-                'Elegí una sola.',
-                'Ejemplos:',
-                'Confianza.',
-                'Abundancia.',
-                'Amor.',
-                'Calma.',
-                'Expansión.',
-                'Disciplina.',
-                'Alegría.',
-                'Luego escribí cinco intenciones que acompañen esa palabra.'
-            ], 
-            titulo: '5. Visualizar',
-            descripciones: [
-                'Cerrá los ojos.',
-                'Imaginá que ya estás viviendo el mes que deseás.',
-                'Observá cómo caminás.',
-                'Cómo hablás.',
-                'Cómo resolvés los desafíos.',
-                'Cómo disfrutás los pequeños momentos.',
-                'Permitite sentir esa realidad.'
-            ], 
-            titulo: '6. Sellar el compromiso',
-            descripciones: [
-                'Colocá ambas manos sobre el corazón.',
-                'Respirá profundamente.',
-                'Decí:',
-                '"Hoy comienzo este nuevo ciclo con confianza.',
-                'Elijo pensamientos que construyen.',
-                'Acciones que transforman.',
-                'Y una actitud abierta para recibir todo aquello que contribuya a mi mayor bien.',
-                'Confío en la vida.',
-                'Confío en mi camino.',
-                'Confío en mí."'
-            ]
-        },
+        paso_paso: [
+            {
+                titulo: "Encender la luz",
+                descripciones: [
+                    'Encendé la vela diciendo:',
+                    '"Hoy abro las puertas a un nuevo mes lleno de oportunidades, aprendizajes y bendiciones.',
+                    'Que esta luz ilumine cada uno de mis pasos."'
+                ],
+            },
+            {
+                titulo: 'Agradecer el ciclo que termina',
+                descripciones: [
+                    'Antes de mirar hacia adelante, agradecé.',
+                    'Escribí tres cosas que el mes anterior te enseñó.',
+                    'Tres personas por las que sentís gratitud.',
+                    'Tres momentos que querés conservar en tu corazón.',
+                    'El agradecimiento abre espacio para recibir.'
+                ],
+            },
+            {
+                titulo: 'Liberar',
+                descripciones: [
+                    'Escribí aquello que decidís dejar atrás.',
+                    'Miedos.',
+                    'Preocupaciones.',
+                    'Culpas.',
+                    'Enojos.',
+                    'Creencias limitantes.',
+                    null,
+                    'Cuando termines, rompé el papel o quemalo de manera segura mientras repetís:',
+                    '"Honro lo vivido.',
+                    'Libero lo que ya cumplió su propósito.',
+                    'Elijo avanzar con el corazón liviano."'
+                ],
+            },
+            {
+                titulo: 'Crear la intención del mes',
+                descripciones: [
+                    'En una nueva hoja escribí:',
+                    'Mi palabra para este mes.',
+                    'Elegí una sola.',
+                    null,
+                    'Ejemplos:',
+                    'Confianza.',
+                    'Abundancia.',
+                    'Amor.',
+                    'Calma.',
+                    'Expansión.',
+                    'Disciplina.',
+                    'Alegría.',
+                    null,
+                    'Luego escribí cinco intenciones que acompañen esa palabra.'
+                ],
+            },
+            {
+                titulo: 'Visualizar',
+                descripciones: [
+                    'Cerrá los ojos.',
+                    'Imaginá que ya estás viviendo el mes que deseás.',
+                    'Observá cómo caminás.',
+                    'Cómo hablás.',
+                    'Cómo resolvés los desafíos.',
+                    'Cómo disfrutás los pequeños momentos.',
+                    'Permitite sentir esa realidad.'
+                ],
+            },
+            {
+                titulo: 'Sellar el compromiso',
+                descripciones: [
+                    'Colocá ambas manos sobre el corazón.',
+                    'Respirá profundamente.',
+                    'Decí:',
+                    '"Hoy comienzo este nuevo ciclo con confianza.',
+                    'Elijo pensamientos que construyen.',
+                    'Acciones que transforman.',
+                    'Y una actitud abierta para recibir todo aquello que contribuya a mi mayor bien.',
+                    'Confío en la vida.',
+                    'Confío en mi camino.',
+                    'Confío en mí."'
+                ]
+            },
+        ],
         cierre_titulo: "Cierre del ritual",
         cierre_items: [
             'Guardá la hoja con tus intenciones en un lugar especial.',
@@ -552,20 +663,19 @@ export const rituales = {
             'Hoy comienzo un nuevo ciclo lleno de posibilidades.',
             'Así es. Así será."'
         ],
-        reflexion_titulo: "💜 Reflexión",
+        reflexion_titulo: "Reflexión",
         reflexion_items: [
             'Los meses no cambian nuestra vida por sí solos.',
             'Lo que transforma nuestro camino es la decisión de vivir cada nuevo comienzo con presencia, gratitud y propósito.',
             'Que este ritual te recuerde que siempre existe una nueva oportunidad para elegir distinto, confiar más profundamente y construir la vida que anhela tu alma.',
-            '',
+            null,
             '"Cada nuevo mes es una página en blanco. No escribas desde el miedo ni desde la costumbre. Escribí desde la persona en la que te estás convirtiendo. Cuando la mente elige con claridad, el cuerpo actúa con coherencia y el alma guía el camino, cada comienzo se transforma en una oportunidad para florecer."'
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
         ],
         mostrarBoton: false,
-        tiempo: "30 minutos",
-        materiales: ["Vela blanca o dorada", "Agua", "Incienso o sahumo", "Flor fresca", "Cuaderno", "Lapicera", "Cuarzo transparente o amatista"]
+        tiempo: "45 minutos"
     },
     
     ritual4: {
@@ -579,20 +689,39 @@ export const rituales = {
         introduccion : [
             'Esta colección está pensada para quienes sienten la necesidad de detenerse, volver a sí mismos y recuperar la conexión con su mundo interior.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            '🌑 Ritual de Luna Nueva',
-            '🌕 Ritual de Luna Llena',
-            '🌿 Ritual de Conexión con el Ser Interior',
-            '✨ Ritual de Gratitud Profunda',
-            '🙏 Ritual de Silencio y Escucha del Alma'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual de Luna Nueva',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Luna Llena',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Conexión con el Ser Interior',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Gratitud Profunda',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Silencio y Escucha del Alma',
+                mostrarBullet: true,
+            },            
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
         ],
         mostrarBoton: true        
     },
+    
     ritual5: {
         id: "coleccion_2",
         titulo: "Colección 2",
@@ -604,14 +733,32 @@ export const rituales = {
         introduccion : [
             'Ideal para momentos de cambio, decisiones importantes o procesos personales.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            '🍂 Ritual para Soltar el Pasado',
-            '🔥 Ritual para Transmutar el Dolor',
-            '🕊 Ritual del Perdón',
-            '🌈 Ritual para Abrir Nuevos Caminos',
-            '🌱 Ritual de Renacimiento Personal'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual para Soltar el Pasado',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Transmutar el Dolor',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual del Perdón',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Abrir Nuevos Caminos',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Renacimiento Personal',
+                mostrarBullet: true,
+            },
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -629,14 +776,32 @@ export const rituales = {
         introduccion : [
             'Pensada para quienes desean trabajar tanto la sanación emocional como la manifestación consciente.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            '💰 Ritual de la Abundancia',
-            '❤️ Ritual del Amor Propio',
-            '🌟 Ritual para Manifestar Sueños',
-            '🌺 Ritual para Elevar la Autoestima',
-            '🌻 Ritual para Conectar con el Merecimiento'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual de la Abundancia',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual del Amor Propio',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Manifestar Sueños',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Elevar la Autoestima',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Conectar con el Merecimiento',
+                mostrarBullet: true,
+            },
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -654,14 +819,32 @@ export const rituales = {
         introduccion : [
             'Rituales simples para incorporar en la vida diaria.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            '☀ Ritual para Comenzar el Día',
-            '🌙 Ritual para Cerrar el Día',
-            '🌬 Ritual de Respiración y Presencia',
-            '📖 Ritual de Escritura Consciente',
-            '🕯 Ritual Semanal de Limpieza Energética'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual para Comenzar el Día',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Cerrar el Día',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Respiración y Presencia',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Escritura Consciente',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual Semanal de Limpieza Energética',
+                mostrarBullet: true,
+            },
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -679,14 +862,32 @@ export const rituales = {
         introduccion : [
             'Esta colección invita a dar significado a los momentos importantes de la vida.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            '🎂 Ritual de Cumpleaños',
-            '🏡 Ritual para un Nuevo Hogar',
-            '💍 Ritual para Bendecir una Relación',
-            '👶 Ritual para Nuevos Comienzos',
-            '🎓 Ritual para Iniciar un Proyecto'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual de Cumpleaños',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para un Nuevo Hogar',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Bendecir una Relación',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Nuevos Comienzos',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Iniciar un Proyecto',
+                mostrarBullet: true,
+            },
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -704,14 +905,32 @@ export const rituales = {
         introduccion : [
             'Muy alineada con la filosofía de Raíces del Alma.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            '🌹 Ritual para Sanar el Linaje Femenino',
-            '🔥 Ritual para Sanar el Linaje Masculino',
-            '👶 Ritual para Abrazar al Niño Interior',
-            '🤲 Ritual para Honrar a los Ancestros',
-            '💜 Ritual para Cortar Lazos Energéticos'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual para Sanar el Linaje Femenino',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Sanar el Linaje Masculino',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Abrazar al Niño Interior',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Honrar a los Ancestros',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Cortar Lazos Energéticos',
+                mostrarBullet: true,
+            },
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -729,14 +948,32 @@ export const rituales = {
         introduccion : [
             'Sería tu colección más completa, integrando mente, cuerpo y alma.'
         ],
-        importancia_titulo: "Incluye",
-        importancia_subtitulo: "",
-        importancia: [
-            'Ritual de Luna Nueva',
-            'Ritual de Luna Llena',
-            'Ritual de la Abundancia',
-            'Ritual para Sanar el Linaje Femenino',
-            'Ritual para Sanar el Linaje Masculino'
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Ritual de Luna Nueva',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de Luna Llena',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual de la Abundancia',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Sanar el Linaje Femenino',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Ritual para Sanar el Linaje Masculino',
+                mostrarBullet: true,
+            },
         ],
         images: [
             "/img/rituales/apertura_mes.jpg"
@@ -745,8 +982,8 @@ export const rituales = {
     }
 };
 
-
 // ✔
 // ○
 // •
 // ❤
+

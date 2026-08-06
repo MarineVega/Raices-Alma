@@ -86,7 +86,7 @@
   }
 
   .ritual-detalle-descripcion {
-    @apply text-xl mb-4;
+    @apply text-xl mb-4 ml-4 mr-4;
     color: var(--color-texto);
   }
   .ritual-detalle-espacio {

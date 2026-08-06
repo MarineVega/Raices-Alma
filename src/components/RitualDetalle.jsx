@@ -93,49 +93,58 @@ export default function RitualDetalle() {
         <div className="ritual-detalle-grid">
 
           {/* Importancia */}
-          <div className="ritual-detalle-card">
-            <h3 className="ritual-detalle-card-titulo">
-              <Sparkle className="w-5 h-5" />
-              <p>{ritual.importancia_titulo}</p>
-            </h3>
-            
-            <h4 className="ritual-detalle-card-subtitulo">              
-              <p>{ritual.importancia_subtitulo}</p>              
-            </h4>
+          {ritual.importancia?.length > 0 && (
+            <>
+              <div className="ritual-detalle-card">
+                <h3 className="ritual-detalle-card-titulo">
+                  <Sparkle className="w-5 h-5" />
+                  <p>{ritual.importancia_titulo}</p>
+                </h3>
+                
+                <h4 className="ritual-detalle-card-subtitulo">              
+                  <p>{ritual.importancia_subtitulo}</p>              
+                </h4>
 
-            <ul className="ritual-detalle-card-descripcion">
-              {ritual.importancia?.map((importancia, idx) => 
-                importancia === null ? (
-                  <li key={idx} className="ritual-detalle-espacio"></li>
-                ) : (                  
-                <li key={idx}>{importancia}</li>
-                )
-              )}
-            </ul>
-          </div>
+                <ul className="ritual-detalle-card-descripcion">
+                  {ritual.importancia?.map((importancia, idx) => 
+                    importancia === null ? (
+                      <li key={idx} className="ritual-detalle-espacio"></li>
+                    ) : (                  
+                    <li key={idx}>{importancia}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+            </>
+          )}
 
           {/* Beneficios */}
-          <div className="ritual-detalle-card">
-            <h3 className="ritual-detalle-card-titulo">
-              <CheckCircle2 className="w-5 h-5" />
-              <p>{ritual.beneficios_titulo}</p>
-            </h3>
-            <h4 className="ritual-detalle-card-subtitulo">              
-              <p>{ritual.beneficios_subtitulo}</p>              
-            </h4>
+          {ritual.beneficios?.length > 0 && (
+            <>
+              <div className="ritual-detalle-card">
+                <h3 className="ritual-detalle-card-titulo">
+                  <CheckCircle2 className="w-5 h-5" />
+                  <p>{ritual.beneficios_titulo}</p>
+                </h3>
+                <h4 className="ritual-detalle-card-subtitulo">              
+                  <p>{ritual.beneficios_subtitulo}</p>              
+                </h4>
 
-            <ul className="ritual-detalle-beneficios-lista">
-              {ritual.beneficios?.map((beneficio, idx) => (
-                <li key={idx}>
-                  <span className="ritual-detalle-bullet">✦</span>
-                  {beneficio}
-                </li>
-              ))}
-            </ul>
-          </div>
+                <ul className="ritual-detalle-beneficios-lista">
+                  {ritual.beneficios?.map((beneficio, idx) => (
+                    <li key={idx}>
+                      <span className="ritual-detalle-bullet">✦</span>
+                      {beneficio}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
+
         </div>
               
-        {/* Grid Mente · Cuerpo · Alma */}
+        {/* Grid Mente · Cuerpo · Alma */}        
         {ritual.items?.length > 0 && (
           <>
             <h2 className="ritual-detalle-seccion-titulo">
@@ -170,99 +179,163 @@ export default function RitualDetalle() {
           </>
         )}
         
-
         {/* Materiales (antes de comenzar) */}
-        <h2 className="ritual-detalle-seccion-titulo">
-          {ritual.preparacion_titulo}
-        </h2>
-        <div className="ritual-detalle-card ritual-detalle-card-preparacion">
+        {ritual.preparacion_items?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.preparacion_titulo}
+            </h2>
+            <div className="ritual-detalle-card ritual-detalle-card-preparacion">
 
-          <h4 className="ritual-detalle-card-subtitulo">              
-            {ritual.preparacion_subtitulo}
-          </h4>
-        
-          <ul className="ritual-detalle-card-descripcion">
-            {ritual.preparacion_items?.map((item, idx) => 
-              item === null ? (
-              <li key={idx} className="ritual-detalle-espacio"></li>
-              ) : (
-                <li key={idx}>
-                  {item.mostrarBullet && (
-                    <span className="ritual-detalle-bullet">✦ </span>
-                  )}
-                  {item.texto}
-                </li>
-              )
-            )}
-          </ul>        
-        </div>
+              <h4 className="ritual-detalle-card-subtitulo">              
+                {ritual.preparacion_subtitulo}
+              </h4>
+            
+              <ul className="ritual-detalle-card-descripcion">
+                {ritual.preparacion_items?.map((item, idx) => 
+                  item === null ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                  ) : (
+                    <li key={idx}>
+                      {item.mostrarBullet && (
+                        <span className="ritual-detalle-bullet">✦ </span>
+                      )}
+                      {item.texto}
+                    </li>
+                  )
+                )}
+              </ul>        
+            </div>
+          </>
+        )}
 
         {/* Paso a paso - El Ritual */}
-        <h2 className="ritual-detalle-seccion-titulo">
-          {ritual.paso_paso_titulo}
-        </h2>
+        {ritual.paso_paso?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.paso_paso_titulo}
+            </h2>
 
-        <div className="ritual-detalle-pasos">
-          {ritual.paso_paso.map((item, idx) => (
-            
-            <div key={idx} className="ritual-detalle-paso">
-              <span className="ritual-detalle-paso-numero">{idx + 1}</span>
-              
-              <div className="ritual-detalle-paso-card">
-                  <h4 className="ritual-detalle-paso-titulo">
-                    {item.titulo}
-                  </h4>
+            <div className="ritual-detalle-pasos">
+              {ritual.paso_paso.map((item, idx) => (
+                
+                <div key={idx} className="ritual-detalle-paso">
+                  <span className="ritual-detalle-paso-numero">{idx + 1}</span>
+                  
+                  <div className="ritual-detalle-paso-card">
+                      <h4 className="ritual-detalle-paso-titulo">
+                        {item.titulo}
+                      </h4>
 
-                  <ul className="ritual-detalle-paso-lista">
-                    {item.descripciones.map((descripcion, i) => 
-                      descripcion === null ? (
-                        <li key={i} className="ritual-detalle-espacio"></li>
-                      ) : (
-                        <li key={i}>
-                          {descripcion}
-                        </li>
-                    ))}
-                  </ul>
-               </div>                  
+                      <ul className="ritual-detalle-paso-lista">
+                        {item.descripciones.map((descripcion, i) => 
+                          descripcion === null ? (
+                            <li key={i} className="ritual-detalle-espacio"></li>
+                          ) : (
+                            <li key={i}>
+                              {descripcion}
+                            </li>
+                        ))}
+                      </ul>
+                  </div>                  
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
       
+
+        {/* Cierre del ritual */}
+        {ritual.cierre_items?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.cierre_titulo}
+            </h2>
+            
+            <div className="ritual-detalle-card ritual-detalle-card-preparacion ritual-detalle-card-afirmacion-reflexion">        
+              <ul className="ritual-detalle-card-afirmacion">
+                {ritual.cierre_items?.map((item, idx) => 
+                  item === null ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                  ) : (
+                    <li key={idx}>{item}</li>
+                  )
+                )}
+              </ul>
+            </div>
+          </>
+        )}
+
         {/* Afirmación Final */}
-        <h2 className="ritual-detalle-seccion-titulo">
-          {ritual.afirmacion_titulo}
-        </h2>
-        
-        <div className="ritual-detalle-card ritual-detalle-card-preparacion ritual-detalle-card-afirmacion-reflexion">        
-          <ul className="ritual-detalle-card-afirmacion">
-            {ritual.afimacion_items?.map((item, idx) => 
-              item === null ? (
-              <li key={idx} className="ritual-detalle-espacio"></li>
-              ) : (
-                <li key={idx}>{item}</li>
-              )
-            )}
-          </ul>
-        </div>
+        {ritual.afimacion_items?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.afirmacion_titulo}
+            </h2>
+            
+            <div className="ritual-detalle-card ritual-detalle-card-preparacion ritual-detalle-card-afirmacion-reflexion">        
+              <ul className="ritual-detalle-card-afirmacion">
+                {ritual.afimacion_items?.map((item, idx) => 
+                  item === null ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                  ) : (
+                    <li key={idx}>{item}</li>
+                  )
+                )}
+              </ul>
+            </div>
+          </>
+        )}
 
         {/* Reflexión */}
-        <h2 className="ritual-detalle-seccion-titulo">
-          {ritual.reflexion_titulo}
-        </h2>
+        {ritual.reflexion_items?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.reflexion_titulo}
+            </h2>
 
-        <div className="ritual-detalle-card ritual-detalle-card-preparacion ritual-detalle-card-afirmacion-reflexion">        
-        
-          <ul className="ritual-detalle-card-afirmacion">
-            {ritual.reflexion_items?.map((item, idx) => 
-              item === null ? (
-              <li key={idx} className="ritual-detalle-espacio"></li>
-              ) : (
-                <li key={idx}>{item}</li>
-              )
-            )}
-          </ul>
-        </div>
+            <div className="ritual-detalle-card ritual-detalle-card-preparacion ritual-detalle-card-afirmacion-reflexion">        
+            
+              <ul className="ritual-detalle-card-afirmacion">
+                {ritual.reflexion_items?.map((item, idx) => 
+                  item === null ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                  ) : (
+                    <li key={idx}>{item}</li>
+                  )
+                )}
+              </ul>
+            </div>
+          </>
+        )}
 
+        {/* Colecciones (rituales monetizados) */}
+        {ritual.coleccion_items?.length > 0 && (
+          <>
+            <h2 className="ritual-detalle-seccion-titulo">
+              {ritual.coleccion_titulo}
+            </h2>
+
+            <div className="ritual-detalle-card ritual-detalle-card-preparacion ritual-detalle-card-afirmacion-reflexion">
+              
+            
+              <ul className="ritual-detalle-card-descripcion">
+                {ritual.coleccion_items?.map((item, idx) => 
+                  item === null ? (
+                  <li key={idx} className="ritual-detalle-espacio"></li>
+                  ) : (
+                    <li key={idx}>
+                      {item.mostrarBullet && (
+                        <span className="ritual-detalle-bullet">✦ </span>
+                      )}
+                      {item.texto}
+                    </li>
+                  )
+                )}
+              </ul>        
+            </div>
+          </>
+        )}
 
         {/* CTA Solicitar */}
         {ritual.mostrarBoton !== false && (
@@ -274,9 +347,9 @@ export default function RitualDetalle() {
                 <Calendar className="w-5 h-5" />
                 <span>Solicitar este ritual</span>
             </button>
-            <p className="ritual-detalle-cta-texto">
+            {/* <p className="ritual-detalle-cta-texto">
                 Agenda tu sesión y recibe guía personalizada
-            </p>
+            </p> */}
             </div>
         )}
       </div>
