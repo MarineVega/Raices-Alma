@@ -1,0 +1,104 @@
+@layer components {
+
+  .modal-imagen-overlay{
+    @apply fixed inset-0 flex items-center justify-center p-6;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    animation: modalFade .25s ease;
+  }
+
+  .modal-imagen-contenedor{
+    @apply relative rounded-2xl overflow-hidden;
+    max-width: 900px;
+    max-height: 90vh;
+
+    background-color: var(--color-primario);
+
+    border: 1px solid rgba(var(--color-secundario-rgb), .25);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.45);
+
+    animation: modalZoom .25s ease;
+  }
+
+  .modal-imagen{
+    @apply block;
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .modal-imagen-cerrar{
+    @apply absolute rounded-full flex items-center justify-center transition-all duration-300;
+
+    top: 14px;
+    right: 14px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    cursor: pointer;
+
+    background-color: rgba(var(--color-primario-rgb), .75);
+
+    color: var(--color-texto);
+  }
+
+  .modal-imagen-cerrar:hover{
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    transform: rotate(90deg);
+  }
+
+  .modal-imagen-cerrar svg{
+    @apply w-5 h-5;
+  }
+
+
+  @keyframes modalFade{
+
+    from{
+      opacity:0;
+    }
+
+    to{
+      opacity:1;
+    }
+
+  }
+
+  @keyframes modalZoom{
+
+    from{
+      opacity:0;
+      transform:scale(.9);
+    }
+
+    to{
+      opacity:1;
+      transform:scale(1);
+    }
+
+  }
+
+  @media (max-width:768px){
+
+    .modal-imagen-overlay{
+      @apply p-3;
+    }
+
+    .modal-imagen-cerrar{
+
+      width:38px;
+      height:38px;
+
+      top:10px;
+      right:10px;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,320 @@
+@layer components {
+
+    .testimonios {
+        @apply py-20 px-6 lg:px-16 overflow-hidden;
+        background-color: var(--color-primario-claro);
+    }
+
+    .testimonios-contenedor{
+        @apply max-w-7xl mx-auto;
+    }
+
+    /*======================================
+        HEADER
+    ======================================*/    
+    .testimonios-header {
+        @apply text-center mb-16;
+    }
+
+    .testimonios-badge {    
+        @apply inline-flex items-center gap-3 rounded-full px-4 py-2 mb-4;
+        background-color: rgba(var(--color-primario-rgb), 0.2);
+        border: 1px solid rgba(var(--color-primario-rgb), 0.3);
+    }
+
+    .testimonios-badge-icon {
+        @apply w-5 h-5;
+        color: var(--color-acento-brillo);
+    }
+
+    .testimonios-badge span {
+        @apply font-semibold tracking-widest text-sm;
+        color: var(--color-acento-brillo);
+    }
+
+    /*======================================
+        TITULOS
+    ======================================*/
+
+    .testimonios-titulo{        
+        @apply text-4xl md:text-5xl font-bold tracking-wider mb-4;
+        color: var(--color-primario);
+    }
+
+    .testimonios-subtitulo{
+        @apply text-xl max-w-2xl mx-auto;    
+        color: var(--color-texto-oscuro);
+    }
+
+    /*======================================
+        GRID
+    ======================================*/
+
+    .testimonios-grid{
+        @apply grid gap-8;
+        grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+    }
+
+    /*======================================
+        CARD
+    ======================================*/
+
+    .testimonio-card{
+        @apply rounded-3xl p-8 relative overflow-hidden transition-all duration-300;        
+        background-color: rgba(var(--color-primario-rgb), 0.8);
+        border: 1px solid rgba(var(--color-primario-rgb), 0.1);
+        /* backdrop-filter: blur(8px); */
+    }
+
+    .testimonio-card::before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:4px;
+        background:linear-gradient(
+        90deg,
+        transparent,
+        var(--color-acento),
+        transparent
+        );
+    }
+
+    .testimonio-card:hover{
+        transform:translateY(-6px);
+        border-color:var(--color-acento);
+        box-shadow:0 18px 35px rgba(0,0,0,.28);
+    }
+
+    /*======================================
+        COMILLAS
+    ======================================*/
+    .testimonio-comillas{
+        @apply w-10 h-10 mb-5;
+        color:rgba(var(--color-acento-rgb),.85);
+    }
+
+    /*======================================
+        TEXTO
+    ======================================*/
+    .testimonio-texto{
+        @apply text-lg leading-8 mb-8 italic;
+        color:var(--color-texto);
+    }
+
+    /*======================================
+        FOOTER
+    ======================================*/
+    .testimonio-footer{
+        @apply flex items-end justify-between gap-5 flex-wrap;
+    }
+
+    .testimonio-nombre{
+        @apply text-lg font-bold mb-2;
+        color:var(--color-secundario);
+    }
+
+    /*======================================
+        ESTRELLAS
+    ======================================*/
+    /* .testimonio-estrellas{
+        @apply flex gap-1;
+    }
+
+    .testimonio-estrella{
+        @apply w-5 h-5;
+        color:var(--color-acento);
+    } */
+
+    /*======================================
+        BOTON
+    ======================================*/
+    .testimonio-boton{
+        @apply px-5 py-3 rounded-xl font-semibold transition-all duration-300;
+        background-color:rgba(var(--color-acento-rgb),.35);
+        color:var(--color-acento-brillo);
+        border:1px solid rgba(var(--color-acento-rgb),.45);
+        cursor:pointer;
+    }
+
+    .testimonio-boton:hover{
+        background-color:var(--color-acento);
+        color:var(--color-texto);
+        transform:scale(1.05);
+    }
+
+    /*======================================
+        MODAL
+    ======================================*/
+
+    .testimonio-modal{
+
+        @apply fixed inset-0 flex items-center justify-center z-50 p-6;
+
+        background-color:rgba(0,0,0,.75);
+
+        backdrop-filter:blur(8px);
+
+        animation:fadeIn .25s ease;
+
+    }
+
+    .testimonio-modal-contenido{
+
+        @apply relative rounded-3xl overflow-hidden;
+
+        max-width:420px;
+
+        width:100%;
+
+        background-color:var(--color-primario);
+
+        animation:zoomIn .25s ease;
+
+    }
+
+    .testimonio-modal-imagen{
+
+        @apply w-full block;
+
+    }
+
+    .testimonio-modal-cerrar{
+
+        @apply absolute top-3 right-3 rounded-full p-2 transition-all;
+
+        background-color:rgba(var(--color-primario-rgb),.75);
+
+        color:var(--color-texto);
+
+        border:none;
+
+        cursor:pointer;
+
+    }
+
+    .testimonio-modal-cerrar:hover{
+
+        background-color:var(--color-acento);
+
+    }
+
+    /*======================================
+        VER MAS
+    ======================================*/
+
+    .testimonios-ver-mas{
+        @apply flex justify-center mt-12;
+    }
+
+    .testimonios-boton-ver-mas{
+        @apply px-8 py-3 rounded-xl transition-all duration-300 font-semibold;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: var(--color-primario);
+
+    }
+
+    .testimonios-boton-ver-mas:hover{
+        background-color: var(--color-acento);
+        border-color: var(--color-acento);
+        color: var(--color-texto);
+        cursor: pointer;
+    }
+
+    /*======================================
+        ANIMACIONES
+    ======================================*/
+
+    @keyframes fadeIn{
+
+        from{
+
+        opacity:0;
+
+        }
+
+        to{
+
+        opacity:1;
+
+        }
+
+    }
+
+    @keyframes zoomIn{
+
+        from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+        }
+
+        to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+        }
+
+    }
+
+    /*======================================
+        RESPONSIVE
+    ======================================*/
+
+    @media (max-width:768px){
+
+        .testimonios{
+
+        @apply py-16 px-4;
+
+        }
+
+        .testimonios-titulo{
+
+        @apply text-3xl;
+
+        }
+
+        .testimonio-card{
+
+        @apply p-6;
+
+        }
+
+    }
+
+    @media (max-width:480px){
+
+        .testimonios{
+
+        @apply py-12 px-3;
+
+        }
+
+        .testimonio-texto{
+
+        @apply text-base leading-7;
+
+        }
+
+        .testimonio-footer{
+
+        @apply flex-col items-start;
+
+        }
+
+        .testimonio-boton{
+
+        @apply w-full;
+
+        }
+
+    }
+
+}

@@ -8,7 +8,9 @@
     @apply max-w-7xl mx-auto;
   }
 
-  /* Header */
+  /*======================================
+    HEADER
+  ======================================*/
   .videos-header {
     @apply text-center mb-16;
   }
@@ -29,6 +31,9 @@
     color: var(--color-acento-brillo);
   }
 
+  /*======================================
+    TITULOS
+    ======================================*/
   .videos-titulo {
     @apply text-4xl md:text-5xl font-bold tracking-wider mb-4;    
     color: var(--color-primario);
@@ -39,7 +44,9 @@
     color: var(--color-texto-oscuro);
   }
 
-  /* Categoría */
+  /*======================================
+    CATEGORÍA
+    ======================================*/  
   .videos-categoria {
     @apply mb-20;
   }

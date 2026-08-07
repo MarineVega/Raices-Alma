@@ -12,6 +12,7 @@ import SobreMi from './components/SobreMi';
 import Terapias from './components/Terapias';
 import Videos from './components/Videos';
 import Rituales from './components/Rituales';
+import Testimonios from './components/Testimonios';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import BotonSubir from './components/BotonSubir';
@@ -106,13 +107,9 @@ function AppContent() {
                 <SobreMi />
                 <Terapias />
                 <Videos />
-
-
-                {/* <Promocion /> */}
-                {/* <Paquetes /> */}
                 {/* console.log("handleSeleccionarPaquete existe:", typeof handleSeleccionarPaquete); */}                
                 <Rituales onSeleccionarRitual={handleSeleccionarRitual} />
-                
+                <Testimonios />
                 {/* <Contacto paqueteSeleccionado={paqueteSeleccionado} />                   */}
                 <Contacto />
               </main>
