@@ -1,5 +1,5 @@
 import { contacto } from "../data/contacto";
-import { MessageCircle, MapPin, Clock } from "lucide-react";
+import { MessageCircle, MapPin, Clock, Sparkles} from "lucide-react";
 import { generarLinkWhatsApp } from "../utils/whatsapp";
  
 export default function Contacto(tipo = "consulta", paqueteSeleccionado = null) {  
@@ -9,6 +9,10 @@ export default function Contacto(tipo = "consulta", paqueteSeleccionado = null) 
     <section id="contacto" className="contacto">
       <div className="contacto-contenedor">
         <div className="contacto-header">
+            <div className="contacto-badge">
+              <Sparkles className="contacto-badge-icon" />
+              <span>CONTACTO</span>
+            </div>
           <h2 className="contacto-titulo">Contactame</h2>
           <p className="contacto-subtitulo">El primer paso hacia tu sanación empieza hoy</p>
         </div>

@@ -59,21 +59,21 @@ export const categoriasVideos = [
       }
     ]
   },
-  {
-    id: "energia",
-    titulo: "Energía del Día",
-    subtitulo: "Conexión con las energías disponibles para cada jornada",
-    icono: Sun,
-    color: "var(--color-acento-brillo)",
-    videos: [
-      {
-        id: "energia-semanal",
-        titulo: "Energía de la Semana",
-        descripcion: "Lectura energética para navegar estos próximos 7 días",
-        fecha: "2026-07-01",
-        url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
-        mensajePredefinido: "Hola! Quisiera consultar sobre la energía de esta semana y cómo aplicarla a mi situación..."
-      }
-    ]
-  }
+  // {
+  //   id: "energia",
+  //   titulo: "Energía del Día",
+  //   subtitulo: "Conexión con las energías disponibles para cada jornada",
+  //   icono: Sun,
+  //   color: "var(--color-acento-brillo)",
+  //   videos: [
+  //     {
+  //       id: "energia-semanal",
+  //       titulo: "Energía de la Semana",
+  //       descripcion: "Lectura energética para navegar estos próximos 7 días",
+  //       fecha: "2026-07-01",
+  //       url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
+  //       mensajePredefinido: "Hola! Quisiera consultar sobre la energía de esta semana y cómo aplicarla a mi situación..."
+  //     }
+  //   ]
+  // }
 ];

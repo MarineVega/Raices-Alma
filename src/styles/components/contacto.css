@@ -3,6 +3,11 @@
     @apply py-20 px-6 lg:px-16;
     /* background-color: var(--color-fondo); */
     background-color: rgba(var(--color-acento-rgb), 0.1);
+    background: radial-gradient(
+      circle at center,
+      var(--color-primario-claro) 10%,
+      var(--color-primario) 50%
+    );
   }
 
   .contacto-contenedor {
@@ -10,16 +15,31 @@
   }
 
   .contacto-header {
-    @apply text-center mb-12;
+    @apply text-center mb-16;
   }
 
+  .contacto-badge {
+    @apply inline-flex items-center gap-3 rounded-full px-4 py-2 mb-4;
+    background-color: rgba(var(--color-acento-rgb), 0.1);
+    border: 1px solid rgba(var(--color-acento-rgb), 0.3);
+  }
+
+  .contacto-badge-icon {
+    @apply w-5 h-5;
+    color: var(--color-acento);
+  }
+
+  .contacto-badge span {
+    @apply font-semibold tracking-widest;
+    color: var(--color-acento);
+  }
   .contacto-titulo {
     @apply text-4xl md:text-5xl font-bold mb-4 tracking-wider;
-    color: var(--color-texto-brillo);
+    color: var(--color-secundario);
   }
 
-  .contacto-subtitulo {
-    @apply text-xl tracking-wider;
+  .contacto-subtitulo {    
+    @apply text-xl mt-4 max-w-2xl mx-auto tracking-widest;
     color: var(--color-texto);
   }
 
@@ -29,39 +49,39 @@
 
   .contacto-card {
     @apply p-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2;
-    background-color: var(--color-secundario);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-decoration: none;
+    background-color: var(--color-primario-claro);
+    border: 1px solid rgba(var(--color-primario-rgb), 0.8);
   }
 
   .contacto-card:hover {
-    border-color: var(--color-acento);
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-acento);
   }
 
-  .contacto-icono-wrapper {
-    @apply w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4;
-    background-color: rgba(var(--color-acento-rgb), 0.1);
+  .contacto-icono-wrapper {    
+    @apply w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 shrink-0;    
+    background-color: rgba(var(--color-acento-rgb), 0.7);
   }
 
   .contacto-icono {
     @apply w-7 h-7;
-    color: var(--color-acento);
+    color: var(--color-secundario);
   }
 
   .contacto-card h3 {
     @apply text-xl font-bold mb-2;
-    color: var(--color-texto-brillo);
+    color: var(--color-secundario);
   }
 
   .contacto-card p {
     @apply text-base;
-    color: var(--color-texto);
+    color: var(--color-texto-oscuro);
   }
 
   .contacto-subtexto {
     @apply text-sm block mt-2;
     color: var(--color-texto);
+    
     opacity: 0.7;
   }
 

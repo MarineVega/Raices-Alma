@@ -36,7 +36,6 @@
 
   .terapias-titulo {
     @apply text-4xl md:text-5xl font-bold tracking-wider;
-    /* color: var(--color-texto-brillo); */
     color: var(--color-secundario);
   }
 
