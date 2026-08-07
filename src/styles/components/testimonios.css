@@ -1,5 +1,4 @@
 @layer components {
-
     .testimonios {
         @apply py-20 px-6 lg:px-16 overflow-hidden;
         background-color: var(--color-primario-claro);
@@ -21,7 +20,6 @@
         background-color: rgba(var(--color-primario-rgb), 0.2);
         border: 1px solid rgba(var(--color-primario-rgb), 0.3);
     }
-
     .testimonios-badge-icon {
         @apply w-5 h-5;
         color: var(--color-acento-brillo);
@@ -35,12 +33,10 @@
     /*======================================
         TITULOS
     ======================================*/
-
     .testimonios-titulo{        
         @apply text-4xl md:text-5xl font-bold tracking-wider mb-4;
         color: var(--color-primario);
     }
-
     .testimonios-subtitulo{
         @apply text-xl max-w-2xl mx-auto;    
         color: var(--color-texto-oscuro);
@@ -49,7 +45,6 @@
     /*======================================
         GRID
     ======================================*/
-
     .testimonios-grid{
         @apply grid gap-8;
         grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
@@ -58,15 +53,15 @@
     /*======================================
         CARD
     ======================================*/
-
     .testimonio-card{
-        @apply rounded-3xl p-8 relative overflow-hidden transition-all duration-300;        
+        @apply rounded-3xl p-6 relative overflow-hidden transition-all duration-300;        
         background-color: rgba(var(--color-primario-rgb), 0.8);
         border: 1px solid rgba(var(--color-primario-rgb), 0.1);
         /* backdrop-filter: blur(8px); */
     }
 
-    .testimonio-card::before{
+    /* línea amarilla arriba, con gradient */
+        .testimonio-card::before{
         content:"";
         position:absolute;
         top:0;
@@ -89,7 +84,7 @@
 
     /*======================================
         COMILLAS
-    ======================================*/
+    ======================================*/    
     .testimonio-comillas{
         @apply w-10 h-10 mb-5;
         color:rgba(var(--color-acento-rgb),.85);
@@ -175,29 +170,19 @@
     }
 
     .testimonio-modal-imagen{
-
         @apply w-full block;
-
     }
 
     .testimonio-modal-cerrar{
-
         @apply absolute top-3 right-3 rounded-full p-2 transition-all;
-
         background-color:rgba(var(--color-primario-rgb),.75);
-
         color:var(--color-texto);
-
         border:none;
-
         cursor:pointer;
-
     }
 
     .testimonio-modal-cerrar:hover{
-
         background-color:var(--color-acento);
-
     }
 
     /*======================================

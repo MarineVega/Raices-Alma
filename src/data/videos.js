@@ -71,7 +71,7 @@ export const categoriasVideos = [
         titulo: "Energía de la Semana",
         descripcion: "Lectura energética para navegar estos próximos 7 días",
         fecha: "2026-07-01",
-        url: "https://player.vimeo.com/video/VIDEO_ID",
+        url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
         mensajePredefinido: "Hola! Quisiera consultar sobre la energía de esta semana y cómo aplicarla a mi situación..."
       }
     ]
