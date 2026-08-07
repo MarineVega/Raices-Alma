@@ -1,7 +1,6 @@
 @layer components {
   .contacto {
     @apply py-20 px-6 lg:px-16;
-    /* background-color: var(--color-fondo); */
     background-color: rgba(var(--color-acento-rgb), 0.1);
     background: radial-gradient(
       circle at center,

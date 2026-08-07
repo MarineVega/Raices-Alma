@@ -1,7 +1,7 @@
 @layer components {
   .boton-primario {
     @apply flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-medium transition-all duration-300 active:scale-95 md:text-2xl;
-    background-color: var(--color-acento-brillo);    
+    background-color: var(--color-acento-brillo);
     color: var(--color-texto-brillo);
     cursor: pointer;
   }
@@ -9,13 +9,12 @@
   .boton-primario:hover {
     @apply opacity-90;
     transform: translateY(-3px);
-    box-shadow: 0 10px 40px -10px var(--color-terciario);
+    box-shadow: 0 10px 40px -10px var(--color-acento);
   }
 
-  
-  .boton-fantasma {    
+  .boton-fantasma {
     @apply flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-medium transition-all duration-300 active:scale-95 md:text-2xl;
-    /* border-color: var(--color-terciario); */
+    /* border-color: var(--color-acento); */
     background-color: var(--color-secundario);
     color: var(--color-texto);
     cursor: pointer;
@@ -26,6 +25,4 @@
     transform: translateY(-3px);
     box-shadow: 0 10px 40px -10px var(--color-acento);
   }
-
-  
 }

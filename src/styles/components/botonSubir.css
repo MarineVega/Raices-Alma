@@ -1,40 +1,40 @@
 @layer components {
-    .boton-subir {
-        @apply fixed bottom-8 right-8 p-3 rounded-full transition-all duration-500 z-100;
-        background-color: var(--color-terciario);
-        color: var(--color-claro);
-        box-shadow: 0 4px 15px rgba(var(--color-terciario-rgb), 0.4);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(20px);
-        border: none;
-        cursor: pointer;
-    }
+  .boton-subir {
+    @apply fixed bottom-8 right-8 p-3 rounded-full transition-all duration-500 z-100;
+    background-color: var(--color-acento);
+    color: var(--color-claro);
+    box-shadow: 0 4px 15px rgba(var(--color-acento-rgb), 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    border: none;
+    cursor: pointer;
+  }
 
-    .dark .boton-subir {
-        color: var(--color-fondo);
-    }
+  .dark .boton-subir {
+    color: var(--color-fondo);
+  }
 
-    .boton-subir.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
+  .boton-subir.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 
-    .boton-subir:hover {
-        background-color: var(--color-acento);
-        transform: translateY(-5px);
-    }
+  .boton-subir:hover {
+    background-color: var(--color-acento);
+    transform: translateY(-5px);
+  }
 
-    .dark .boton-subir:hover {
-        color: var(--color-claro);
-    }
+  .dark .boton-subir:hover {
+    color: var(--color-claro);
+  }
 
-    /* --- Adaptación para modo accesibilidad --- */
-    .modo-accesibilidad .boton-subir {
-        background-color: #000 !important;
-        color: #fff !important;
-        border: 2px solid #fff !important;
-        box-shadow: 0 0 0 2px #000 !important;
-    }
+  /* --- Adaptación para modo accesibilidad --- */
+  .modo-accesibilidad .boton-subir {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 0 2px #000 !important;
+  }
 }
