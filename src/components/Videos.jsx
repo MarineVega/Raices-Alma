@@ -59,6 +59,7 @@ export default function Videos() {
                 modules={[Navigation, Pagination]}
                 spaceBetween={24}
                 slidesPerView={1}
+                loop={true}
                 navigation={{
                   prevEl: `.videos-prev-${categoria.id}`,
                   nextEl: `.videos-next-${categoria.id}`,
