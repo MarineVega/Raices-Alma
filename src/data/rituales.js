@@ -717,7 +717,7 @@ export const rituales = {
             },            
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     },
@@ -761,7 +761,7 @@ export const rituales = {
             },
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     },
@@ -804,7 +804,7 @@ export const rituales = {
             },
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     },
@@ -847,7 +847,7 @@ export const rituales = {
             },
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     },
@@ -890,7 +890,7 @@ export const rituales = {
             },
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     },
@@ -933,7 +933,7 @@ export const rituales = {
             },
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     },
@@ -976,7 +976,7 @@ export const rituales = {
             },
         ],
         images: [
-            "/img/rituales/apertura_mes.jpg"
+            "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
     }
