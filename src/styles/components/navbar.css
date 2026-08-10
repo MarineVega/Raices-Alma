@@ -152,21 +152,38 @@
 
   .navbar-menu-mobile.active {
     /* Altura automática según el contenido o un valor fijo */
-    @apply h-auto py-10 opacity-100;
+    @apply h-auto py-10 opacity-100;    
+    background-color: rgba(
+      var(--color-primario-rgb),
+      0.95
+    ); 
   }
 
   .mobile-links {
-    @apply flex flex-col items-center gap-8 text-xl font-bold;
+    @apply flex flex-col items-center gap-3 text-xl font-bold;
     color: var(--color-texto);
     /* Quitamos cualquier margen extra que pueda descentrar */
     margin: 0;
     padding: 0;
   }
 
+  .mobile-links li {
+    @apply w-full max-w-md rounded-xl transition-all duration-300;
+  }
+  .mobile-links li:hover {
+    background-color: rgba(var(--color-acento-rgb), 0.15);
+    box-shadow: 0 0 20px rgba(var(--color-acento-rgb), 0.12);
+    transform: translateY(-1px);
+  }
   .mobile-links li a {
-    @apply font-semibold tracking-wide transition-colors;
+    /* @apply font-semibold tracking-wide transition-colors; */
+    @apply flex w-full items-center justify-center rounded-xl px-6 py-3 font-semibold tracking-wide transition-all duration-300;
     color: var(--color-texto);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para despegar el texto del fondo */
+  }
+
+  .mobile-links li:hover a {
+    color: var(--color-acento-brillo);
   }
 
   .btn-mobile-contacto {

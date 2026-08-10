@@ -27,7 +27,6 @@ export const categoriasVideos = [
           "Muchas veces creemos que el apego solo existe hacia aquello que nos hizo daño."
         ],
         fecha: "2026-06-20",
-        // url: "https://drive.google.com/file/d/1HKNmbRu5SfiR4TxNer54wTjYWf0pyooV/preview", // muestra opcion para verlo en el drive
         url: "https://mvsolucionesweb.com.ar/Raices/Estancamiento.mp4",
         mensajePredefinido: "Hola! Me gustaría hacer una consulta sobre el video de Estancamiento. Mi situación es..."
       },
@@ -42,38 +41,47 @@ export const categoriasVideos = [
         mensajePredefinido: "Hola! Vi el video de Apego y quisiera profundizar sobre mi caso particular..."
       },
       {
-        id: "ansiedad2",
-        titulo: "Manejo de la Ansiedad Diaria 2",
-        descripcion: "Técnicas prácticas para calmar la mente en momentos de estrés",
-        fecha: "2026-06-25",
-        url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
-        mensajePredefinido: "Hola! Me gustaría hacer una consulta sobre el video de Manejo de la Ansiedad Diaria. Mi situación es..."
+        id: "dinero",
+        titulo: "El dinero no define tu valor",
+        descripcion: "Pero la manera en que te relacionás con él puede mostrarte mucho sobre tu historia. ¿Con qué creencia sobre el dinero creciste?",
+        fecha: "2026-05-03",
+        url: "https://mvsolucionesweb.com.ar/Raices/Dinero.mp4",
+        mensajePredefinido: "Hola! Me gustaría hacer una consulta sobre el video de El dinero no define tu valor. Mi situación es..."
       },
       {
-        id: "vinculos2",
-        titulo: "Vínculos que Sanan 2",
-        descripcion: "Cómo mejorar nuestras relaciones desde la consciencia",
-        fecha: "2026-06-25",
-        url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
-        mensajePredefinido: "Hola! Vi el video de Vínculos que Sanan y quisiera profundizar sobre mi caso particular..."
+        id: "autoexigencia",
+        titulo: "Autoexigencia",
+        descripcion: "Hoy quiero invitarte a hacer una pausa. Preguntate: ¿Me estoy impulsando a crecer... o me estoy exigiendo para sentir que soy suficiente?. Recordá que no necesitás ser perfecto para ser valioso.",
+        fecha: "2026-03-20",
+        url: "https://mvsolucionesweb.com.ar/Raices/Autoexigencia.mp4",
+        mensajePredefinido: "Hola! Vi el video de Autoexigencia y quisiera profundizar sobre mi caso particular..."
+      }
+      ,
+      {
+        id: "soltar-control",
+        titulo: "Soltar el Control",
+        descripcion: "Soltar el control no significa dejar de ser responsable. Significa aceptar que no todo depende de nosotros y que, aun en la incertidumbre, podemos encontrar calma.",
+        fecha: "2026-04-23",
+        url: "https://mvsolucionesweb.com.ar/Raices/Soltar_Control.mp4",
+        mensajePredefinido: "Hola! Vi el video de Soltar el control y quisiera profundizar sobre mi caso particular..."
       }
     ]
   },
-  // {
-  //   id: "energia",
-  //   titulo: "Energía del Día",
-  //   subtitulo: "Conexión con las energías disponibles para cada jornada",
-  //   icono: Sun,
-  //   color: "var(--color-acento-brillo)",
-  //   videos: [
-  //     {
-  //       id: "energia-semanal",
-  //       titulo: "Energía de la Semana",
-  //       descripcion: "Lectura energética para navegar estos próximos 7 días",
-  //       fecha: "2026-07-01",
-  //       url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
-  //       mensajePredefinido: "Hola! Quisiera consultar sobre la energía de esta semana y cómo aplicarla a mi situación..."
-  //     }
-  //   ]
-  // }
+  {
+    id: "energia",
+    titulo: "Energía del Día",
+    subtitulo: "Conexión con la energía disponible para cada jornada",
+    icono: Sun,
+    color: "var(--color-acento-brillo)",
+    videos: [
+      {
+        id: "san-juan",
+        titulo: "Después de la noche de San Juan...",
+        descripcion: "Anoche fue tiempo de soltar. De entregar al fuego aquello que ya no acompaña nuestro camino. Miedos, dudas, heridas, creencias, situaciones o vínculos que cumplieron su propósito.",
+        fecha: "2026-06-24",
+        url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
+        mensajePredefinido: "Hola! Quisiera consultar sobre el ritual de la noche de San Juan..."
+      }
+    ]
+  }
 ];

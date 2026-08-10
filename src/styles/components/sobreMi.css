@@ -158,20 +158,78 @@
 
   /* Mobile */
   @media (max-width: 768px) {
+
+  .sobreMi {
+    @apply py-16;
+  }
+
+  /* En mobile: imagen arriba y texto abajo */
+  .sobreMi-contenedor {
+    @apply grid grid-cols-1 gap-10 px-6;
+  }
+
+  /* IMAGEN */
+  .sobreMi-imagen {
+    @apply order-1 w-full flex justify-center mx-auto;
+    margin-right: 0;
+  }
+
+  .sobreMi-imagen img {
+    @apply w-full max-w-xs object-contain;
+    border-radius: 1.5rem;
+    transform: rotate(-1deg);
+  }
+
+  /* En mobile no necesitamos el degradado lateral */
+  .sobreMi-imagen::after {
+    display: none;
+  }
+
+  /* TEXTO */
+  .sobreMi-texto {
+    @apply order-2 w-full flex flex-col;
+    background: none;
+    padding: 0;
+    margin-left: 0;
+    border-radius: 0;
+  }
+
+  .sobreMi-titulo {
+    @apply text-3xl mb-6 text-center;
+  }
+
+  .sobreMi-titulo::after {
+    @apply mx-auto;
+  }
+
+  .sobreMi-descripcion {
+    @apply text-lg leading-relaxed;
+  }
+
+  .sobreMi-descripcion .sobreMi-linea {
+    @apply flex items-start gap-3 mb-5 text-left;
+  }
+
+  .sobreMi-linea .sobreMi-vinieta svg {
+    @apply w-5 h-5;
+  }
+
+  .sobreMi-pie {
+    @apply text-center text-3xl border-l-0 border-t-2 pt-4 px-4 mt-8;
+  }
+}
+/* 
+  @media (max-width: 768px) {
     .sobreMi {
       @apply py-16;
     }
-/* 
-    .sobreMi-contenedor {
-      @apply grid-cols-1 gap-8;
-    } */
 
     .sobreMi-contenedor {
   @apply relative z-10 w-full mx-auto px-6 lg:px-16 max-w-7xl;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Mitad y mitad */
+  grid-template-columns: 1fr 1fr; 
   align-items: center;
-  gap: 2rem; /* Menos gap para que se superpongan */
+  gap: 2rem; 
 }
 
     .sobreMi-imagen {
@@ -181,15 +239,11 @@
     .sobreMi-imagen img {
       @apply max-w-62.5;
     }
-/* 
-    .sobreMi-texto {
-      @apply order-2 text-center;
-    } */
 
     .sobreMi-texto {
   @apply flex flex-col relative;
   z-index: 5;
-  /* Fondo sutil para legibilidad sobre la imagen */
+ 
   background: linear-gradient(
     to right,
     var(--color-primario-claro) 0%,
@@ -197,7 +251,7 @@
   );
   padding: 2rem;
   border-radius: 1rem;
-  margin-left: -2rem; /* Que el texto también invada el espacio de la imagen */
+  margin-left: -2rem;
 }
 
 
@@ -216,5 +270,6 @@
     .sobreMi-pie {
       @apply text-center border-l-0 border-t-2 pt-4 px-4;
     }
-  }
+  } */
+
 }

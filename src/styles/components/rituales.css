@@ -58,8 +58,18 @@
   } */
 
   .rituales-controles {
-    @apply hidden md:block absolute inset-0 pointer-events-none;
+    /* @apply hidden md:block absolute inset-0 pointer-events-none; */
+    @apply absolute inset-0 pointer-events-none z-20;
   }
+  /* .rituales-prev,
+  .rituales-next {
+    @apply pointer-events-auto w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
+    background-color: rgba(var(--color-secundario-rgb), 0.9);
+    color: var(--color-texto-brillo);
+    border: 2px solid rgba(var(--color-acento-rgb), 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  } */
+
   .rituales-prev,
   .rituales-next {
     @apply pointer-events-auto w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
@@ -68,15 +78,16 @@
     border: 2px solid rgba(var(--color-acento-rgb), 0.3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
-
-  .rituales-prev {
-    @apply absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto ;
+  .rituales-prev {    
+    @apply absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto;
     @apply -left-4;
+    @apply -ml-2;
   }
 
   .rituales-next {
     @apply absolute right-0 top-1/2 -translate-y-1/2 pointer-events-auto;
-    @apply -right-4
+    @apply -right-4;
+    @apply -mr-2;
   }
   .rituales-prev:hover,
   .rituales-next:hover {
@@ -85,13 +96,6 @@
     border-color: var(--color-acento);
   }
 
-  .rituales-prev {
-    @apply -ml-2;
-  }
-
-  .rituales-next {
-    @apply -mr-2;
-  }
 
   /* Swiper */
   .rituales-swiper {
@@ -242,7 +246,14 @@
     }
 
     .rituales-controles {
-      @apply hidden;
+      @apply block;
+    }
+
+    .rituales-prev,
+    .rituales-next {
+      /* @apply w-10 h-10; */
+      @apply hidden md:flex;
+
     }
   }
 

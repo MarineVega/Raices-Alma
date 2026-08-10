@@ -346,7 +346,7 @@
 
   @media (max-width: 768px) {
     .ritual-detalle-container {
-      @apply py-12 px-4;
+      @apply pt-28 py-12 px-4;
     }
 
     .ritual-detalle-titulo {
