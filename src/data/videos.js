@@ -77,7 +77,7 @@ export const categoriasVideos = [
       {
         id: "san-juan",
         titulo: "Después de la noche de San Juan...",
-        descripcion: "Anoche fue tiempo de soltar. De entregar al fuego aquello que ya no acompaña nuestro camino. Miedos, dudas, heridas, creencias, situaciones o vínculos que cumplieron su propósito.",
+        descripcion: "Anoche fue tiempo de soltar. De entregar al fuego aquello que ya no acompaña nuestro camino. Miedos, heridas, creencias, situaciones o vínculos que cumplieron su propósito.",
         fecha: "2026-06-24",
         url: "https://mvsolucionesweb.com.ar/Raices/Fogata.mp4",
         mensajePredefinido: "Hola! Quisiera consultar sobre el ritual de la noche de San Juan..."
