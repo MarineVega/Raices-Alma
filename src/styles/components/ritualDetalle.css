@@ -346,7 +346,7 @@
 
   @media (max-width: 768px) {
     .ritual-detalle-container {
-      @apply pt-28 pb-12 px-4;
+      @apply pt-20 pb-12 px-4;
     }
 
     .ritual-detalle-titulo {
@@ -383,9 +383,8 @@
 
   @media (max-width: 480px) {
     .ritual-detalle-container {
-      @apply py-8 px-3;
+      @apply pt-20 pb-8 px-3;
     }
-
     .ritual-detalle-titulo {
       @apply text-2xl;
     }
@@ -401,6 +400,7 @@
       @apply w-full justify-center px-4 py-3 text-sm;
     }
   }
+
 }
 
 
