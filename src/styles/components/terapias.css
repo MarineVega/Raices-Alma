@@ -91,6 +91,9 @@
     color: var(--color-secundario);
   }
 
+  .dark .terapia-icono {    
+    color: var(--color-secundario-dark);
+  }
   .terapia-titulo {
     @apply text-2xl font-bold mb-2 tracking-wider;
     color: var(--color-secundario);
@@ -118,7 +121,6 @@
 
   .terapia-bullet {
     @apply w-1.5 h-1.5 rounded-full shrink-0 mt-1.5;
-    background-color: var(--color-secundario);
-    /* background-color: var(--color-acento); */
-  }
+    background-color: var(--color-secundario);   
+  } 
 }

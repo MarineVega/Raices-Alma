@@ -9,18 +9,6 @@
       var(--color-primario-claro) 10%,
       var(--color-primario) 50%
     );
-
-
-
-    /* este me gusta para modo oscuro */
-/*     
-    background: radial-gradient(
-      circle at center,
-      var(--color-primario) 0%,
-      var(--color-secundario) 70%
-    );
-     */
-
   }
   
   /* Overlay solo si necesitás oscurecer el fondo del color primario */

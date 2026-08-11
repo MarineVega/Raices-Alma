@@ -37,6 +37,10 @@
         @apply text-4xl md:text-5xl font-bold tracking-wider mb-4;
         color: var(--color-primario);
     }
+
+    .dark .testimonios-titulo {  
+        color: var(--color-secundario);
+    }
     .testimonios-subtitulo{
         @apply text-xl max-w-2xl mx-auto;    
         color: var(--color-texto-oscuro);
@@ -61,7 +65,7 @@
     }
 
     /* línea amarilla arriba, con gradient */
-        .testimonio-card::before{
+    .testimonio-card::before{
         content:"";
         position:absolute;
         top:0;
@@ -98,6 +102,9 @@
         color:var(--color-texto);
     }
 
+    .dark .testimonio-texto {    
+        color: var(--color-secundario);
+    }
     /*======================================
         FOOTER
     ======================================*/
@@ -177,12 +184,19 @@
         cursor:pointer;
     }
 
+    .dark .testimonios-boton-ver-mas{
+        color:var(--color-fondo);
+    }
     .testimonios-boton-ver-mas:hover{
         @apply -translate-y-1;
         background-color: var(--color-acento);
         border-color: var(--color-acento);
         color: var(--color-texto);
         cursor: pointer;
+    }
+
+    .dark .testimonios-boton-ver-mas:hover{
+        color:var(--color-fondo);
     }
 
     /*======================================

@@ -171,6 +171,10 @@
     color: var(--color-secundario);
   }
 
+  .dark .rituales-icono {    
+    color: var(--color-secundario-dark);
+  }
+
   .rituales-card-titulo {
     @apply text-xl font-bold tracking-wider;
     color: var(--color-secundario);
@@ -202,7 +206,7 @@
   .rituales-boton-ver-mas {
     @apply w-full flex items-center justify-center gap-2 py-3 rounded-lg font-semibold transition-all tracking-wider mt-3;
     background-color: var(--color-secundario);
-    color: var(--color-texto-brillo);
+    color: var(--color-texto);
     border: none;
     cursor: pointer;
   }
@@ -210,6 +214,10 @@
   .rituales-boton-ver-mas:hover {
     opacity: 0.9;
     transform: scale(1.02);
+  }
+
+  .dark .rituales-boton-ver-mas {    
+    background-color: var(--color-secundario-dark);
   }
 
   /* ======================================== */

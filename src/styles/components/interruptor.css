@@ -1,0 +1,21 @@
+@layer components {
+
+    .interruptor-icono {
+        @apply transition-transform duration-500 ease-out flex items-center justify-center;
+        cursor: pointer;
+    }
+
+    .interruptor-icono.rotado {
+        @apply rotate-90;
+    }
+
+    .icono-sol {
+        @apply text-amber-600;
+    }
+
+    .icono-luna {
+        color: var(--color-acento);
+        fill: rgba(var(--color-acento-rgb), 0.2);
+    }
+
+}

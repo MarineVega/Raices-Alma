@@ -6,6 +6,10 @@
     cursor: pointer;
   }
 
+  .dark .boton-primario {    
+    color: var(--color-fondo);    
+  }
+
   .boton-primario:hover {
     @apply opacity-90;
     transform: translateY(-3px);
@@ -24,5 +28,9 @@
     @apply opacity-90;
     transform: translateY(-3px);
     box-shadow: 0 10px 40px -10px var(--color-acento);
+  }
+
+  .dark .boton-fantasma {
+    background-color: var(--color-secundario-dark);
   }
 }

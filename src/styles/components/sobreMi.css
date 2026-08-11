@@ -13,101 +13,35 @@
     gap: 4rem;
   }
 
-  /* IMAGEN DE LA TERAPEUTA */
-  /* .sobreMi-imagen {
+  .sobreMi-imagen {
     @apply relative flex justify-center;
+    /* Que la imagen invada un poco el espacio del texto */
+    margin-right: -3rem;
+    z-index: 10;
   }
 
   .sobreMi-imagen img {
-    @apply w-full max-w-md object-contain;
-    /* Efecto opcional: marco sutil */
-    /* border-radius: 2rem; */
-    /* Sombra suave para destacar */
-    /* filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1)); */
-    /* max-width: 360px;
+    @apply w-full object-contain;
+    max-width: 450px; /* Más grande, de 360px a 450px */
+    border-radius: 2rem;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
     transform: rotate(-1.5deg);
-  } */
- 
+  }
 
-  .sobreMi-imagen {
-  @apply relative flex justify-center;
-  /* Que la imagen invada un poco el espacio del texto */
-  margin-right: -3rem;
-  z-index: 10;
-}
-
-.sobreMi-imagen img {
-  @apply w-full object-contain;
-  max-width: 450px; /* Más grande, de 360px a 450px */
-  border-radius: 2rem;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
-  transform: rotate(-1.5deg);
-}
-/* 
-.sobreMi-imagen::after {
+  .sobreMi-imagen::after {
     content: "";
     position: absolute;
     inset: 0;
-
-    background:
-        radial-gradient(circle at center,
-            transparent 55%,
-            rgba(196,170,224,.15) 75%,
-            var(--color-primario-claro) 100%);
-
+    /* Difuminado solo del lado derecho (hacia el texto) */
+    background: linear-gradient(
+      to right,
+      transparent 60%,
+      var(--color-primario-claro) 100%
+    );
     pointer-events: none;
-} */
+    border-radius: 2rem; /* Mismo radio que la imagen */
+  }
 
-.sobreMi-imagen::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* Difuminado solo del lado derecho (hacia el texto) */
-  background: linear-gradient(
-    to right,
-    transparent 60%,
-    var(--color-primario-claro) 100%
-  );
-  pointer-events: none;
-  border-radius: 2rem; /* Mismo radio que la imagen */
-}
-
-/*
-.sobreMi-imagen::before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:140px;
-
-    background:linear-gradient(
-        to bottom,
-        transparent,
-        var(--color-primario-claro)
-    );
-
-    pointer-events:none;
-}
-*/
-/*
-.sobreMi-imagen::before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border-radius:50%;
-
-    background:radial-gradient(
-        circle,
-        rgba(255,255,255,.45),
-        rgba(190,150,255,.22),
-        transparent 70%
-    );
-
-    z-index:-1;
-}
-*/
   /* TEXTO */
   .sobreMi-texto {
     @apply flex flex-col;
@@ -117,6 +51,10 @@
     @apply text-4xl md:text-5xl font-bold mb-8;
     color: var(--color-primario);
     position: relative;
+  }
+
+  .dark .sobreMi-titulo {  
+    color: var(--color-secundario);
   }
 
   /* Línea decorativa bajo el título */
