@@ -67,6 +67,9 @@
     color: var(--color-secundario);
   }
 
+  .dark .contacto-icono {    
+    color: var(--color-secundario-dark);
+  }
   .contacto-card h3 {
     @apply text-xl font-bold mb-2;
     color: var(--color-secundario);

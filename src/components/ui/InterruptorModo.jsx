@@ -1,66 +1,89 @@
 import { Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 
-// Recibimos la prop "bloqueado"
-export default function InterruptorModo ({ bloqueado }) {
-  // Inicializo el estado revisando localStorage o el sistema
-  const [isDark, setIsDark] = useState(() => {
-    const guardado = localStorage.getItem("tema");
-    if (guardado) return guardado === "dark";
-    
-    // Si no hay nada guardado, preguntamos al navegador, cual fue la preferencia anterior
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+export default function InterruptorModo({ bloqueado }) {
 
-  // Si se activa la accesibilidad, apagamos el dark mode
-  useEffect(() => {
-    if (bloqueado) {
-      setIsDark(false);
-    }
-  }, [bloqueado]);
+    const [isDark, setIsDark] = useState(() => {
+        const guardado = localStorage.getItem("tema");
 
-  useEffect(() => {
-    // Lógica para aplicar la clase 'dark' al elemento HTML
-    const html = document.documentElement;
+        if (guardado) {
+            return guardado === "dark";
+        }
 
-    // IMPORTANTE: Solo aplico dark si NO está bloqueado por accesibilidad
-    if (isDark && !bloqueado) {
-      html.classList.add("dark");
-      localStorage.setItem("tema", "dark");
-    } else {
-      html.classList.remove("dark");
-      localStorage.setItem("tema", "light");
-    }
-  }, [isDark, bloqueado]);
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    });
 
-  // Listener para cambios en el sistema mientras la web está abierta
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e) => {
-      // Solo cambio automáticamente si el usuario no ha fijado una preferencia manual
-      if (!localStorage.getItem("tema")) {
-        setIsDark(e.matches);
-      }
-    };
-    
-    mq.addEventListener("change", handleChange);
-    return () => mq.removeEventListener("change", handleChange);
-  }, []);
 
-  return (
-    <button
-      onClick={() => !bloqueado && setIsDark(!isDark)} // Solo clickea si no está bloqueado
-      className={`interruptor-contenedor ${bloqueado ? "deshabilitado" : ""}`}
-      style={{ opacity: bloqueado ? 0.3 : 1, cursor: bloqueado ? 'not-allowed' : 'pointer' }}
-    >      
-      {/* Icono animado */}
-      <div className={`interruptor-icono ${isDark ? "rotado" : ""}`}>
-        {isDark ? (
-          <Moon size={30} className="icono-luna" />
-        ) : (
-          <Sun size={30} className="icono-sol" />
-        )}
-      </div>
-    </button>
-  );
-};
+    // Si se activa accesibilidad, apagamos el modo oscuro
+    useEffect(() => {
+        if (bloqueado) {
+            setIsDark(false);
+        }
+    }, [bloqueado]);
+
+
+    // Aplicamos / quitamos la clase dark
+    useEffect(() => {
+
+        const html = document.documentElement;
+
+        if (isDark && !bloqueado) {
+
+            html.classList.add("dark");
+            localStorage.setItem("tema", "dark");
+
+        } else {
+
+            html.classList.remove("dark");
+            localStorage.setItem("tema", "light");
+
+        }
+
+    }, [isDark, bloqueado]);
+
+
+    // Detectar cambios del sistema
+    useEffect(() => {
+
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const handleChange = (e) => {
+
+            if (!localStorage.getItem("tema")) {
+                setIsDark(e.matches);
+            }
+
+        };
+
+        mq.addEventListener("change", handleChange);
+
+        return () => mq.removeEventListener("change", handleChange);
+
+    }, []);
+
+
+    return (
+        <button
+            onClick={() => !bloqueado && setIsDark(!isDark)}
+            className={`interruptor-contenedor ${
+                bloqueado ? "deshabilitado" : ""
+            }`}
+            style={{
+                opacity: bloqueado ? 0.3 : 1,
+                cursor: bloqueado ? "not-allowed" : "pointer"
+            }}
+        >
+
+            <div className={`interruptor-icono ${isDark ? "rotado" : ""}`}>
+
+                {isDark ? (
+                    <Moon size={30} className="icono-luna" />
+                ) : (
+                    <Sun size={30} className="icono-sol" />
+                )}
+
+            </div>
+
+        </button>
+    );
+}

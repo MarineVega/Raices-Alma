@@ -17,17 +17,7 @@
 @import "./components/contacto.css";
 @import "./components/footer.css";
 @import "./components/botonSubir.css";
-
-
-/* 
 @import "./components/interruptor.css";
-
-@import "./components/detallePlantilla.css";
-@import "./components/carruselPlantilla.css"; */
-
-/* @import "../plantillas/profesional/profesional.css";
-@import "../plantillas/emprendedor/emprendedor.css";
-@import "../plantillas/holistica/holistica.css"; */
 
 /* 3. Por último el layout general de la App */
 @import "./app-layout.css";
