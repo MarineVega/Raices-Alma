@@ -51,4 +51,144 @@
         --color-texto: #F8F5FC;      
         --color-texto-oscuro: #D8D0DF;
     }
+
+    /* ============================= */
+    /*   MODO DISMINUCIÓN VISUAL     */
+    /* ============================= */
+    /* .app-layout.modo-accesibilidad {
+        --color-fondo: #FFFFFF !important;
+        --color-fondo-claro: #F2F2F2 !important;
+
+        --color-primario: #000000 !important;
+        --color-secundario: #0044CC !important;
+        --color-terciario: #0044CC !important;
+
+        --color-texto: #000000 !important;
+        --color-texto-oscuro: #000000 !important;
+
+        --color-acento: #D4A900 !important;
+        --color-acento-brillo: #B88600 !important;
+
+        --color-borde: #000000 !important;
+
+        --color-fondo-rgb: 255, 255, 255;
+        --color-primario-rgb: 0, 0, 0;
+        --color-terciario-rgb: 0, 68, 204;
+        --color-acento-rgb: 212, 169, 0;
+        --color-borde-rgb: 0, 0, 0;
+    } */
+
+
+    .app-layout.modo-accesibilidad {
+        --color-primario-rgb: 0, 0, 0 !important;
+        --color-secundario-rgb: 0, 68, 204 !important;
+        --color-borde-rgb: 255, 255, 255 !important;
+        --color-borde-rgb: 0, 0, 0 !important;
+        --color-acento-rgb: 221, 170, 0 !important;
+
+        --color-primario: rgb(177, 174, 177) !important;
+        --color-primario-rgb: 177, 174, 177 !important;
+
+        --color-primario-claro: #FFFFFF !important;
+        --color-secundario: #0044CC !important;
+        
+        --color-acento: #DDAA00 !important;
+        --color-acento-brillo: #996600 !important;
+
+        --color-fondo: #FFFFFF !important;
+        --color-texto: #000000 !important;
+        --color-texto-oscuro: #000000 !important;
+       
+        font-weight: 500 !important;
+    }
+
+    
+    .modo-accesibilidad .texto-degradado {
+        background: none !important;
+        color: var(--color-terciario);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+  
+    .modo-accesibilidad .boton-primario {
+        background-color: var(--color-primario) !important;        
+        color: black !important;
+        border: 2px solid #000;
+    }
+
+    .modo-accesibilidad .boton-fantasma {
+        background-color: var(--color-primario-claro) !important;        
+        color: black !important;
+        border: 2px solid #000;
+    }
+    .modo-accesibilidad * {
+        box-shadow: none !important;        
+    }
+    
+    .modo-accesibilidad a {
+        text-decoration: underline;
+    }
+
+    .modo-accesibilidad button {
+        border: 2px solid #000;
+    }
+
+    .modo-accesibilidad img {
+        filter: saturate(1.5) contrast(1.2);
+    }
+    .modo-accesibilidad .navbar {
+        background-color: var(--color-primario-claro) !important;        
+    }
+    .modo-accesibilidad .navbar-marca-texto, 
+    .modo-accesibilidad .hero-destacar,
+    .modo-accesibilidad .videos-titulo,
+    .modo-accesibilidad .testimonios-titulo,
+    .modo-accesibilidad .terapias-badge-icon,
+    .modo-accesibilidad .terapias-badge span,
+    .modo-accesibilidad .videos-badge-icon,
+    .modo-accesibilidad .videos-badge span,
+    .modo-accesibilidad .rituales-badge-icon,
+    .modo-accesibilidad .rituales-badge span,
+    .modo-accesibilidad .testimonios-badge-icon,
+    .modo-accesibilidad .testimonios-badge span,
+    .modo-accesibilidad .contacto-badge-icon,
+    .modo-accesibilidad .contacto-badge span,
+    .modo-accesibilidad .ritual-detalle-paso-titulo,
+    .modo-accesibilidad .testimonio-comillas,
+    .modo-accesibilidad .footer-h4,
+    .modo-accesibilidad .footer-contacto-icono,
+    .modo-accesibilidad .footer-lista a:hover,
+    .modo-accesibilidad .footer-datos a:hover,
+    .modo-accesibilidad .footer-link-autor:hover {
+        color: var(--color-secundario) !important;
+    }
+
+    .modo-accesibilidad .terapias-badge,
+    .modo-accesibilidad .videos-badge,
+    .modo-accesibilidad .rituales-badge,
+    .modo-accesibilidad .testimonios-badge,
+    .modo-accesibilidad .contacto-badge {
+        background-color: rgba(var(--color-primario-rgb), 0.1) !important;
+        border: 1px solid rgba(var(--color-primario-rgb), 0.3) !important;
+    }
+
+    .modo-accesibilidad .video-card {
+        background-color: rgba(var(--color-primario-rgb),0.4) !important;
+    }
+    .modo-accesibilidad .video-fecha,
+    .modo-accesibilidad .testimonio-boton {
+        color: var(--color-texto) !important;
+    }
+
+    .modo-accesibilidad .video-boton-consultar ,
+    .modo-accesibilidad .rituales-boton-ver-mas ,
+    .modo-accesibilidad .rituales-controles ,
+    .modo-accesibilidad .ritual-detalle-boton-whatsapp {
+        color: var(--color-primario-claro) !important;
+    }
+   
+    .modo-accesibilidad .footer-sociales a:hover {    
+        background-color: rgba(var(--color-secundario-rgb), 0.3) !important;
+    }
 }
+
