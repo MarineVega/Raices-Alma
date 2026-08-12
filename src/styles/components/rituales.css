@@ -50,26 +50,10 @@
   .rituales-carrusel-wrapper {
     @apply relative px-4 md:px-12;
   }
-
-  /* Controles de navegación */
-  /* .rituales-controles {
-    @apply hidden md:flex absolute -left-2 top-1/2 -translate-y-1/2 z-10 w-full justify-between pointer-events-none;
-    padding: 0 -12px;
-  } */
-
   .rituales-controles {
     /* @apply hidden md:block absolute inset-0 pointer-events-none; */
     @apply absolute inset-0 pointer-events-none z-20;
   }
-  /* .rituales-prev,
-  .rituales-next {
-    @apply pointer-events-auto w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
-    background-color: rgba(var(--color-secundario-rgb), 0.9);
-    color: var(--color-texto-brillo);
-    border: 2px solid rgba(var(--color-acento-rgb), 0.3);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  } */
-
   .rituales-prev,
   .rituales-next {
     @apply pointer-events-auto w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;

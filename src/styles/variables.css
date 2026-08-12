@@ -54,39 +54,16 @@
 
     /* ============================= */
     /*   MODO DISMINUCIÓN VISUAL     */
-    /* ============================= */
-    /* .app-layout.modo-accesibilidad {
-        --color-fondo: #FFFFFF !important;
-        --color-fondo-claro: #F2F2F2 !important;
-
-        --color-primario: #000000 !important;
-        --color-secundario: #0044CC !important;
-        --color-terciario: #0044CC !important;
-
-        --color-texto: #000000 !important;
-        --color-texto-oscuro: #000000 !important;
-
-        --color-acento: #D4A900 !important;
-        --color-acento-brillo: #B88600 !important;
-
-        --color-borde: #000000 !important;
-
-        --color-fondo-rgb: 255, 255, 255;
-        --color-primario-rgb: 0, 0, 0;
-        --color-terciario-rgb: 0, 68, 204;
-        --color-acento-rgb: 212, 169, 0;
-        --color-borde-rgb: 0, 0, 0;
-    } */
-
-
+    /* ============================= */   
     .app-layout.modo-accesibilidad {
         --color-primario-rgb: 0, 0, 0 !important;
         --color-secundario-rgb: 0, 68, 204 !important;
-        --color-borde-rgb: 255, 255, 255 !important;
+        /* --color-borde-rgb: 255, 255, 255 !important; */
         --color-borde-rgb: 0, 0, 0 !important;
         --color-acento-rgb: 221, 170, 0 !important;
 
-        --color-primario: rgb(177, 174, 177) !important;
+        /* --color-primario: rgb(177, 174, 177) !important; */
+        --color-primario: #B1AEB1 !important;
         --color-primario-rgb: 177, 174, 177 !important;
 
         --color-primario-claro: #FFFFFF !important;
@@ -101,7 +78,6 @@
        
         font-weight: 500 !important;
     }
-
     
     .modo-accesibilidad .texto-degradado {
         background: none !important;
@@ -153,6 +129,7 @@
     .modo-accesibilidad .testimonios-badge span,
     .modo-accesibilidad .contacto-badge-icon,
     .modo-accesibilidad .contacto-badge span,
+    .modo-accesibilidad .ritual-detalle-titulo,
     .modo-accesibilidad .ritual-detalle-paso-titulo,
     .modo-accesibilidad .testimonio-comillas,
     .modo-accesibilidad .footer-h4,
@@ -187,6 +164,10 @@
         color: var(--color-primario-claro) !important;
     }
    
+    .modo-accesibilidad .ritual-detalle-volver {
+        background-color: var(--color-primario) !important;
+    }
+
     .modo-accesibilidad .footer-sociales a:hover {    
         background-color: rgba(var(--color-secundario-rgb), 0.3) !important;
     }
