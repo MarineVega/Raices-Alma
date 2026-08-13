@@ -10,6 +10,15 @@
       var(--color-primario) 50%
     );
   }
+
+  .dark .hero {
+    background: radial-gradient(
+      circle at center,
+      var(--color-secundario) 10%,
+      /* var(--color-primario) 50% */
+      var(--color-primario-claro) 60%
+    );
+  }
   
   /* Overlay solo si necesitás oscurecer el fondo del color primario */
   .hero-overlay {
@@ -19,34 +28,39 @@
 
   .hero-contenedor {
     @apply relative z-10 w-full mx-auto px-6 lg:px-16 max-w-7xl;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0; /* Sin espacio entre columnas para que se superpongan */
+    justify-content: center;
+    /*grid-template-columns: 1fr 1fr;*/ /* Dos columnas iguales */
+    /*gap: 0; *//* Sin espacio entre columnas para que se superpongan */
   }
 
   /* IMAGEN - Bien visible, a la derecha, invade el centro */
-  .hero-imagen {
-    @apply relative z-20; /* Por encima del texto para superposición */
-    grid-column: 1 / -1; /* Ocupa ambas columnas */
-    grid-row: 1; /* Misma fila que el texto */
-    justify-self: end; /* Alineada a la derecha */
-    width: 65%; /* Ancho controlado - ajustá según necesites */
-    margin-right: -5%; /* Opcional: que sobresalga un poco */
-  }
+  /*.hero-imagen {
+    @apply relative z-20; */ /* Por encima del texto para superposición */
+/*    grid-column: 1 / -1; */ /* Ocupa ambas columnas */
+  /*  grid-row: 1; */ /* Misma fila que el texto */
+   /* justify-self: end; */ /* Alineada a la derecha */
+   /* width: 65%; /* Ancho controlado - ajustá según necesites */
+  /*  margin-right: -5%; */ /* Opcional: que sobresalga un poco */
+  /* } */
 
+  .hero-imagen {
+    @apply relative z-20;
+    width: 65%;
+    margin: 0 auto;
+  }
   .hero-imagen img {
     @apply w-full h-auto object-contain;
     /* Sin transparencia, sin filtros */
   }
 
-  /* TEXTO - A la izquierda, se superpone con la imagen */
   .hero-texto {
-    @apply relative z-10; /* Debajo de la imagen para que esta lo tape parcialmente */
-    grid-column: 1; /* Primera columna */
-    grid-row: 1; /* Misma fila */
-    max-width: 550px;
-    padding-right: 2rem; /* Espacio antes de que llegue la imagen */
+    @apply relative z-10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-texto h1 {
@@ -72,7 +86,7 @@
   }
 
   .hero-accion {
-    @apply flex flex-col sm:flex-row items-start gap-4 mt-12;
+    @apply flex flex-col sm:flex-row items-center gap-4 mt-12;
   }
 
   /* Mobile: imagen centrada debajo del texto */
@@ -88,7 +102,6 @@
       grid-row: auto;
       justify-self: center;
       margin-right: 0;
-      order: 2; /* Imagen debajo del texto */
     }
     
     .hero-texto {
@@ -97,6 +110,7 @@
       padding-right: 0;
       order: 1; /* Texto arriba */
       z-index: 20; /* En mobile, texto arriba */
+      order: 1;
     }
 
     .hero-texto h1 {

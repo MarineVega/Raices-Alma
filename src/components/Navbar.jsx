@@ -41,11 +41,11 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
           <div className="navbar-logo">
             {/* Asegurate de tener la imagen en la carpeta public */}
             <img 
-              src="/raices_sin_fondo.png" 
-              alt="Raíces del Alma" 
+              src="/public/img/logo_navbar.png" 
+              alt="Alcume" 
               className="navbar-logo-img"              
               />
-            <span className="navbar-marca-texto">Raíces del Alma</span>
+            {/* <span className="navbar-marca-texto">Alcume</span> */}
           </div>
         </Link>
 

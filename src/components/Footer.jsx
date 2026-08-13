@@ -15,13 +15,13 @@ export default function Footer({paqueteSeleccionado = null }) {
         <div className="footer-col-marca">
           <div className="footer-logo-box">
             <img 
-              src="/raices_sin_fondo.png" 
-              alt="Raíces del Alma" 
+              src="/public/img/logo_navbar.png" 
+              alt="Alcume" 
               className="footer-logo-img"
             />
           </div>
           <p className="footer-descripcion">
-            Sanar el origen, despertar la consciencia <br/> y vivir el propósito
+            Integrar la historia <br/> Habitar tu presente <br/> Elegir quién ser
           </p>
           <div className="footer-sociales">
             <a href="https://www.instagram.com/constelaciones_ana_/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
