@@ -119,6 +119,7 @@ function VideoCard({ video, color }) {
           className="video-iframe"
           controls
           controlsList="nodownload"
+          onContextMenu={(e) => e.preventDefault()}
           disablePictureInPicture
         />
       </div>
