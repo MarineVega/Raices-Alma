@@ -6,7 +6,7 @@ export default function SobreMi() {
     <section id="sobreMi" className="sobreMi">
         <div className="sobreMi-contenedor">
             <div className="sobreMi-imagen">
-                <img src="/img/foto_terapeuta.png" alt="Terapeuta Raíces del Alma"/>
+                <img src="/img/foto_terapeuta.png" alt="Terapeuta ALCUME"/>
             </div>
 
             <div className="sobreMi-texto">
