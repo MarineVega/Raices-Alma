@@ -41,7 +41,7 @@ export default function NavBar({ isAccessible, onToggleAccesibilidad }) {
           <div className="navbar-logo">
             {/* Asegurate de tener la imagen en la carpeta public */}
             <img 
-              src="/public/img/logo_navbar.png" 
+              src="/img/logo_navbar.png" 
               alt="Alcume" 
               className="navbar-logo-img"              
               />

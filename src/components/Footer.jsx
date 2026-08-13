@@ -15,7 +15,7 @@ export default function Footer({paqueteSeleccionado = null }) {
         <div className="footer-col-marca">
           <div className="footer-logo-box">
             <img 
-              src="/public/img/logo_navbar.png" 
+              src="/img/logo_navbar.png" 
               alt="Alcume" 
               className="footer-logo-img"
             />
