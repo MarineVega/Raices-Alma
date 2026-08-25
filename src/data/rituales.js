@@ -208,6 +208,50 @@ export const rituales = {
     },
 
     ritual2: {
+        id: "coleccion_1",
+        titulo: "Volver a mí",
+        subtitulo: "Rituales del Alma",
+        descripcion: "Un recorrido para reconectar con vos, escuchar tu mundo interior y comenzar a elegirte con mayor conciencia.",
+        icono: Sprout,
+        introduccion_titulo: "",
+        introduccion_subtitulo: "",
+        introduccion : [
+            'REGRESAR → ESCUCHAR → RECONOCER → SOLTAR → ELEGIR'
+        ],
+        coleccion_titulo: "Incluye",
+        coleccion_items: [
+            {
+                texto: 'Regreso a mí',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'La voz de mi alma',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Reconozco quién soy',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Suelto lo que ya no me representa',
+                mostrarBullet: true,
+            },
+            null,
+            {
+                texto: 'Elijo desde mi esencia',
+                mostrarBullet: true,
+            },            
+        ],
+        images: [
+            "/img/rituales/colecciones.jpg"
+        ],
+        mostrarBoton: true        
+    },
+
+    ritual3: {
         id: "abundancia",
         titulo: "Abundancia",
         subtitulo: "Conectá con la energía de la abundancia",
@@ -435,7 +479,7 @@ export const rituales = {
         tiempo: "30 minutos"
     },
     
-    ritual3: {
+    ritual4: {
         id: "apertura_mes",
         titulo: "Apertura de Mes",
         subtitulo: "Comenzar de nuevo",
@@ -676,87 +720,43 @@ export const rituales = {
         ],
         mostrarBoton: false,
         tiempo: "45 minutos"
-    },
-    
-    ritual4: {
-        id: "coleccion_1",
-        titulo: "Colección 1",
-        subtitulo: "Rituales del Alma",
-        descripcion: "Reconectar con tu esencia y escuchar la voz de tu interior.",
-        icono: Sprout,
-        introduccion_titulo: "",
-        introduccion_subtitulo: "",
-        introduccion : [
-            'Esta colección está pensada para quienes sienten la necesidad de detenerse, volver a sí mismos y recuperar la conexión con su mundo interior.'
-        ],
-        coleccion_titulo: "Incluye",
-        coleccion_items: [
-            {
-                texto: 'Ritual de Luna Nueva',
-                mostrarBullet: true,
-            },
-            null,
-            {
-                texto: 'Ritual de Luna Llena',
-                mostrarBullet: true,
-            },
-            null,
-            {
-                texto: 'Ritual de Conexión con el Ser Interior',
-                mostrarBullet: true,
-            },
-            null,
-            {
-                texto: 'Ritual de Gratitud Profunda',
-                mostrarBullet: true,
-            },
-            null,
-            {
-                texto: 'Ritual de Silencio y Escucha del Alma',
-                mostrarBullet: true,
-            },            
-        ],
-        images: [
-            "/img/rituales/colecciones.jpg"
-        ],
-        mostrarBoton: true        
-    },
+    },    
     
     ritual5: {
         id: "coleccion_2",
-        titulo: "Colección 2",
+        titulo: "Transformar y Renacer",
         subtitulo: "Rituales de Transformación",
-        descripcion: "Para cerrar ciclos y abrir nuevos comienzos.",
+        descripcion: "Un camino simbólico para cerrar etapas, transformar lo vivido, liberar aquello que todavía pesa y abrirte a un nuevo comienzo.",
         icono: Flame,
         introduccion_titulo: "",
         introduccion_subtitulo: "",
         introduccion : [
-            'Ideal para momentos de cambio, decisiones importantes o procesos personales.'
+            'RECONOCER → TRANSFORMAR → LIBERAR → CRUZAR → RENACER'
         ],
         coleccion_titulo: "Incluye",
         coleccion_items: [
             {
-                texto: 'Ritual para Soltar el Pasado',
+                texto: 'Honro lo que termina',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual para Transmutar el Dolor',
+                texto: 'Transformo mi herida en aprendizaje',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual del Perdón',
+                texto: 'Libero lo que todavía me ata',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual para Abrir Nuevos Caminos',
+                texto: 'Cruzo el umbral',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual de Renacimiento Personal',
+                texto: 'Renazco en una nueva versión de mí',
                 mostrarBullet: true,
             },
         ],
@@ -767,39 +767,39 @@ export const rituales = {
     },
     ritual6: {
         id: "coleccion_3",
-        titulo: "Colección 3",
+        titulo: "Me abro a Recibir",
         subtitulo: "Rituales para Sanar y Manifestar",
-        descripcion: "Liberar lo viejo para crear una nueva realidad.",
+        descripcion: "Un recorrido para revisar bloqueos internos, conectar con el merecimiento, sembrar nuevas intenciones y abrirte conscientemente a recibir.",
         icono: Flower,
         introduccion_titulo: "",
         introduccion_subtitulo: "",
         introduccion : [
-            'Pensada para quienes desean trabajar tanto la sanación emocional como la manifestación consciente.'
+            'SANAR → ABRIR → MERECER → INTENCIONAR → RECIBIR'
         ],
         coleccion_titulo: "Incluye",
         coleccion_items: [
             {
-                texto: 'Ritual de la Abundancia',
+                texto: 'Libero aquello que bloquea mi recibir',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual del Amor Propio',
+                texto: 'Abro espacio para lo nuevo',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual para Manifestar Sueños',
+                texto: 'Me permito merecer',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual para Elevar la Autoestima',
+                texto: 'Siembro mi intención',
                 mostrarBullet: true,
             },
             null,
             {
-                texto: 'Ritual para Conectar con el Merecimiento',
+                texto: 'Siembro mi intención',
                 mostrarBullet: true,
             },
         ],
@@ -807,7 +807,8 @@ export const rituales = {
             "/img/rituales/colecciones.jpg"
         ],
         mostrarBoton: true        
-    },
+    }
+/*
     ritual7: {
         id: "coleccion_4",
         titulo: "Colección 4",
@@ -980,6 +981,7 @@ export const rituales = {
         ],
         mostrarBoton: true        
     }
+    */
 };
 
 // ✔
