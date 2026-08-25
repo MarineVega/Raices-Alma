@@ -139,7 +139,7 @@ function VideoCard({ video, color }) {
         
         <div className="video-fecha">
           <Calendar size={16} />
-          <span>{new Date(video.fecha).toLocaleDateString('es-AR', { 
+          <span>{new Date(video.fecha + "T12:00:00").toLocaleDateString('es-AR', { 
             day: 'numeric', 
             month: 'long', 
             year: 'numeric' 
