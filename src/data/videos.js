@@ -68,8 +68,8 @@ export const categoriasVideos = [
       ,
       {
         id: "dinero-2",
-        titulo: "¿Qué aprendiste sobre el dinero en tu familia?",
-        descripcion: "Nuestra relación con el dinero no comienza cuando empezamos a trabajar. Mucho antes ya escuchábamos frases, observábamos comportamientos y recibíamos mensajes acerca de lo que significaba tener, gastar, ahorrar, perder o recibir.",
+        titulo: "¿Qué aprendiste sobre el dinero?",
+        descripcion: "Nuestra relación con el dinero no comienza cuando empezamos a trabajar. Mucho antes ya escuchábamos frases, observábamos comportamientos y recibíamos mensajes acerca de lo que significaba.",
         fecha: "2026-08-21",
         url: "https://alcume.com.ar/videos/Dinero2.mp4",
         mensajePredefinido: 'Hola! Vi el video de "¿Qué aprendiste sobre el dinero en tu familia?" y quisiera profundizar sobre mi caso particular...'
@@ -85,7 +85,7 @@ export const categoriasVideos = [
       {
         id: "dar-recibir",
         titulo: "Dar te resulta más fácil que recibir?",
-        descripcion: "A veces somos excelentes para acompañar, ayudar, escuchar y dar. Pero cuando alguien nos ofrece algo a nosotros… nos cuesta. Nos justificamos. Queremos devolverlo enseguida. Sentimos culpa. O pensamos que no lo merecemos. Y esa dificultad para recibir también puede aparecer con la relación con el dinero.",
+        descripcion: "A veces somos excelentes para acompañar, ayudar, escuchar y dar. Pero cuando alguien nos ofrece algo a nosotros… nos cuesta. Nos justificamos. Queremos devolverlo enseguida. Sentimos culpa.",
         fecha: "2026-08-21",
         url: "https://alcume.com.ar/videos/Dar_Recibir.mp4",
         mensajePredefinido: 'Hola! Vi el video de "Dar te resulta más fácil que recibir?" y quisiera profundizar sobre mi caso particular...'
@@ -93,7 +93,7 @@ export const categoriasVideos = [
       {
         id: "decir-no",
         titulo: 'Cuántas veces dijiste "sí" para no decepcionar a alguien, cuando en realidad querías decir "no"?',
-        descripcion: 'Con el tiempo, acostumbrarnos a complacer a los demás puede hacernos olvidar de escucharnos a nosotros. ¿Cuántos "sí" dijiste por miedo... y cuántos "no" necesitás empezar a decir por amor propio?',
+        descripcion: 'Con el tiempo, acostumbrarnos a complacer a los demás puede hacernos olvidar de escucharnos a nosotros. ¿Cuántos "sí" dijiste por miedo?',
         fecha: "2026-08-24",
         url: "https://alcume.com.ar/videos/Decir_No.mp4",
         mensajePredefinido: 'Hola! Vi el video de "Decir, No" y quisiera profundizar sobre mi caso particular...'
@@ -117,7 +117,7 @@ export const categoriasVideos = [
       },
       {
         id: "oraculo-agosto-2026",
-        titulo: "Mensajito signo a signo.",
+        titulo: "Mensaje signo a signo.",
         descripcion: "Últimos días del mes de Agosto.",
         fecha: "2026-06-24",
         url: "https://alcume.com.ar/videos/SignoASigno_Agosto_2026.mp4",
